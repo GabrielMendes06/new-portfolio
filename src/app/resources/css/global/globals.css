@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main-bg-color: rgba(28, 28, 28, 0);
+    --text-nav-color: rgb(167, 167, 167);
+}
+
+.bg-black-style {
+    background-color: var(--main-bg-color);
+}
+
+.text-nav-color {
+    color: var(--text-nav-color)!important;
+}

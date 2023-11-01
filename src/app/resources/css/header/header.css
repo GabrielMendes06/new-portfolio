@@ -1,0 +1,70 @@
+#basic-nav-dropdown {
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .nav-item-animation {
+    animation-name: fadeIn;
+    animation-duration: 1s;  /* Duração da animação */
+    animation-timing-function: ease; /* Função de timing (pode ser linear, ease-in, ease-out, etc.) */
+    animation-delay: 1s; /* Delay antes da animação começar */
+    animation-iteration-count: 1; /* Quantas vezes a animação será reproduzida */
+    animation-fill-mode: forwards; /* A animação manterá o estilo do último keyframe após concluir */
+}
+
+.nav-item-animation:hover {
+    cursor: pointer;
+    --text-nav-color: white;
+}
+
+.nav-item-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -7px;
+    left: 0;
+    background: linear-gradient(270deg, #986dff 0%, #17161d 100%);
+    transform-origin: bottom right;
+    transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav-item-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-item-animation:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.nav-item-animation:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.nav-item-animation:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.nav-item-animation:nth-child(4) {
+    animation-delay: 1.1s;
+}
+
+.nav-item-animation:nth-child(5) {
+    animation-delay: 1.3s;
+}
+
+.nav-item-animation:nth-child(6) {
+    animation-delay: 1.5s;
+}
