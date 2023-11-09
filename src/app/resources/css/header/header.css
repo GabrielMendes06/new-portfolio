@@ -1,26 +1,63 @@
 @keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateX(100px);
+        opacity: 0;
+        transform: translateX(100px);
     }
-  
+
     to {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
-  .nav-item-animation {
+}
+
+@keyframes fadeModal {
+    from {
+        opacity: 0;
+        height: 0%;
+    }
+
+    to {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+.nav-item-animation {
     animation-name: fadeIn;
-    animation-duration: 1s;  /* Duração da animação */
-    animation-timing-function: ease; /* Função de timing (pode ser linear, ease-in, ease-out, etc.) */
-    animation-delay: 1s; /* Delay antes da animação começar */
-    animation-iteration-count: 1; /* Quantas vezes a animação será reproduzida */
-    animation-fill-mode: forwards; /* A animação manterá o estilo do último keyframe após concluir */
+    animation-duration: 1s;
+    /* Duração da animação */
+    animation-timing-function: ease;
+    /* Função de timing (pode ser linear, ease-in, ease-out, etc.) */
+    animation-delay: 1s;
+    /* Delay antes da animação começar */
+    animation-iteration-count: 1;
+    /* Quantas vezes a animação será reproduzida */
+    animation-fill-mode: forwards;
+}
+
+.modal * {
+    overflow: hidden!important;
+}
+
+.modal {
+    overflow: hidden;
+    animation-name: fadeModal;
+    animation-duration: 1s;
+    /* Duração da animação */
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    /* Quantas vezes a animação será reproduzida */
+    animation-fill-mode: forwards;
+}
+
+.btn-close-white {
+    font-size: 1.3em;
+    margin: 1em;
 }
 
 .nav-item-animation:hover {
     cursor: pointer;
-    --text-nav-color: white;
+    color: var(--text-nav-color-hover);
 }
 
 .nav-item-animation::after {
@@ -66,7 +103,12 @@
 }
 
 .menu-burguer {
-    display: none!important;
+    display: none !important;
+    transition: 0.5s !important;
+}
+
+.menu-burguer:hover {
+    background-color: rgba(69, 69, 69, 0.504) !important;
 }
 
 
@@ -76,6 +118,6 @@
     }
 
     .menu-burguer {
-        display: block!important;
+        display: block !important;
     }
 }

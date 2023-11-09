@@ -3,7 +3,7 @@ interface NavbarItemListProps extends React.LiHTMLAttributes<HTMLLIElement> {
 }
 
 const NavbarItemList: React.FC<NavbarItemListProps> = ({text, ...rest}) => {
-    return <li className="text-stone-400 mx-3 px-2 nav-item-animation font-normal text-lg hover:text-white" {...rest}>{text}</li>
+    return <li className="text-nav-color mx-3 px-2 nav-item-animation font-normal text-lg" {...rest}>{text}</li>
 }
 
 export default NavbarItemList

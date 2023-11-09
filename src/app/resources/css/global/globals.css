@@ -3,14 +3,37 @@
 @tailwind utilities;
 
 :root {
-    --main-bg-color: rgba(28, 28, 28, 0);
-    --text-nav-color: rgb(167, 167, 167);
+    --main-bg-color: white!important;
+    --modal-bg-color: white!important;
+    --logo-text: black!important;
+    --text-nav-color: black!important;
+    --text-nav-color-hover: rgb(57, 57, 57)!important;
 }
 
-.bg-black-style {
-    background-color: var(--main-bg-color);
+.dark-theme {
+    --main-bg-color: #020a13!important;
+    --modal-bg-color: rgb(36, 36, 36)!important;
+    --text-nav-color: rgb(132, 132, 132)!important;
+    --text-nav-color-hover: white!important;
+    --logo-text: white!important;
+}
+
+.bg-content-style {
+    background-color: var(--main-bg-color)!important;
 }
 
 .text-nav-color {
     color: var(--text-nav-color)!important;
+}
+
+.modal-bg-color {
+    background-color: var(--modal-bg-color);
+}
+
+.text-nav-color:hover {
+    color: var(--text-nav-color-hover)!important;
+}
+
+.logo-text {
+    color: var(--logo-text)
 }

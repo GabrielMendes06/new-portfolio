@@ -4,7 +4,7 @@ import SectionHome from "../sections/home/SectionHome"
 export default function HomePage() {
     
     return (
-       <div className="section-home">
+       <div className="bg-content-style">
            <SectionHome />
        </div>
     )
