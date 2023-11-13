@@ -10,7 +10,9 @@ export default function OnlyHeader() {
     return(
           <Navbar expand="lg" className="bg-black-style position-fixed w-100" >
           <Container className='text-light flex-nowrap'>
-          <p className='logo-text p-4'>React-Bootstrap</p>
+          <div>
+            <p className='logo-text margin-0 p-4'>Gabriel Mendes</p>
+          </div>
             <Nav className="ms-auto">
               <div className='d-flex me-5'>
                 <NavbarItemList text='Início' />

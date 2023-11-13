@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import './resources/css/global/globals.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const roboto = Roboto({
   weight: ['100','400','500','700','900'],
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" > 
-      <body className={`${roboto.className} `} >{children}</body> 
+      <body className={`${roboto.className} dark-theme`} >{children}</body> 
     </html>
   )
 }

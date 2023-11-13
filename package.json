@@ -15,7 +15,8 @@
     "next": "14.0.0",
     "react": "^18",
     "react-bootstrap": "^2.9.1",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-ts-typewriter": "^0.1.8-b"
   },
   "devDependencies": {
     "@types/node": "^20",
