@@ -8,6 +8,7 @@
     --logo-text: black!important;
     --text-nav-color: black!important;
     --text-nav-color-hover: rgb(57, 57, 57)!important;
+    --text-span-title: rgb(83, 160, 255)!important;
 }
 
 .dark-theme {
@@ -36,4 +37,8 @@
 
 .logo-text {
     color: var(--logo-text)
+}
+
+.span-title {
+    color: var(--text-span-title);
 }
