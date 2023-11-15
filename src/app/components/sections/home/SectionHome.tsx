@@ -63,7 +63,7 @@ const SectionHome: React.FC = () => {
               delay: 2,
               repeat: Infinity,
               duration: 2.5,
-              times: [0, 0.01, 0.03, 0.4],
+              times: [0, 0.01, 0.07, 0.09],
             }}
           >
             <Image src={DevBackground} alt="Imagem de fundo" />
