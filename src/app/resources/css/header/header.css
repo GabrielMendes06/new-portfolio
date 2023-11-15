@@ -105,10 +105,14 @@
 .menu-burguer {
     display: none !important;
     transition: 0.5s !important;
+    
 }
 
 .menu-burguer:hover {
     background-color: rgba(69, 69, 69, 0.504) !important;
+}
+.bi-list {
+    font-size: 1.6em;
 }
 
 

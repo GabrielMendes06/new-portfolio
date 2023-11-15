@@ -14,7 +14,7 @@ export default function OnlyHeader() {
             <p className='logo-text margin-0 p-4'>Gabriel Mendes</p>
           </div>
             <Nav className="ms-auto">
-              <div className='d-flex me-5'>
+              <div className='d-flex me-3'>
                 <NavbarItemList text='Início' />
                 <NavbarItemList text='Sobre mim'/>
                 <NavbarItemList text='Conhecimentos'/>

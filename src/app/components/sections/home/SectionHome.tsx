@@ -8,13 +8,6 @@ import Title from "../../global/Title";
 
 const SectionHome: React.FC = () => {
 
-
-
-
-
-
-
-
     return (
         <>
             <OnlyHeader />
@@ -33,7 +26,7 @@ const SectionHome: React.FC = () => {
                             className="initial-title-apresentation" />
                     </motion.div>
                     <Paragraph
-                        text={<Typewriter text={'Olá, me chamo Gabriel Mendes,sou desenvolvedor especializado em Front-End, um prazer em conhece-lo.'} />}
+                        text={<Typewriter text={'Olá, me chamo Gabriel Mendes, sou desenvolvedor especializado em Front-End, um prazer em conhece-lo.'} />}
                         className="initial-paragraph-apresentation" />
                 </div>
                 <motion.div
