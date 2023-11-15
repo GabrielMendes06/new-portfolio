@@ -68,7 +68,7 @@
     height: 1px;
     bottom: -7px;
     left: 0;
-    background: linear-gradient(270deg, #986dff 0%, #17161d 100%);
+    background: linear-gradient(270deg, #6dacff 0%, #17161d 100%);
     transform-origin: bottom right;
     transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
 }
