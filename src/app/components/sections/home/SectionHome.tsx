@@ -56,14 +56,14 @@ const SectionHome: React.FC = () => {
           <motion.div
             initial={{  }}
             animate={{
-              opacity: [1, 0, 1, 0, 1, 0]
+              opacity: [1, 0, 0.8, 0, 1, 0.2]
               
             }}
             transition={{
               delay: 2,
               repeat: Infinity,
               duration: 2.5,
-              times: [0, 0.01, 0.07, 0.09],
+              times: [0, 0.1, 0.25, 0.26, 1],
             }}
           >
             <Image src={DevBackground} alt="Imagem de fundo" />
