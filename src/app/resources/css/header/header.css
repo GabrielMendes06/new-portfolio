@@ -22,6 +22,10 @@
     }
 }
 
+.navbar {
+    z-index: 999;
+}
+
 .nav-item-animation {
     animation-name: fadeIn;
     animation-duration: 1s;

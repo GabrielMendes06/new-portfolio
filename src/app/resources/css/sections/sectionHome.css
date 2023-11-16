@@ -19,6 +19,10 @@
   font-size: 2.3em;
 }
 
+.animation-heartcode {
+  z-index: 0;
+}
+
 @media (max-width: 968px) {
   .title {
     font-size: 1.5em;
@@ -27,5 +31,11 @@
   .initial-paragraph-apresentation {
     font-size: 1em;
     margin-top: 2em;
+  }
+
+  .animation-heartcode {
+    position: absolute;
+    margin: auto;
+    opacity: 0;
   }
 }
