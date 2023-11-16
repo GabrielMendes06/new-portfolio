@@ -16,7 +16,7 @@ function Example() {
   return (
     <>
       <Button
-        className="mb-2 menu-burguer bg-transparent border-0"
+        className="menu-burguer bg-transparent border-0"
         onClick={() => handleShow(true)}
       >
         <i className="bi bi-list"></i>

@@ -26,12 +26,17 @@
 }
 
 @media (max-width: 968px) {
+
   .title {
-    font-size: 1.5em;
+    font-size: 2.5em;
+  }
+
+  .initial-title-apresentation {
+    font-size: 2.4em!important;
   }
 
   .initial-paragraph-apresentation {
-    font-size: 1em;
+    font-size: 1.7em;
     margin-top: 2em;
   }
 
