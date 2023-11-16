@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    overflow-x: hidden;
-}
-
 :root {
     --main-bg-color: white!important;
     --modal-bg-color: white!important;

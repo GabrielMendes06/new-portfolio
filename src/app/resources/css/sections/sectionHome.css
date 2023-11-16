@@ -1,5 +1,7 @@
 .section-home {
   height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .initial-content {
