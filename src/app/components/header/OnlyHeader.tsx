@@ -6,6 +6,7 @@ import NavbarItemList from "./NavbarItemList";
 import NavbarModal from "./NavbarModal";
 import Paragraph from "../global/Paragraph";
 import { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
 
 export default function OnlyHeader() {
 
@@ -35,14 +36,8 @@ export default function OnlyHeader() {
             className="default-text m-0 p-4"
             text='Gabriel Mendes' />
         </div>
-        <label className="theme-button">
-          <input type="checkbox" className="theme-checkbox" onClick={() => toggleTheme()} />
-          <i className="bi bi-brightness-high-fill sun-icon"></i>
-          <i className="bi bi-moon-fill moon-icon"></i>
-          <span className="toggle"></span>
-        </label>
         <Nav>
-          <div className="d-flex me-3 align-items-center">
+          <div className="d-flex me-4 align-items-center">
             <NavbarItemList text="Início" />
             <NavbarItemList text="Sobre mim" />
             <NavbarItemList text="Conhecimentos" />
@@ -51,6 +46,21 @@ export default function OnlyHeader() {
             <NavbarModal />
           </div>
         </Nav>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            y: [-15, 0],
+            opacity: [0, 1],
+          }}
+          transition={{ duration: 1.5 }}>
+          <label className="theme-button">
+            <input type="checkbox" className="theme-checkbox" onClick={() => toggleTheme()} />
+            <i className="bi bi-brightness-high-fill sun-icon"></i>
+            <i className="bi bi-moon-fill moon-icon"></i>
+            <span className="toggle"></span>
+          </label>
+        </motion.div>
+
       </Container>
     </Navbar>
   );
