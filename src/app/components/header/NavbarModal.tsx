@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import NavbarItemList from "./NavbarItemList";
 import ModalItemlist from "./ModalItemList";
 
 function Example() {
-  const [fullscreen, setFullscreen] = useState<any>(true);
+  const [fullscreen, setFullscreen] = useState<string | true | undefined>(true);
   const [show, setShow] = useState(false);
+  const [closeModalColor, setCloseModalColor] = useState<string>('')
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  function checkThemeClass() {
+    setIsDarkTheme(document.body.classList.contains('dark-theme'));
+  }
+
+  useEffect(() => {
+    checkThemeClass()
+  }, []);
 
   function handleShow(breakpoint: any) {
     setFullscreen(breakpoint);
@@ -17,9 +26,12 @@ function Example() {
     <>
       <Button
         className="menu-burguer bg-transparent border-0"
-        onClick={() => handleShow(true)}
+        onClick={() => { 
+          handleShow(true)
+          checkThemeClass()
+        }}
       >
-        <i className="bi bi-list"></i>
+        <i className="bi bi-list default-text"></i>
       </Button>
       <Modal
         show={show}
@@ -30,7 +42,8 @@ function Example() {
         <Modal.Header
           className="modal-bg-color border-0 "
           closeButton={true}
-          closeVariant="white"
+          closeVariant={isDarkTheme ? 'white' : ''}
+          
         ></Modal.Header>
         <Modal.Body className="modal-bg-color d-flex flex-column list-none align-items-center">
           <ModalItemlist text="Início" />

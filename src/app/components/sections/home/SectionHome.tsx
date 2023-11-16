@@ -30,7 +30,7 @@ const SectionHome: React.FC = () => {
     // Definição dos variants baseado no estado isSmall
     const variants = isSmall ? {
         animate: {
-            opacity: [0.3, 0, 0.2, 0, 0.3, 0.2]
+            opacity: [0.5, 0, 0.2, 0, 0.5, 0.2]
         },
         transition: {
             delay: 2,
@@ -49,7 +49,7 @@ const SectionHome: React.FC = () => {
             times: [0, 0.1, 0.25, 0.26, 1],
         }
     };
-
+ 
     return (
 
         <>

@@ -5,18 +5,30 @@
 :root {
     --main-bg-color: white!important;
     --modal-bg-color: white!important;
-    --logo-text: black!important;
+    --default-text: black!important;
+    --text-nav-color: black!important;
+    --text-nav-color-hover: rgb(57, 57, 57)!important;
+    --text-span-title: rgb(83, 160, 255)!important;
+    --theme-button: #020a13!important;
+}
+
+.light-theme {
+    --theme-button: #020a13!important;
+    --main-bg-color: white!important;
+    --modal-bg-color: white!important;
+    --default-text: black!important;
     --text-nav-color: black!important;
     --text-nav-color-hover: rgb(57, 57, 57)!important;
     --text-span-title: rgb(83, 160, 255)!important;
 }
 
 .dark-theme {
+    --theme-button: #ffffff!important;
     --main-bg-color: #020a13!important;
     --modal-bg-color: rgb(36, 36, 36)!important;
     --text-nav-color: rgb(132, 132, 132)!important;
     --text-nav-color-hover: white!important;
-    --logo-text: white!important;
+    --default-text: white!important;
 }
 
 .bg-content-style {
@@ -35,8 +47,8 @@
     color: var(--text-nav-color-hover)!important;
 }
 
-.logo-text {
-    color: var(--logo-text)
+.default-text {
+    color: var(--default-text)
 }
 
 .span-title {

@@ -5,18 +5,44 @@ import "../../resources/css/header/header.css";
 import NavbarItemList from "./NavbarItemList";
 import NavbarModal from "./NavbarModal";
 import Paragraph from "../global/Paragraph";
+import { useEffect, useState } from "react";
 
 export default function OnlyHeader() {
+
+  const [theme, setTheme] = useState<string>("dark-theme")
+
+  useEffect(() => {
+    setTheme(document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme');
+  }, []);
+
+  function toggleTheme() {
+    if (document.body.classList.contains('dark-theme')) {
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+      setTheme('light-theme');
+    } else {
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+      setTheme('dark-theme');
+    }
+  }
+
   return (
     <Navbar expand="lg" className="bg-black-style position-fixed w-100">
       <Container className="text-light flex-nowrap">
         <div>
-          <Paragraph 
-          className="logo-text m-0 p-4" 
-          text='Gabriel Mendes'/>
+          <Paragraph
+            className="default-text m-0 p-4"
+            text='Gabriel Mendes' />
         </div>
-        <Nav className="ms-auto">
-          <div className="d-flex me-3">
+        <label className="theme-button">
+          <input type="checkbox" className="theme-checkbox" onClick={() => toggleTheme()} />
+          <i className="bi bi-brightness-high-fill sun-icon"></i>
+          <i className="bi bi-moon-fill moon-icon"></i>
+          <span className="toggle"></span>
+        </label>
+        <Nav>
+          <div className="d-flex me-3 align-items-center">
             <NavbarItemList text="Início" />
             <NavbarItemList text="Sobre mim" />
             <NavbarItemList text="Conhecimentos" />

@@ -7,7 +7,7 @@ interface TitleProps extends React.HTMLAttributes<HTMLParagraphElement> {
 
 const Title: React.FC<TitleProps> = ({ text, className, ...rest }) => {
   return (
-    <h1 className={`logo-text mx-3 px-2 title mb-3 ${className}`} {...rest}>
+    <h1 className={`default-text mx-3 px-2 title mb-3 ${className}`} {...rest}>
       {text}
     </h1>
   );
