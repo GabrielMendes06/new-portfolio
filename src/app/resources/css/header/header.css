@@ -159,6 +159,13 @@ input:checked~.moon-icon {
     animation-delay: 1.1s;
 }
 
+.menu-text-size {
+    font-size: 1.6em;
+    width: 100%;
+    padding-bottom: 1em!important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.448);
+}
+
 .menu-burguer {
     display: none !important;
     transition: 0.5s !important;
@@ -170,6 +177,10 @@ input:checked~.moon-icon {
 
 .bi-list {
     font-size: 1.6em;
+}
+
+.btn-close {
+    font-size: 1.5em;
 }
 
 @media (max-width: 968px) {

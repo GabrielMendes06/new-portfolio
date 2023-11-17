@@ -2,6 +2,8 @@
   height: 100dvh;
   overflow-x: hidden;
   position: relative;
+  overflow-y: hidden;
+  min-height: 600px;
 }
 
 .initial-content {
@@ -36,11 +38,11 @@
   }
 
   .initial-title-apresentation {
-    font-size: 2.4em!important;
+    font-size: 2.1em!important;
   }
 
   .initial-paragraph-apresentation {
-    font-size: 1.7em;
+    font-size: 1.4em;
     margin-top: 2em;
   }
 

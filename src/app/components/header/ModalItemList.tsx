@@ -5,7 +5,7 @@ interface ModalItemlistProps extends React.LiHTMLAttributes<HTMLLIElement> {
 const ModalItemlist: React.FC<ModalItemlistProps> = ({ text, ...rest }) => {
   return (
     <li
-      className="text-nav-color mx-3 px-2 font-normal text-lg text-center m-3 cursor-pointer"
+      className="text-nav-color mx-3 px-2 font-normal menu-text-size text-center m-3 cursor-pointer"
       {...rest}
     >
       {text}
