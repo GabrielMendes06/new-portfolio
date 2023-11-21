@@ -1,0 +1,22 @@
+.about-subtitle {
+    font-size: 1.3em;
+}
+
+.about-subtitle2 {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.about-title {
+    font-size: 1.7em;
+}
+
+.bg-card {
+    background-color: #020d18;
+    border: 1px solid #082141;
+    border-radius: 10px;
+}
+
+.card-content {
+    max-width: 900px;
+}

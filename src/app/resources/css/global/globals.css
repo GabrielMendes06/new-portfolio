@@ -19,7 +19,7 @@
     --default-text: black!important;
     --text-nav-color: black!important;
     --text-nav-color-hover: rgb(57, 57, 57)!important;
-    --text-span-title: rgb(83, 160, 255)!important;
+    --text-span-title: rgb(25, 106, 205)!important;
 }
 
 .dark-theme {
@@ -29,6 +29,7 @@
     --text-nav-color: rgb(132, 132, 132)!important;
     --text-nav-color-hover: white!important;
     --default-text: white!important;
+    --text-span-title: rgb(83, 160, 255)!important;
 }
 
 .bg-content-style {
