@@ -1,10 +1,10 @@
-import "../../../resources/css/sections/sectionHome.css";
+import "../../resources/css/sections/sectionHome.css";
 import { motion } from "framer-motion";
-import OnlyHeader from "../../header/OnlyHeader";
-import Paragraph from "../../global/Paragraph";
+import OnlyHeader from "../header/OnlyHeader";
+import Paragraph from "../global/Paragraph";
 import Typewriter from "react-ts-typewriter";
-import Title from "../../global/Title";
-import DevBackground from "../../../resources/images/sections/sectionHome/programacao.png";
+import Title from "../global/Title";
+import DevBackground from "../../resources/images/sections/sectionHome/programacao.png"; 
 import Image from "next/image";
 import { useEffect, useState } from "react";
 

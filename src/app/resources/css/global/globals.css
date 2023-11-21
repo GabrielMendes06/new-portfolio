@@ -33,7 +33,7 @@
 
 .bg-content-style {
     background-color: var(--main-bg-color)!important;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.5s, color 0.3s;
 }
 
 .text-nav-color {
@@ -54,4 +54,8 @@
 
 .span-title {
     color: var(--text-span-title);
+}
+
+.section-content {
+    height: 100dvh;
 }
