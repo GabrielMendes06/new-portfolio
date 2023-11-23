@@ -22,8 +22,8 @@ const SmallIcon: React.FC<SmallIconProps> = ({ className, href }) => {
 
     return (
 
-        <motion.div variants={item}>
-            <a href={`${href}`} className="d-flex align-items-center justify-content-center icon-content">
+        <motion.div variants={item} className="border-animation">
+            <a href={`${href}`} className="d-flex align-items-center justify-content-center icon-content icon-bg ">
                 <i className={`${className} icon-size`}></i>
             </a>
         </motion.div>

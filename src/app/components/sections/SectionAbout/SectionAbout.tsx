@@ -1,7 +1,7 @@
 import '../../../resources/css/sections/sectionAbout.css'
 import Cartoon from '../../../resources/images/sections/sectionAbout/cartoon.webp'
 import Image from 'next/image'
-import SmallIcon from '../../global/SmallIcon'
+import SmallIcon from './SmallIcon'
 import { motion } from 'framer-motion'
 import AnimatedTitle from './AnimatedTitle'
 import AnimatedParagraph from './AnimatedParagraph'
@@ -71,7 +71,7 @@ const SectionAbout: React.FC = () => {
                             classNameProps='text-content'
                         />
                     </motion.div>
-                    <motion.div className='d-flex icon-container'
+                    <motion.div className='d-flex icon-container '
                         variants={FadeIn}
                         initial='hidden'
                         whileInView={'show'}
