@@ -35,7 +35,7 @@ const SectionAbout: React.FC = () => {
 
     return (
         <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about">
-            <div className='bg-card placeholder:row d-flex p-4'>
+            <div className='bg-card row d-flex p-4'>
                 <motion.div className='col-sm-6 middle-card-div'
                     variants={FadeImage}
                     initial='hidden'
