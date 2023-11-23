@@ -24,18 +24,20 @@
 
 .navbar {
     z-index: 999;
+    transition: background-color 0.5s, color 0.3s;
+}
+
+.navbar-scroll {
+    background-color: #0035a7;
+    transition: 0.5s;
 }
 
 .nav-item-animation {
     animation-name: fadeIn;
     animation-duration: 1s;
-    /* Duração da animação */
     animation-timing-function: ease;
-    /* Função de timing (pode ser linear, ease-in, ease-out, etc.) */
     animation-delay: 1s;
-    /* Delay antes da animação começar */
     animation-iteration-count: 1;
-    /* Quantas vezes a animação será reproduzida */
     animation-fill-mode: forwards;
 }
 

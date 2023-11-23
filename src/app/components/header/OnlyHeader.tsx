@@ -11,9 +11,23 @@ import { motion } from 'framer-motion'
 export default function OnlyHeader() {
 
   const [theme, setTheme] = useState<string>("dark-theme")
+  const [scrolled, setScrolled] = useState(false);
+  const verification = scrolled ? 'text-light' : 'default-text'
 
   useEffect(() => {
     setTheme(document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme');
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100;
+      setScrolled(isScrolled);
+    }
+        // Adiciona o ouvinte de evento
+        window.addEventListener('scroll', handleScroll);
+
+        // Limpeza do ouvinte de evento
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+
   }, []);
 
   function toggleTheme() {
@@ -29,11 +43,11 @@ export default function OnlyHeader() {
   }
 
   return (
-    <Navbar expand="lg" className="bg-black-style position-fixed w-100">
+    <Navbar expand="lg" className={`position-fixed w-100 ${scrolled ? 'navbar-scroll' : ""}`}>
       <Container className="text-light flex-nowrap">
         <div>
           <Paragraph
-            className="default-text m-0 p-4"
+            className={`${verification} m-0 p-4`}
             text='Gabriel Mendes' />
         </div>
         <Nav>
@@ -49,8 +63,7 @@ export default function OnlyHeader() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
-            y: [-15, 0],
-            opacity: [0, 1],
+            opacity: [0, 1]
           }}
           transition={{ duration: 1.5 }}>
           <label className="theme-button">

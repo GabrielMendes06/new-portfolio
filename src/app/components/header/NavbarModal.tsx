@@ -6,8 +6,9 @@ import ModalItemlist from "./ModalItemList";
 function Example() {
   const [fullscreen, setFullscreen] = useState<string | true | undefined>(true);
   const [show, setShow] = useState(false);
-  const [closeModalColor, setCloseModalColor] = useState<string>('')
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const verification = scrolled ? 'text-light' : 'default-text'
 
   function checkThemeClass() {
     setIsDarkTheme(document.body.classList.contains('dark-theme'));
@@ -15,6 +16,14 @@ function Example() {
 
   useEffect(() => {
     checkThemeClass()
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100;
+      setScrolled(isScrolled);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   function handleShow(breakpoint: any) {
@@ -26,12 +35,12 @@ function Example() {
     <>
       <Button
         className="menu-burguer bg-transparent border-0"
-        onClick={() => { 
+        onClick={() => {
           handleShow(true)
           checkThemeClass()
         }}
       >
-        <i className="bi bi-list default-text"></i>
+        <i className={`bi bi-list ${verification}`}></i>
       </Button>
       <Modal
         show={show}
@@ -43,7 +52,7 @@ function Example() {
           className="modal-bg-color border-0 "
           closeButton={true}
           closeVariant={isDarkTheme ? 'white' : ''}
-          
+
         ></Modal.Header>
         <Modal.Body className="modal-bg-color d-flex flex-column list-none align-items-center">
           <ModalItemlist text="Início" />
