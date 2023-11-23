@@ -47,7 +47,7 @@ const SectionAbout: React.FC = () => {
                         alt='Dev Cartoon'
                     />
                 </motion.div>
-                <div className='col-sm-6 d-flex flex-column align-items-start middle-card-div'>
+                <div className='col-sm-6 d-flex flex-column justify-content-center align-items-start middle-card-div'>
                     <motion.div
                         variants={FadeIn}
                         initial='hidden'
