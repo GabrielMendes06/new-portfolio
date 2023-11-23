@@ -1,10 +1,10 @@
 import '../../../resources/css/sections/sectionAbout.css'
 import Cartoon from '../../../resources/images/sections/sectionAbout/cartoon.webp'
 import Image from 'next/image'
-import Paragraph from '../../global/Paragraph'
-import Title from '../../global/Title'
 import SmallIcon from '../../global/SmallIcon'
 import { motion } from 'framer-motion'
+import AnimatedTitle from './AnimatedTitle'
+import AnimatedParagraph from './AnimatedParagraph'
 
 const SectionAbout: React.FC = () => {
 
@@ -13,22 +13,22 @@ const SectionAbout: React.FC = () => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.3,
-                duration: 1
+                staggerChildren: 0.4,
+                duration: 1,
+                delay: 0.4
             }
         }
     };
 
-    const item = {
-        hidden: {
-            opacity: 0,
-            y: -50,
-        },
+    const FadeImage = {
+        hidden: { opacity: 0, x: -50 },
         show: {
             opacity: 1,
-            y: 0,
+            x: 0,
             transition: {
-                duration: 0.8
+                staggerChildren: 0.4,
+                duration: 1,
+                delay: 0.4
             }
         }
     };
@@ -37,62 +37,49 @@ const SectionAbout: React.FC = () => {
         <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about">
             <div className='bg-card card-content row d-flex p-4'>
                 <motion.div className='col-sm-6 middle-card-div'
-                    variants={FadeIn}
+                    variants={FadeImage}
                     initial='hidden'
                     whileInView={'show'}
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                 >
-                    <motion.div variants={item}>
-                        <Image
-                            src={Cartoon}
-                            alt='Dev Cartoon'
-                        />
-                    </motion.div>
-
+                    <Image
+                        src={Cartoon}
+                        alt='Dev Cartoon'
+                    />
                 </motion.div>
                 <div className='col-sm-6 d-flex flex-column align-items-start middle-card-div'>
                     <motion.div
                         variants={FadeIn}
                         initial='hidden'
                         whileInView={'show'}
-                        viewport={{once: true}}
+                        viewport={{ once: true }}
                     >
-                        <motion.div variants={item}>
-                            <Title
-                                text='Quem sou'
-                                className='about-subtitle span-title mt-5'
-                            />
-                        </motion.div>
-                        <motion.div
-                            variants={item}>
-                            <Title
-                                text='Gabriel Mendes'
-                                className='about-title'
-                            />
-                        </motion.div>
-                        <motion.div variants={item}>
-                            <Title
-                                text='Front-end Developer'
-                                className='about-subtitle2'
-                            />
-                        </motion.div>
-                        <motion.div variants={item}>
-                            <Paragraph
-                                text='Meu nome é Gabriel Mendes da Silva, sou Desenvolvedor Front-End desde 2021 e fascinado pela área em que trabalho. Tenho experiência com Startups, prototipagem rápida de idéias e designs de interfaces de alta qualidade, com animações e responsividade.'
-                                className='text-content'
-                            />
-                        </motion.div>
+                        <AnimatedTitle
+                            textProps='Quem sou'
+                            classNameProps='about-subtitle span-title mt-5'
+                        />
+                        <AnimatedTitle
+                            textProps='Gabriel Mendes'
+                            classNameProps='about-title'
+                        />
+                        <AnimatedTitle
+                            textProps='Front-end Developer'
+                            classNameProps='about-subtitle2'
+                        />
+                        <AnimatedParagraph
+                            textProps='Meu nome é Gabriel Mendes da Silva, sou Desenvolvedor Front-End desde 2021 e fascinado pela área em que trabalho. Tenho experiência com Startups, prototipagem rápida de idéias e designs de interfaces de alta qualidade, com animações e responsividade.'
+                            classNameProps='text-content'
+                        />
                     </motion.div>
                     <motion.div className='d-flex icon-container'
                         variants={FadeIn}
                         initial='hidden'
                         whileInView={'show'}
-                        viewport={{once: true}}>
+                        viewport={{ once: true }}>
                         <SmallIcon
                             href='#'
                             className='bi bi-linkedin'
                         />
-
                         <SmallIcon
                             href='#'
                             className='bi bi-github'
