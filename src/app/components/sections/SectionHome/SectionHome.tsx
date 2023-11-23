@@ -1,15 +1,15 @@
-import "../../resources/css/sections/sectionHome.css";
+import "../../../resources/css/sections/sectionHome.css";
 import { motion } from "framer-motion";
-import OnlyHeader from "../header/OnlyHeader";
-import Paragraph from "../global/Paragraph";
+import OnlyHeader from "../../header/OnlyHeader";
+import Paragraph from "../../global/Paragraph";
 import Typewriter from "react-ts-typewriter";
-import Title from "../global/Title";
-import DevBackground from "../../resources/images/sections/sectionHome/programacao.png"; 
+import Title from "../../global/Title";
+import DevBackground from "../../../resources/images/sections/sectionHome/programacao.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const SectionHome: React.FC = () => {
-    
+
     const [isSmall, setIsSmall] = useState(false);
 
     useEffect(() => {
@@ -49,12 +49,12 @@ const SectionHome: React.FC = () => {
             times: [0, 0.1, 0.25, 0.26, 1],
         }
     };
- 
+
     return (
 
         <>
             <OnlyHeader />
-            <div className="container bg-transparent initial-content d-flex align-items-center section-home">
+            <div className="container bg-transparent initial-content d-flex align-items-center section-home mb-5">
                 <div className="d-flex flex-column initial-text-apresentation">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -99,8 +99,8 @@ const SectionHome: React.FC = () => {
                         animate={variants.animate}
                         transition={variants.transition}
                     >
-                        <Image src={DevBackground} alt="Imagem de fundo" 
-                        priority/>
+                        <Image src={DevBackground} alt="Imagem de fundo"
+                            priority />
                     </motion.div>
                 </motion.div>
             </div>

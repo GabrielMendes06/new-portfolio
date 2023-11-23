@@ -1,6 +1,6 @@
 import "../../resources/css/sections/sectionHome.css"
-import SectionAbout from "../sections/SectionAbout"
-import SectionHome from "../sections/SectionHome"
+import SectionAbout from "../sections/SectionAbout/SectionAbout"
+import SectionHome from "../sections/SectionHome/SectionHome"
 
 export default function HomePage() {
     

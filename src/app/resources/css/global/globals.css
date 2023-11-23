@@ -2,51 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --main-bg-color: white!important;
-    --modal-bg-color: white!important;
-    --default-text: black!important;
-    --text-nav-color: black!important;
-    --text-nav-color-hover: rgb(57, 57, 57)!important;
-    --text-span-title: rgb(83, 160, 255)!important;
-    --theme-button: #020a13!important;
-}
-
 .light-theme {
     --theme-button: #020a13!important;
     --main-bg-color: white!important;
-    --modal-bg-color: white!important;
-    --default-text: black!important;
+    --modal-bg-color: white!important; 
+    --card-bg-color:  #d7d7d7!important;
+    --card-border-color: #b6b6b6;
+    --card-border-color-hover: #515151;
     --text-nav-color: black!important;
     --text-nav-color-hover: rgb(57, 57, 57)!important;
     --text-span-title: rgb(25, 106, 205)!important;
+    --text-content: rgb(36, 36, 36)!important;
+    --default-text: black!important;
 }
 
 .dark-theme {
     --theme-button: #ffffff!important;
     --main-bg-color: #020a13!important;
     --modal-bg-color: rgb(36, 36, 36)!important;
+    --card-bg-color:  #020d18!important;
+    --card-border-color: #082141;
+    --card-border-color-hover: #2779e3;
     --text-nav-color: rgb(132, 132, 132)!important;
-    --text-nav-color-hover: white!important;
-    --default-text: white!important;
+    --text-nav-color-hover: white!important;    
     --text-span-title: rgb(83, 160, 255)!important;
+    --text-content: rgb(138, 138, 138)!important;
+    --default-text: white!important;
+
 }
 
 .bg-content-style {
-    background-color: var(--main-bg-color)!important;
+    background-color: var(--main-bg-color);
+    transition: background-color 0.5s, color 0.3s;
+}
+
+.bg-card {
+    background-color: var( --card-bg-color);
+    border:  1px solid var(--card-border-color);
+    border-radius: 10px;
     transition: background-color 0.5s, color 0.3s;
 }
 
 .text-nav-color {
-    color: var(--text-nav-color)!important;
+    color: var(--text-nav-color);
+}
+
+.text-content {
+    color: var(--text-content)!important;
 }
 
 .modal-bg-color {
     background-color: var(--modal-bg-color);
+    transition: background-color 0.5s, color 0.3s;
 }
 
 .text-nav-color:hover {
-    color: var(--text-nav-color-hover)!important;
+    color: var(--text-nav-color-hover);
 }
 
 .default-text {
@@ -60,3 +71,26 @@
 .section-content {
     height: 100dvh;
 }
+
+.icon-content {
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--card-border-color);
+    margin: 10px;
+    border-radius: 10px;
+    color: var(--text-span-title);
+    transition: background-color 0.5s, color 0.3s;
+}
+
+.icon-content:hover {
+    border-color: var(--card-border-color-hover);
+}
+
+.icon-size {
+    font-size: 1.6em;
+}
+
+
+
+
