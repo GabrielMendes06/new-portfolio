@@ -45,6 +45,7 @@ const SectionAbout: React.FC = () => {
                     <Image
                         src={Cartoon}
                         alt='Dev Cartoon'
+                        priority
                     />
                 </motion.div>
                 <div className='col-sm-6 d-flex flex-column justify-content-center align-items-start middle-card-div'>
