@@ -35,8 +35,8 @@ const SectionAbout: React.FC = () => {
 
     return (
         <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about">
-            <div className='bg-card row d-flex p-4'>
-                <motion.div className='col-sm-6 middle-card-div'
+            <div className='bg-card row d-flex'>
+                <motion.div className='col-md-6 middle-card-div'
                     variants={FadeImage}
                     initial='hidden'
                     whileInView={'show'}
@@ -48,7 +48,7 @@ const SectionAbout: React.FC = () => {
                         priority
                     />
                 </motion.div>
-                <div className='col-sm-6 d-flex flex-column justify-content-center align-items-start middle-card-div'>
+                <div className='col-md-6 d-flex flex-column justify-content-center align-items-start middle-card-div'>
                     <motion.div
                         variants={FadeIn}
                         initial='hidden'

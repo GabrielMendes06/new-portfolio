@@ -32,6 +32,10 @@
     cursor: pointer;
 }
 
+.middle-card-div {
+    min-width: 300px;
+}
+
 .icon-content:hover {
     --_i: 100%;
     transition: .3s, background-size .3s .3s;
