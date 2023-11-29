@@ -25,24 +25,24 @@
 
 @media(max-width: 1080px) {
     .mquery-align {
-        align-items: center!important;
+        justify-content: center!important;
     }
 }
 
 @media(max-width: 576px) {
     .skill-container {
-        width: 100px!important;
-        height: 100px!important;
-        max-width: 100px!important;
-        max-height: 100px!important;
+        width: 140px!important;
+        height: 140px!important;
+        max-width: 140px!important;
+        max-height: 140px!important;
     }
 
     .skill-title {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     .skill-image {
-        width: 30px;
+        width: 45px;
     }
 
     .mquery-align {

@@ -13,7 +13,7 @@ const SectionAbout: React.FC = () => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.4,
+                staggerChildren: 0.2,
                 duration: 1,
                 delay: 0.4
             }
@@ -28,7 +28,7 @@ const SectionAbout: React.FC = () => {
             transition: {
                 staggerChildren: 0.4,
                 duration: 1,
-                delay: 0.4
+                delay: 0.4,
             }
         }
     };
@@ -40,7 +40,7 @@ const SectionAbout: React.FC = () => {
                     variants={FadeImage}
                     initial='hidden'
                     whileInView={'show'}
-                    viewport={{ once: true }}
+                    viewport={{once: true}}
                 >
                     <Image
                         src={Cartoon}
@@ -49,12 +49,6 @@ const SectionAbout: React.FC = () => {
                     />
                 </motion.div>
                 <div className='col-md-6 d-flex flex-column justify-content-center align-items-start middle-card-div'>
-                    <motion.div
-                        variants={FadeIn}
-                        initial='hidden'
-                        whileInView={'show'}
-                        viewport={{ once: true }}
-                    >
                         <AnimatedTitle
                             textProps='Quem sou'
                             classNameProps='about-subtitle span-title mt-5'
@@ -71,12 +65,12 @@ const SectionAbout: React.FC = () => {
                             textProps='Meu nome é Gabriel Mendes da Silva, sou Desenvolvedor Front-End desde 2021 e fascinado pela área em que trabalho. Tenho experiência com Startups, prototipagem rápida de idéias e designs de interfaces de alta qualidade, com animações e responsividade.'
                             classNameProps='text-content'
                         />
-                    </motion.div>
                     <motion.div className='d-flex icon-container '
                         variants={FadeIn}
                         initial='hidden'
                         whileInView={'show'}
-                        viewport={{ once: true }}>
+                        viewport={{once: true}}
+                        >
                         <SmallIcon
                             href='#'
                             className='bi bi-linkedin'

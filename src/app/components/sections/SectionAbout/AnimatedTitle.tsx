@@ -17,13 +17,18 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ textProps, classNameProps
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.8
+                duration: 1,
+                delay: 0.3
             }
         }
     };
 
     return (
-        <motion.div variants={item}>
+        <motion.div 
+        variants={item}
+        initial='hidden'
+        whileInView='show'
+        viewport={{once: true}}>
             <Title
                 text={textProps}
                 className={classNameProps}
