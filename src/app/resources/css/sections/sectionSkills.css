@@ -11,7 +11,11 @@
     height: 150px!important;
     max-width: 150px!important;
     max-height: 150px!important;
+    position: relative;
+    border-radius: 0;
 }
+
+
 
 .skill-title {
     font-size: 1em;
@@ -23,6 +27,82 @@
     width: 60px;
 }
 
+.top, .bottom, .right, .left {
+    width: 5px;
+    height: 5px;
+    background: #2779e3;
+    position: absolute;
+    border-radius: 100vmax;
+    animation: none; /* Inicialmente, sem animação */
+}
+
+
+.top, .bottom {
+    transform: scaleX(0);
+}
+
+.right, .left {
+    transform: scaleY(0);
+}
+
+.skill-container:hover .top {
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: animateTop 2s linear infinite;
+}
+
+.skill-container:hover .right {
+    height: 100%;
+    right: 0;
+    top: 0;
+    animation: animateRight 2s linear infinite 0.5s;
+}
+
+.skill-container:hover .bottom {
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    animation: animateBottom 2s linear infinite 1s;
+}
+
+
+.skill-container:hover .left {
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    animation: animateLeft 2s linear infinite 1.5s;
+}
+
+@keyframes animateTop {
+    0% { transform: translateX(-50%) scaleX(0); }
+    25% { transform: translateX(0) scaleX(1); }
+    50% { transform: translateX(50%) scaleX(0); }
+    100% { transform: translateX(-50%) scaleX(0); }
+}
+
+@keyframes animateBottom {
+    0% { transform: translateX(50%) scaleX(0); }
+    25% { transform: translateX(0) scaleX(1); }
+    50% { transform: translateX(-50%) scaleX(0); }
+    100% { transform: translateX(-50%) scaleX(0); }
+}
+
+@keyframes animateRight {
+    0% { transform: translateY(-50%) scaleY(0); }
+    25% { transform: translateY(0) scaleY(1); }
+    50% { transform: translateY(50%) scaleY(0); }
+    100% { transform: translateY(50%) scaleY(0); }
+}
+
+@keyframes animateLeft {
+    0% { transform: translateY(50%) scaleY(0); }
+    25% { transform: translateY(0) scaleY(1); }
+    50% { transform: translateY(-50%) scaleY(0); }
+    100% { transform: translateY(-50%) scaleY(0); }
+}
+
+/* Seus media queries */
 @media(max-width: 1080px) {
     .mquery-align {
         justify-content: center!important;

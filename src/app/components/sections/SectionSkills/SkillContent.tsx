@@ -35,11 +35,11 @@ const FadeIn = {
         opacity: 1,
         x: 0,
         transition: {
-            delay: 0.18 * index
+            delay: 0.18 * index,
+            duration: 0.3
         }
     })
 }
-
 
 const SkillContent: React.FC = () => {
     return (
@@ -51,18 +51,22 @@ const SkillContent: React.FC = () => {
                     key={index}
                     variants={FadeIn}
                     whileInView='visible'
-                    className="bg-card bg-border-hover m-3 col-sm d-flex align-items-center justify-content-center flex-column skill-container"
+                    className="bg-card bg-border-hover m-3 col-sm d-flex align-items-center justify-content-center flex-column skill-container "
                     custom={index}
                     viewport={{once: true}}>
-                    <Title
-                        className="skill-title span-title" text={skill} />
+                        <Title
+                            className="skill-title span-title" text={skill} />
                     <Image
                         className="skill-image"
                         src={skillImages[skill]}
                         alt={skill} />
+                        <span className="top"></span>
+                        <span className="right"></span>
+                        <span className="bottom"></span>
+                        <span className="left"></span>
                 </motion.li>
             ))}
-
+            
         </motion.ul>
     )
 }
