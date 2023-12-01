@@ -29,7 +29,7 @@ const skillImages: any = {
 const FadeIn = {
     hidden: {
         opacity: 0,
-        x: -200
+        x: -100
     },
     visible: (index: number) => ({
         opacity: 1,

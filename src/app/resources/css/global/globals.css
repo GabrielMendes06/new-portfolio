@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+ol, ul {
+     padding-left: 0!important; 
+}
 
 .light-theme {
     --theme-button: #020a13 !important;

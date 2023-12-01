@@ -2,33 +2,38 @@ import '../../../resources/css/sections/sectionAbout.css'
 import Cartoon from '../../../resources/images/sections/sectionAbout/cartoon.webp'
 import Image from 'next/image'
 import SmallIcon from './SmallIcon'
-import { motion } from 'framer-motion'
-import AnimatedTitle from './AnimatedTitle'
-import AnimatedParagraph from './AnimatedParagraph'
+import { motion, useInView } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+import Paragraph from '../../global/Paragraph'
+import Title from '../../global/Title'
 
 const SectionAbout: React.FC = () => {
 
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" })
+    const viewVerification = isInView ? 'visible' : 'hidden'
+
+    useEffect(() => {
+        console.log("Element is in view: ", isInView)
+    }, [isInView])
+
     const FadeIn = {
         hidden: { opacity: 0 },
-        show: {
+        visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
                 duration: 1,
-                delay: 0.4
             }
         }
     };
 
     const FadeImage = {
         hidden: { opacity: 0, x: -50 },
-        show: {
+        visible: {
             opacity: 1,
             x: 0,
             transition: {
-                staggerChildren: 0.4,
                 duration: 1,
-                delay: 0.4,
             }
         }
     };
@@ -54,8 +59,7 @@ const SectionAbout: React.FC = () => {
                 <motion.div className='col-md-6 middle-card-div'
                     variants={FadeImage}
                     initial='hidden'
-                    whileInView={'show'}
-                    viewport={{ once: true }}
+                    animate={viewVerification}
                 >
                     <Image
                         src={Cartoon}
@@ -69,73 +73,70 @@ const SectionAbout: React.FC = () => {
                             initial='hidden'
                             key={1}
                             variants={item}
-                            whileInView='visible'
+                            animate={viewVerification}
                             custom={1}
-                            viewport={{ once: true }}>
-                            <AnimatedTitle
-                                textProps='Quem sou'
-                                classNameProps='about-subtitle span-title mt-5'
+                            ref={ref}>
+                            <Title
+                                text='Quem sou'
+                                className='about-subtitle span-title mt-5'
                             />
                         </motion.li>
                         <motion.li
                             initial='hidden'
                             key={2}
                             variants={item}
-                            whileInView='visible'
-                            custom={2}
-                            viewport={{ once: true }}>
-                            <AnimatedTitle
-                                textProps='Gabriel Mendes'
-                                classNameProps='about-title'
+                            animate={viewVerification}
+                            custom={2}>
+                            <Title
+                                text='Gabriel Mendes'
+                                className='about-title'
                             />
                         </motion.li>
                         <motion.li
                             initial='hidden'
                             key={3}
                             variants={item}
-                            whileInView='visible'
-                            custom={3}
-                            viewport={{ once: true }}>
-                            <AnimatedTitle
-                                textProps='Front-end Developer'
-                                classNameProps='about-subtitle2'
+                            animate={viewVerification}
+                            custom={3}>
+                            <Title
+                                text='Front-end Developer'
+                                className='about-subtitle2'
                             />
                         </motion.li>
-                        <motion.li initial='hidden'
+                        <motion.li
+                            initial='hidden'
                             key={4}
                             variants={item}
-                            whileInView='visible'
-                            custom={4}
-                            viewport={{ once: true }}>
-                            <AnimatedParagraph
-                                textProps='Meu nome é Gabriel Mendes da Silva, sou Desenvolvedor Front-End desde 2021 e fascinado pela área em que trabalho. Tenho experiência com Startups, prototipagem rápida de idéias e designs de interfaces de alta qualidade, com animações e responsividade.'
-                                classNameProps='text-content'
+                            animate={viewVerification}
+                            custom={4}>
+                            <Paragraph text='Meu nome é Gabriel Mendes da Silva, sou Desenvolvedor Front-End desde 2021 e fascinado pela área em que trabalho. Tenho experiência com Startups, prototipagem rápida de idéias e designs de interfaces de alta qualidade, com animações e responsividade.'
+                                className='text-content' />
+                        </motion.li>
+                        <motion.li
+                            className='d-flex icon-container'
+                            initial='hidden'
+                            key={5}
+                            variants={FadeIn}
+                            animate={viewVerification}
+                            custom={5}>
+                            <SmallIcon
+                                href='#'
+                                className='bi bi-linkedin'
+                            />
+                            <SmallIcon
+                                href='#'
+                                className='bi bi-github'
+                            />
+                            <SmallIcon
+                                href='#'
+                                className='bi bi-envelope'
+                            />
+                            <SmallIcon
+                                href='#'
+                                className='bi bi-instagram'
                             />
                         </motion.li>
                     </ul>
-                    <motion.div className='d-flex icon-container '
-                        variants={FadeIn}
-                        initial='hidden'
-                        whileInView={'show'}
-                        viewport={{ once: true }}
-                    >
-                        <SmallIcon
-                            href='#'
-                            className='bi bi-linkedin'
-                        />
-                        <SmallIcon
-                            href='#'
-                            className='bi bi-github'
-                        />
-                        <SmallIcon
-                            href='#'
-                            className='bi bi-envelope'
-                        />
-                        <SmallIcon
-                            href='#'
-                            className='bi bi-instagram'
-                        />
-                    </motion.div>
                 </div>
 
             </div>

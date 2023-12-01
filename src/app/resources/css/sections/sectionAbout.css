@@ -41,6 +41,11 @@
     transition: .3s, background-size .3s .3s;
 }
 
+.icon-container {
+    margin-left: 0.8rem;
+}
+
+
 @media(max-width: 968px) {
     .bg-card {
         border-radius: 0;

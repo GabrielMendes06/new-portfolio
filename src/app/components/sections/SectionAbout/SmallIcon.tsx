@@ -11,11 +11,12 @@ const SmallIcon: React.FC<SmallIconProps> = ({ className, href }) => {
             opacity: 0,
             x: -50,
         },
-        show: {
+        visible: {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 0.8
+                duration: 0.8,
+                delay: 1.8
             }
         }
     };
