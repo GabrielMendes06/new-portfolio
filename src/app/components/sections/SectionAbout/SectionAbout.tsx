@@ -13,10 +13,6 @@ const SectionAbout: React.FC = () => {
     const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" })
     const viewVerification = isInView ? 'visible' : 'hidden'
 
-    useEffect(() => {
-        console.log("Element is in view: ", isInView)
-    }, [isInView])
-
     const FadeIn = {
         hidden: { opacity: 0 },
         visible: {

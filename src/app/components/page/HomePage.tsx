@@ -2,6 +2,7 @@ import "../../resources/css/sections/sectionHome.css"
 import SectionAbout from "../sections/SectionAbout/SectionAbout"
 import SectionSkills from "../sections/SectionSkills/SectionSkills"
 import SectionHome from "../sections/SectionHome/SectionHome"
+import SectionProjects from "../sections/SectionProjects/SectionProjects"
 
 export default function HomePage() {
     
@@ -10,6 +11,7 @@ export default function HomePage() {
            <SectionHome />
            <SectionAbout />
            <SectionSkills />
+           <SectionProjects />
        </div>
     )
 }  

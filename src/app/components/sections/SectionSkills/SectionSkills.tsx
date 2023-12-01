@@ -31,7 +31,7 @@ const SectionSkills: React.FC = () => {
           initial='hidden'
           whileInView='visible'
           viewport={{once: true}}>
-          <Title text="Habilidades" className="text-center" />
+          <Title text="Habilidades" className="text-center mb-5" />
         </motion.div>
         <div className="skills-content">
           <SkillContent />
