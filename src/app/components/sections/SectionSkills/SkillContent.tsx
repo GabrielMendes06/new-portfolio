@@ -44,7 +44,7 @@ const FadeIn = {
 const SkillContent: React.FC = () => {
     return (
         <motion.ul
-            className="row mquery-align">
+            className="row responsive-align-row mquery-align">
             {skills.map((skill, index) => (
                 <motion.li
                     initial='hidden'
@@ -55,7 +55,8 @@ const SkillContent: React.FC = () => {
                     custom={index}
                     viewport={{once: true}}>
                         <Title
-                            className="skill-title span-title" text={skill} />
+                            className="skill-title span-title" 
+                            text={skill} />
                     <Image
                         className="skill-image"
                         src={skillImages[skill]}

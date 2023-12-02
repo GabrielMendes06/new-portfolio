@@ -37,7 +37,7 @@ const SectionSkills: React.FC = () => {
           initial='hidden'
           animate={viewVerification}
           viewport={{once: true}}>
-          <Title text="Habilidades" className="text-center mb-5" />
+          <Title text="Habilidades" className="text-center mb-5 section-title" />
         </motion.div>
         <div className="skills-content">
           <SkillContent />

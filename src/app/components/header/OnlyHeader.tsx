@@ -44,10 +44,10 @@ export default function OnlyHeader() {
 
   return (
     <Navbar expand="lg" className={`position-fixed w-100 ${scrolled ? 'navbar-scroll' : ""}`}>
-      <Container className="text-light flex-nowrap">
+      <Container className="text-light flex-nowrap navbar-container">
         <div>
           <Paragraph
-            className={`${verification} m-0 p-4`}
+            className={`${verification} m-0`}
             text='Gabriel Mendes' />
         </div>
         <Nav>

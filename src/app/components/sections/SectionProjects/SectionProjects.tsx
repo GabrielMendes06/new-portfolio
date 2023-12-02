@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import Title from '../../global/Title'
 import SolarSystem from '../../../resources/images/sections/sectionProjects/solar-system.png'
 import EarthMuseum from '../../../resources/images/sections/sectionProjects/earth-museum.png'
@@ -16,13 +16,17 @@ import MySQL from "../../../resources/images/sections/SectionSkills/mysql.svg"
 
 import '../../../resources/css/sections/sectionProject.css'
 import Image from 'next/image'
+import { useRef } from 'react'
 
 const SectionProjects: React.FC = () => {
 
-    const TitleVariant = {
+    const ref = useRef(null)
+    const isInView = useInView(ref, {margin: '0px 0px -250px 0px', once: true})
+
+    const FadeVariant = {
         hidden: {
             opacity: 0,
-            x: -200
+            x: -100
         },
         visible: {
             opacity: 1,
@@ -33,20 +37,21 @@ const SectionProjects: React.FC = () => {
         }
     }
 
-
-
     return (
-        <div className="container bg-transparent d-flex flex-column justify-content-center section-projects pb-5">
+        <motion.div 
+        initial='hidden'
+        variants={FadeVariant} 
+        className="container bg-transparent d-flex flex-column justify-content-center section-projects pb-5"
+        animate={isInView ? 'visible' : 'hidden'}>
             <div>
                 <motion.div
-                    variants={TitleVariant}
+                    ref={ref}  
                     initial='hidden'
-                    whileInView='visible'
-                    viewport={{ once: true }}>
-                    <Title text="Projetos" className="text-center mb-5" />
+                    >
+                    <Title text="Projetos" className="text-center mb-5 section-title" />
                 </motion.div>
             </div>
-            <div className='row responsive-align-row'>
+            <div className='row responsive-align-row mt-5'>
                 <ProjectCard
                     src={SolarSystem}
                     alt='SolarSystem'
@@ -189,7 +194,7 @@ const SectionProjects: React.FC = () => {
                         </div>
                     } />
             </div>
-        </div>
+        </motion.div>
     )
 }
 

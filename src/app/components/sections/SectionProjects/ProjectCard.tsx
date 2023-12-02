@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys }
             y: 0
         },
         hover: {
-            y: 55,
+            y: 53,
             transition: {
                 delay: 0.3,
                 staggerChildren: 2

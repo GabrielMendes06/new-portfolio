@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-ol, ul {
-     padding-left: 0!important; 
+ol,
+ul {
+    padding-left: 0 !important;
 }
 
 .light-theme {
@@ -103,8 +104,11 @@ ol, ul {
     font-size: 1.6em;
 }
 
-@media(max-width: 1400px) {
-    .responsive-align-row{
-        justify-content: center!important;
-    }
+.responsive-align-row {
+    justify-content: center !important;
+}
+
+.section-title {
+    font-size: 1.5em!important;
+    margin-bottom: 130px!important;
 }

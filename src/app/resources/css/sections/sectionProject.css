@@ -1,9 +1,14 @@
+.section-projects {
+    margin-top: 100px;
+}
+
 .project-container {
     position: relative;
     padding: 0!important;
     z-index: 10; 
     margin: 2rem;
     max-width: 300px;
+    cursor: pointer;
 } 
 
 .project-container:hover {
