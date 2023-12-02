@@ -1,8 +1,15 @@
 .project-container {
     position: relative;
     padding: 0!important;
-    margin: 2em;
+    z-index: 10; 
+    margin: 2rem;
+    min-width: 30%;
+    max-width: 300px;
 } 
+
+.project-container:hover {
+    z-index: 11;
+}
 
 .card-description {
     top: 0;
@@ -18,4 +25,43 @@
 .project-title {
     font-size: 1.2em;
     color: white!important;
+}
+
+.date-info {
+    z-index: -1;
+    margin-top: -60px;
+    border-radius: 0px 0px 20px 20px
+}
+
+.info-container {
+    padding: 10px;
+    padding-top: 15px;
+}
+
+.info-button {
+    padding: 2px;
+    width: 70px;
+    border-radius: 20px;
+    background-color: #2779e300;
+    font-size: 0.8em;
+    border: 1px solid #2779e3;
+}
+
+.info-text {
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.project-container {
+    max-width: 90%!important;
+}
+
+@media(max-width: 992px) {
+    .project-container {
+        max-width: 90%!important;
+    }
+    
+    .section-projects .row{
+        justify-content: center!important;
+    }
 }

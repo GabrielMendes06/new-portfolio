@@ -1,5 +1,6 @@
 import "../../../resources/css/sections/sectionSkills.css";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 //Importação das imagens dos ícones
 import Title from "../../global/Title";
@@ -7,6 +8,10 @@ import SkillContent from "./SkillContent";
 
 
 const SectionSkills: React.FC = () => {
+
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" })
+  const viewVerification = isInView ? 'visible' : 'hidden'
 
   const TitleVariant = {
     hidden: {
@@ -27,9 +32,10 @@ const SectionSkills: React.FC = () => {
     >
       <div className="section-skills d-flex justify-content-center container flex-column">
         <motion.div
+          ref={ref}
           variants={TitleVariant}
           initial='hidden'
-          whileInView='visible'
+          animate={viewVerification}
           viewport={{once: true}}>
           <Title text="Habilidades" className="text-center mb-5" />
         </motion.div>
