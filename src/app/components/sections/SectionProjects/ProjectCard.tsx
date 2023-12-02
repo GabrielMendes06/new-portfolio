@@ -77,7 +77,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys }
     }
 
     return (
-        <motion.div className='col-lg project-container'
+        <motion.div className='col-lg-3 project-container'
             variants={CardVariant}
             initial='normal'
             whileHover='hover'>

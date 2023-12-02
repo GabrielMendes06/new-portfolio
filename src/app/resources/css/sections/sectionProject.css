@@ -3,7 +3,6 @@
     padding: 0!important;
     z-index: 10; 
     margin: 2rem;
-    min-width: 30%;
     max-width: 300px;
 } 
 
@@ -60,8 +59,10 @@
     .project-container {
         max-width: 90%!important;
     }
-    
-    .section-projects .row{
-        justify-content: center!important;
+}
+
+@media(min-width: 992px) {
+    .project-container  {
+        max-width: 450px!important;
     }
 }

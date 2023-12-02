@@ -46,7 +46,7 @@ const SectionProjects: React.FC = () => {
                     <Title text="Projetos" className="text-center mb-5" />
                 </motion.div>
             </div>
-            <div className='row'>
+            <div className='row responsive-align-row'>
                 <ProjectCard
                     src={SolarSystem}
                     alt='SolarSystem'

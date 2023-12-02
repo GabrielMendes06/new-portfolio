@@ -102,3 +102,9 @@ ol, ul {
 .icon-size {
     font-size: 1.6em;
 }
+
+@media(max-width: 1400px) {
+    .responsive-align-row{
+        justify-content: center!important;
+    }
+}
