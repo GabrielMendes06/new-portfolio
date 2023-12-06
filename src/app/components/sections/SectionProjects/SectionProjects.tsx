@@ -17,6 +17,7 @@ import MySQL from "../../../resources/images/sections/SectionSkills/mysql.svg"
 import '../../../resources/css/sections/sectionProject.css'
 import Image from 'next/image'
 import { useRef } from 'react'
+import SolarSystemModal from './project_page_modal/SolarSystemModal'
 
 const SectionProjects: React.FC = () => {
 
@@ -53,6 +54,9 @@ const SectionProjects: React.FC = () => {
             </div>
             <div className='row responsive-align-row mt-5'>
                 <ProjectCard
+                cardModalContent={
+                        <SolarSystemModal />
+                   } 
                     src={SolarSystem}
                     alt='SolarSystem'
                     title='Solar System'
@@ -92,6 +96,11 @@ const SectionProjects: React.FC = () => {
                         </div>
                     } />
                 <ProjectCard
+                cardModalContent={
+                    <div style={{width: '300px', height: '300px', backgroundColor: 'black'}}>
+                       
+                    </div>
+                   } 
                     src={EarthMuseum}
                     alt='EarthMuseum'
                     title='Earth Museum'
@@ -124,6 +133,11 @@ const SectionProjects: React.FC = () => {
                         </div>
                     } />
                 <ProjectCard
+                    cardModalContent={
+                     <div style={{width: '300px', height: '300px', backgroundColor: 'black'}}>
+                        
+                     </div>
+                    }       
                     src={Login}
                     alt='Login'
                     title='Login'
@@ -162,6 +176,11 @@ const SectionProjects: React.FC = () => {
                         </div>
                     } />
                 <ProjectCard
+                cardModalContent={
+                    <div style={{width: '300px', height: '300px', backgroundColor: 'black'}}>
+                       
+                    </div>
+                   } 
                     src={Portifolio}
                     alt='test'
                     title='Portifólio legado'
@@ -192,6 +211,7 @@ const SectionProjects: React.FC = () => {
                                 className='mx-1'
                             />          
                         </div>
+                        
                     } />
             </div>
         </motion.div>

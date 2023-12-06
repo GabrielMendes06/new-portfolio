@@ -60,6 +60,67 @@
     max-width: 90%!important;
 }
 
+.card-modal-title {
+    color: rgb(83, 160, 255);
+}
+
+.description-modal {
+    color: rgb(225 225 225);
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.modal-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card-modal-content {
+    background-color: #082141;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.background-modal-project {
+    background-color: rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(3px);
+}
+
+.close-button-modal {
+    font-size: 2em;
+    color: rgb(83, 160, 255);
+    cursor: pointer;
+}
+
+.modal-redirect-button {
+    background-color: rgb(83, 160, 255);
+    text-decoration: none;
+    padding: 6px;
+    margin-right: 0.5rem;
+}
+
+
+.info-modal-color {
+    color: rgb(83, 160, 255);
+}
+
+@media(min-width: 992px) {
+    .card-modal-content {
+        max-width: 80%;
+    }
+}
+
 @media(max-width: 992px) {
     .project-container {
         max-width: 90%!important;
