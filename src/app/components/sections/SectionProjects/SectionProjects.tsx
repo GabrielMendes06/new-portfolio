@@ -18,11 +18,12 @@ import '../../../resources/css/sections/sectionProject.css'
 import Image from 'next/image'
 import { useRef } from 'react'
 import SolarSystemModal from './project_page_modal/SolarSystemModal'
+import DinamicModal from './DinamicModal'
 
 const SectionProjects: React.FC = () => {
 
     const ref = useRef(null)
-    const isInView = useInView(ref, {margin: '0px 0px -250px 0px', once: true})
+    const isInView = useInView(ref, { margin: '0px 0px -250px 0px', once: true })
 
     const FadeVariant = {
         hidden: {
@@ -39,24 +40,27 @@ const SectionProjects: React.FC = () => {
     }
 
     return (
-        <motion.div 
-        initial='hidden'
-        variants={FadeVariant} 
-        className="container bg-transparent d-flex flex-column justify-content-center section-projects pb-5"
-        animate={isInView ? 'visible' : 'hidden'}>
+        <motion.div
+            initial='hidden'
+            variants={FadeVariant}
+            className="container bg-transparent d-flex flex-column justify-content-center section-projects pb-5"
+            animate={isInView ? 'visible' : 'hidden'}>
             <div>
                 <motion.div
-                    ref={ref}  
+                    ref={ref}
                     initial='hidden'
-                    >
+                >
                     <Title text="Projetos" className="text-center mb-5 section-title" />
                 </motion.div>
             </div>
             <div className='row responsive-align-row mt-5'>
                 <ProjectCard
-                cardModalContent={
-                        <SolarSystemModal />
-                   } 
+                    modalTitle='Solar System'
+                    description='Projeto criado do 0, tanto seu design, estilização e transições foram criados por mim. Seu conteúdo foi montado através de uma API e também com pesquisas de blogs diversos, principalmente do site da NASA, onde contém as melhores informações sobre nosso sistema solar. Nunca foi tão divertido criar um projeto quanto foi criar o Solar System, além da paixão por desenvolvimento sou fissurado por astronomia, o que me fez ter um carinho especial por esse projeto.'
+                    data='24 de Outubro de 2021'
+                    image={SolarSystem}
+                    projectLink='#'
+                    repositoryLink='#'
                     src={SolarSystem}
                     alt='SolarSystem'
                     title='Solar System'
@@ -92,18 +96,19 @@ const SectionProjects: React.FC = () => {
                                 width={30}
                                 className='mx-1'
                             />
-                            
+
                         </div>
                     } />
                 <ProjectCard
-                cardModalContent={
-                    <div style={{width: '300px', height: '300px', backgroundColor: 'black'}}>
-                       
-                    </div>
-                   } 
-                    src={EarthMuseum}
-                    alt='EarthMuseum'
-                    title='Earth Museum'
+                    modalTitle='Login'
+                    description='A ideia desse projeto foi criar uma aplicação full-stack de um banco digital, contém funcionalidades como criação de conta, saldo bancário, depósito, transferência, extrato bancário entre outras coisas. A aplicação ficou fora do ar pois a nuvem que eu utilizava para hospedar o banco de dados era gratúito apenas por um curto período, em breve o manterei no ar, hoje apenas funciona em localhost. As tecnologias utilizadas foram React, Node.js, MySQL, HTLM5, CSS3, Axios entre outras.'
+                    data='24 de Outubro de 2021'
+                    image={Login}
+                    projectLink='#'
+                    repositoryLink='#'
+                    src={Login}
+                    alt='Login'
+                    title='Login(Manutenção)'
                     tecnologys={
                         <div className='w-100 d-flex justify-content-center mx-2'>
                             <Image
@@ -123,24 +128,25 @@ const SectionProjects: React.FC = () => {
                                 alt='Bootstrap'
                                 width={30}
                                 className='mx-1'
-                            />   
+                            />
                             <Image
                                 src={JavaScript}
                                 alt='JavaScript'
                                 width={30}
                                 className='mx-1'
-                            />           
+                            />
                         </div>
                     } />
                 <ProjectCard
-                    cardModalContent={
-                     <div style={{width: '300px', height: '300px', backgroundColor: 'black'}}>
-                        
-                     </div>
-                    }       
-                    src={Login}
-                    alt='Login'
-                    title='Login'
+                     modalTitle='Earth Museum'
+                     description='Earth Museum foi um projeto criado majoritariamente em bootstrap, a ideia foi criar um site com um design elegante e intuítivo utilizando a biblioteca css, é um projeto simples de fácil entendimento e agradável.'
+                     data='24 de Outubro de 2021'
+                     image={EarthMuseum}
+                     projectLink='#'
+                     repositoryLink='#'
+                     src={EarthMuseum}
+                     alt='EarthMuseum'
+                     title='EarthMuseum'
                     tecnologys={
                         <div className='w-100 d-flex justify-content-center mx-2'>
                             <Image
@@ -160,30 +166,31 @@ const SectionProjects: React.FC = () => {
                                 alt='JavaScript'
                                 width={30}
                                 className='mx-1'
-                            />  
+                            />
                             <Image
                                 src={NodeJs}
                                 alt='NodeJs'
                                 width={30}
                                 className='mx-1'
-                            />   
+                            />
                             <Image
                                 src={MySQL}
                                 alt='MySQL'
                                 width={30}
                                 className='mx-1'
-                            />             
+                            />
                         </div>
                     } />
                 <ProjectCard
-                cardModalContent={
-                    <div style={{width: '300px', height: '300px', backgroundColor: 'black'}}>
-                       
-                    </div>
-                   } 
-                    src={Portifolio}
-                    alt='test'
-                    title='Portifólio legado'
+                     modalTitle='Portifólio (Legado)'
+                     description='Esse projeto foi meu primeiro portifólio desenvolvido, decidi deixa-lo em exibição pois é uma ótima maneira de fazer uma comparação com meu portifólio atual, demonstrando o crescimento tanto em conhecimento como em profissionalismo da melhor maneira possível para um front-end, a maneira visual. '
+                     data='24 de Outubro de 2021'
+                     image={Portifolio}
+                     projectLink='#'
+                     repositoryLink='#'
+                     src={Portifolio}
+                     alt='Portifólio(Legado)'
+                     title='Portifólio(Legado)'
                     tecnologys={
                         <div className='w-100 d-flex justify-content-center mx-2'>
                             <Image
@@ -209,9 +216,9 @@ const SectionProjects: React.FC = () => {
                                 alt='Bootstrap'
                                 width={30}
                                 className='mx-1'
-                            />          
+                            />
                         </div>
-                        
+
                     } />
             </div>
         </motion.div>

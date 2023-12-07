@@ -1,27 +1,36 @@
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import Image, { StaticImageData } from "next/image"
 import Title from "../../global/Title"
 import { ReactNode, useEffect, useState } from "react"
-import ProjectModal from "./ProjectModal";
+import ProjectModal from "./Backdrop";
+import DinamicModal from "./DinamicModal";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface ProjectCardProps {
     src: StaticImageData;
     alt: string;
     title: string;
     tecnologys: ReactNode;
-    cardModalContent: ReactNode;
+    image: string | StaticImport;
+    modalTitle: string;
+    description?: string;
+    data?: string;
+    projectLink?: string;
+    repositoryLink?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys, cardModalContent }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys,
+    modalTitle,
+    description,
+    image,
+    data,
+    projectLink,
+    repositoryLink }) => {
 
-    const [showModal, setShowModal] = useState(false);
+    const [modalOpen, setModalOpen] = useState<boolean>(false);
+    const close = () => setModalOpen(false)
+    const open = () => setModalOpen(true)
     const [isNarrowScreen, setIsNarrowScreen] = useState(false);
-
-    const modalContent = (
-        <div className="modal-content">
-            {cardModalContent}
-        </div>
-    );
 
     useEffect(() => {
         // Função para atualizar o estado baseado no tamanho da tela
@@ -87,40 +96,55 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys, 
 
     return (
         <>
-        
-        <motion.div className='col-lg-3 project-container'
-            onClick={() => setShowModal(true)}
-            variants={CardVariant}
-            initial='normal'
-            whileHover='hover'>
-            <Image
-                src={src}
-                alt={alt}
-                className="card-image" />
-            <motion.div
-                className="card-description d-flex flex-column"
-                variants={DescriptionVariant}>
-                <Title
-                    text={title}
-                    className="project-title" />
-                {tecnologys}
+
+            <motion.div className='col-lg-3 project-container'
+                onClick={() => (modalOpen ? close() : open())}
+                variants={CardVariant}
+                initial='normal'
+                whileHover='hover'>
+                <Image
+                    src={src}
+                    alt={alt}
+                    className="card-image" />
+                <motion.div
+                    className="card-description d-flex flex-column"
+                    variants={DescriptionVariant}>
+                    <Title
+                        text={title}
+                        className="project-title" />
+                    {tecnologys}
+                </motion.div>
+                <motion.div
+                    className="w-100 bg-dark position-absolute date-info "
+                    variants={DateInfoVariant}
+                >
+                    <div className="d-flex align-items-center justify-content-between info-container">
+                        <p className="text-light m-0 info-text">24 de Outubro de 2021</p>
+                        <motion.button
+                            className="text-light info-button"
+                            variants={ButtonVariant}
+                        >Ver mais</motion.button>
+                    </div>
+                </motion.div>
             </motion.div>
-            <motion.div
-                className="w-100 bg-dark position-absolute date-info "
-                variants={DateInfoVariant}
+
+            <AnimatePresence
+                initial={false}
+                mode="wait"
+                onExitComplete={() => null}
             >
-                <div className="d-flex align-items-center justify-content-between info-container">
-                    <p className="text-light m-0 info-text">24 de Outubro de 2021</p>
-                    <motion.button
-                        className="text-light info-button"
-                        variants={ButtonVariant}
-                    >Ver mais</motion.button>
-                </div>
-            </motion.div>
-        </motion.div>
-        <ProjectModal showModal={showModal} setShowModal={setShowModal} content={modalContent}/>
+                {modalOpen && <DinamicModal modalOpen={modalOpen} handleClose={close}
+                    title={modalTitle}
+                    description={description}
+                    data={data}
+                    image={image}
+                    projectLink={projectLink}
+                    repositoryLink={repositoryLink}
+                />}
+            </AnimatePresence>
+
         </>
-        
+
     )
 }
 
