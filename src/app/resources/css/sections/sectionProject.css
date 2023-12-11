@@ -80,7 +80,7 @@
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    z-index: 1000;
+    z-index: 99;
     height: 100dvh;
     width: 100vw;
 }
