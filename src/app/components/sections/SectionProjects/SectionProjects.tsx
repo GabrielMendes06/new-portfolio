@@ -17,8 +17,6 @@ import MySQL from "../../../resources/images/sections/SectionSkills/mysql.svg"
 import '../../../resources/css/sections/sectionProject.css'
 import Image from 'next/image'
 import { useRef } from 'react'
-import SolarSystemModal from './project_page_modal/SolarSystemModal'
-import DinamicModal from './DinamicModal'
 
 const SectionProjects: React.FC = () => {
 

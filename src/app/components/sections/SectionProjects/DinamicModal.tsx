@@ -54,12 +54,12 @@ const DinamicModal: React.FC<DinamicModalProps> = ({
                 initial='hidden'
                 animate='visible'
                 exit='exit'> 
-                <div className='row'>
+                <div className='row mquery-modal'>
                     <div className='col-md-6'> 
-                        <Image src={image} alt={title} />
+                        <Image src={image} alt={title} className="modal-image"/>
                     </div>
                     <div className='text-light col-md-6 d-flex flex-column'>
-                        <div className='d-flex justify-content-between'>
+                        <div className='d-flex justify-content-between mb-4'>
                             <h1 className='card-modal-title'>{title}</h1>
                             <i onClick={(handleClose)} className="bi bi-x close-button-modal"></i>
                         </div>
