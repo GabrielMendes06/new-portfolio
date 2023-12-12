@@ -80,7 +80,7 @@
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    z-index: 99;
+    z-index: 999;
     height: 100dvh;
     width: 100vw;
 }
@@ -95,6 +95,7 @@
 .background-modal-project {
     background-color: rgba(0, 0, 0, 0.13);
     backdrop-filter: blur(3px);
+    height: 100%;
 }
 
 .close-button-modal {
@@ -121,17 +122,6 @@
     }
 }
 
-@media(max-width: 992px) {
-    .project-container {
-    width: 100%!important;
-    }
-
-    .card-modal-content {
-        height: calc(100% - 80px);
-        width: 100%;
-    }
-}
-
 @media(min-width: 992px) {
     .project-container  {
         max-width: 450px!important;
@@ -149,9 +139,12 @@
 
     .card-modal-content {
         margin: 0;
-        margin-top: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+
+    .modal-redirect-button {
+        padding: 16px;
     }
 }
