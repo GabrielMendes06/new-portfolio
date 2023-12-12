@@ -14,6 +14,21 @@ export default function OnlyHeader() {
   const [scrolled, setScrolled] = useState(false);
   const verification = scrolled ? 'text-light' : 'default-text'
 
+  //const router = useRouter();
+
+  const handleNavClick = (e: any, id: any) => {
+    e.preventDefault();
+    const section = document.querySelector(`#${id}`);
+
+    if (section instanceof HTMLElement) {
+      const offsetTop = section.offsetTop - 100; // 50 pixels acima da seção
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   useEffect(() => {
     setTheme(document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme');
     const handleScroll = () => {
@@ -52,11 +67,11 @@ export default function OnlyHeader() {
         </div>
         <Nav>
           <div className="d-flex me-4 align-items-center">
-            <NavbarItemList text="Início" />
-            <NavbarItemList text="Sobre mim" />
-            <NavbarItemList text="Conhecimentos" />
-            <NavbarItemList text="Projetos" />
-            <NavbarItemList text="Contato" />
+            <NavbarItemList text="Início" href="#home" onClick={(e) => handleNavClick(e, 'home')}/>
+            <NavbarItemList text="Sobre mim" href="#about" onClick={(e) => handleNavClick(e, 'about')}/>
+            <NavbarItemList text="Habilidades" href="#skills" onClick={(e) => handleNavClick(e, 'skills')}/>
+            <NavbarItemList text="Projetos" href="#projects" onClick={(e) => handleNavClick(e, 'projects')}/>
+            <NavbarItemList text="Contato" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}/>
             <NavbarModal />
           </div>
         </Nav>

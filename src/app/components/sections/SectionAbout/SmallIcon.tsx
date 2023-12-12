@@ -1,30 +1,16 @@
-import { motion } from "framer-motion"
+import { Variants, motion } from "framer-motion"
 
 interface SmallIconProps {
-    className: string,
-    href: string
+    className: string;
+    href: string;
+    variants?: Variants;
 }
 
-const SmallIcon: React.FC<SmallIconProps> = ({ className, href }) => {  
-    const item = {
-        hidden: {
-            opacity: 0,
-            x: -50,
-        },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.8,
-                delay: 1.8
-            }
-        }
-    };
+const SmallIcon: React.FC<SmallIconProps> = ({ className, href, variants }) => {  
 
     return (
-
-        <motion.div variants={item} className="border-animation">
-            <a href={`${href}`} className="d-flex align-items-center justify-content-center icon-content icon-bg ">
+        <motion.div variants={variants} className="border-animation d-flex align-items-center justify-content-center">
+            <a href={`${href}`} target="_blank" className="d-flex align-items-center justify-content-center icon-content icon-bg ">
                 <i className={`${className} icon-size`}></i>
             </a>
         </motion.div>

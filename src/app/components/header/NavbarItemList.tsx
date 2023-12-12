@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 
 interface NavbarItemListProps extends React.LiHTMLAttributes<HTMLLIElement> {
   text: string;
+  href: string;
 }
 
-const NavbarItemList: React.FC<NavbarItemListProps> = ({ text, ...rest }) => {
+const NavbarItemList: React.FC<NavbarItemListProps> = ({ text, href, ...rest }) => {
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -24,10 +25,10 @@ const NavbarItemList: React.FC<NavbarItemListProps> = ({ text, ...rest }) => {
 
   return (
     <li
-      className={`${scrolled ? 'text-light' : 'text-nav-color'} mx-3 px-2 nav-item-animation font-normal text-lg`}
+      className={`mx-3 px-2 nav-item-animation font-normal text-lg`}
       {...rest}
     >
-      {text}
+      <a href={href} className={`${scrolled ? 'text-light' : 'text-nav-color'}`}>{text}</a>  
     </li>
   );
 

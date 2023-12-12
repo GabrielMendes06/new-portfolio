@@ -42,7 +42,8 @@ const SectionProjects: React.FC = () => {
             initial='hidden'
             variants={FadeVariant}
             className="container bg-transparent d-flex flex-column justify-content-center section-projects pb-5"
-            animate={isInView ? 'visible' : 'hidden'}>
+            animate={isInView ? 'visible' : 'hidden'}
+            id='projects'>
             <div>
                 <motion.div
                     ref={ref}

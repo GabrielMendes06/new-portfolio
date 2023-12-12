@@ -49,8 +49,23 @@ const SectionAbout: React.FC = () => {
         })
     }
 
+    const itemIcon = {
+        hidden: {
+            opacity: 0,
+            x: -50,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
+                delay: 1.8
+            }
+        }
+    };
+
     return (
-        <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about">
+        <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about" id='about'>
             <div className='bg-card row d-flex'>
                 <motion.div className='col-md-6 middle-card-div'
                     variants={FadeImage}
@@ -116,20 +131,19 @@ const SectionAbout: React.FC = () => {
                             animate={viewVerification}
                             custom={5}>
                             <SmallIcon
-                                href='#'
-                                className='bi bi-linkedin'
+                                href='https://www.linkedin.com/in/gabrielmendes7/'
+                                className='bi bi-linkedin'  
+                                variants={itemIcon}
                             />
                             <SmallIcon
-                                href='#'
+                                href='https://github.com/GabrielMendes06'
                                 className='bi bi-github'
+                                variants={itemIcon}
                             />
                             <SmallIcon
-                                href='#'
+                                href='mailto:gabriel.mendes17@outlook.com'
                                 className='bi bi-envelope'
-                            />
-                            <SmallIcon
-                                href='#'
-                                className='bi bi-instagram'
+                                variants={itemIcon}
                             />
                         </motion.li>
                     </ul>

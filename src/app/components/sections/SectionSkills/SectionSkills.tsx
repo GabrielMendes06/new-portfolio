@@ -30,7 +30,7 @@ const SectionSkills: React.FC = () => {
   return (
     <motion.div
     >
-      <div className="section-skills d-flex justify-content-center container flex-column">
+      <div className="section-skills d-flex justify-content-center container flex-column" id="skills">
         <motion.div
           ref={ref}
           variants={TitleVariant}

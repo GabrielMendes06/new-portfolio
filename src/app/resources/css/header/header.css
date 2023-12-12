@@ -46,6 +46,10 @@
     animation-fill-mode: forwards;
 }
 
+.nav-item-animation a {
+    text-decoration: none;
+}
+
 .modal * {
     overflow: hidden!important;
 }
