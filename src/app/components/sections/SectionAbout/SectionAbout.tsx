@@ -65,9 +65,20 @@ const SectionAbout: React.FC = () => {
     };
 
     return (
-        <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about" id='about'>
-            <div className='bg-card row d-flex'>
-                <motion.div className='col-md-6 middle-card-div'
+        <div className="
+        container 
+        bg-transparent 
+        section-content 
+        d-flex align-items-center 
+        justify-content-center 
+        section-about" 
+        id='about'>
+            <div className='
+            bg-card 
+            row d-flex'>
+                <motion.div className='
+                col-md-6 
+                middle-card-div'
                     variants={FadeImage}
                     initial='hidden'
                     animate={viewVerification}
@@ -78,7 +89,13 @@ const SectionAbout: React.FC = () => {
                         priority
                     />
                 </motion.div>
-                <div className='col-md-6 d-flex flex-column justify-content-center align-items-start middle-card-div'>
+                <div className='
+                col-md-6 
+                d-flex 
+                flex-column 
+                justify-content-center 
+                align-items-start 
+                middle-card-div'>
                     <ul>
                         <motion.li
                             initial='hidden'
@@ -122,29 +139,6 @@ const SectionAbout: React.FC = () => {
                             custom={4}>
                             <Paragraph text='Meu nome é Gabriel Mendes da Silva, sou Desenvolvedor Front-End desde 2021 e fascinado pela área em que trabalho. Tenho experiência com Startups, prototipagem rápida de idéias e designs de interfaces de alta qualidade, com animações e responsividade.'
                                 className='text-content' />
-                        </motion.li>
-                        <motion.li
-                            className='d-flex icon-container'
-                            initial='hidden'
-                            key={5}
-                            variants={FadeIn}
-                            animate={viewVerification}
-                            custom={5}>
-                            <SmallIcon
-                                href='https://www.linkedin.com/in/gabrielmendes7/'
-                                className='bi bi-linkedin'  
-                                variants={itemIcon}
-                            />
-                            <SmallIcon
-                                href='https://github.com/GabrielMendes06'
-                                className='bi bi-github'
-                                variants={itemIcon}
-                            />
-                            <SmallIcon
-                                href='mailto:gabriel.mendes17@outlook.com'
-                                className='bi bi-envelope'
-                                variants={itemIcon}
-                            />
                         </motion.li>
                     </ul>
                 </div>

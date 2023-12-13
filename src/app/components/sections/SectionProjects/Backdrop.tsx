@@ -9,7 +9,9 @@ const Backdrop: React.FC<ModalProps> = ({ children, onClick }) => {
     return (
             <motion.div 
             onClick={onClick}
-            className='modal-project background-modal-project'
+            className='
+            modal-project 
+            background-modal-project'
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity: 0}}>                             

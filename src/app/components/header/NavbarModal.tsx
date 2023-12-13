@@ -34,7 +34,10 @@ function Example() {
   return (
     <>
       <Button
-        className="menu-burguer bg-transparent border-0"
+        className="
+        menu-burguer 
+        bg-transparent 
+        border-0"
         onClick={() => {
           handleShow(true)
           checkThemeClass()
@@ -49,12 +52,18 @@ function Example() {
         className="modal-bg-color"
       >
         <Modal.Header
-          className="modal-bg-color border-0 "
+          className="
+          modal-bg-color 
+          border-0"
           closeButton={true}
           closeVariant={isDarkTheme ? 'white' : ''}
 
         ></Modal.Header>
-        <Modal.Body className="modal-bg-color d-flex flex-column list-none align-items-center">
+        <Modal.Body className="
+        modal-bg-color 
+        d-flex flex-column 
+        list-none 
+        align-items-center">
           <ModalItemlist text="Início" />
           <ModalItemlist text="Sobre mim" />
           <ModalItemlist text="Conhecimentos" />

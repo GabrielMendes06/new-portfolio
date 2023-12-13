@@ -59,7 +59,10 @@ export default function OnlyHeader() {
 
   return (
     <Navbar expand="lg" className={`position-fixed w-100 ${scrolled ? 'navbar-scroll' : ""}`}>
-      <Container className="text-light flex-nowrap navbar-container">
+      <Container className="
+      text-light 
+      flex-nowrap 
+      navbar-container">
         <div>
           <Paragraph
             className={`${verification} m-0`}
@@ -83,8 +86,14 @@ export default function OnlyHeader() {
           transition={{ duration: 1.5 }}>
           <label className="theme-button">
             <input type="checkbox" className="theme-checkbox" onClick={() => toggleTheme()} />
-            <i className="bi bi-brightness-high-fill sun-icon"></i>
-            <i className="bi bi-moon-fill moon-icon"></i>
+            <i className="
+            bi 
+            bi-brightness-high-fill 
+            sun-icon"></i>
+            <i className="
+            bi 
+            bi-moon-fill 
+            moon-icon"></i>
             <span className="toggle"></span>
           </label>
         </motion.div>

@@ -23,9 +23,21 @@ const SectionContact: React.FC = () => {
         }
     }
 
+    const hoverElement = {
+        normal: { scale: 0.9 },
+        hover: { scale: 1.1 }
+    }
+
     return (
         <motion.div
-            className="container bg-transparent initial-content d-flex flex-column justify-content-center section-contact mb-5"
+            className="
+            container 
+            bg-transparent 
+            initial-content 
+            d-flex flex-column 
+            justify-content-center 
+            section-contact 
+            pb-5"
             id="contact"
             initial='hidden'
             variants={FadeVariant}
@@ -33,37 +45,109 @@ const SectionContact: React.FC = () => {
             <motion.div
                 ref={ref}
             >
-                <Title text="Contato" className="text-center mb-5 section-title" />
-
-                <ul className='row d-flex icon-container justify-content-center'>
-                    <li className='col-sm-2'>
+                <Title text="Contato"
+                    className="
+                text-center 
+                pb-5 
+                section-title"
+                />
+                <ul className='
+                row d-flex 
+                icon-container 
+                justify-content-center'
+                >
+                    <motion.li
+                    variants={hoverElement}
+                    initial='normal'
+                    whileHover='hover'                    
+                    className='col contact-icon-container'
+                    onClick={() => window.open('https://www.linkedin.com/in/gabrielmendes7/')}>
                         <SmallIcon
-                            href='https://www.linkedin.com/in/gabrielmendes7/'
-                            className='bi d-flex align-items-center justify-content-center bi-linkedin'
+                            className='
+                            bi 
+                            d-flex 
+                            align-items-center 
+                            justify-content-center 
+                            bi-linkedin'
                         />
-                        <h1 className='default-text contact-title text-center'>Linkedin</h1>
-                    </li>
-                    <li className='col-sm-2'>
+                        <h1 className='
+                        default-text 
+                        contact-title 
+                        text-center'
+                        >Linkedin</h1>
+                        <p className='
+                        text-center 
+                        subtitle-contact
+                        text-content'>@gabrielmendes7</p>
+                    </motion.li>
+                    <motion.li
+                    variants={hoverElement}
+                    initial='normal'
+                    whileHover='hover'                    
+                    className='col contact-icon-container'
+                    onClick={() => window.open('https://github.com/gabrielmendesdev')}>
                         <SmallIcon
-                            href='https://github.com/GabrielMendes06'
-                            className='bi d-flex align-items-center justify-content-center bi-github'
+                            className='
+                            align-items-center 
+                            bi 
+                            bi-github
+                            d-flex                          
+                            justify-content-center'
                         />
                         <h1 className='default-text contact-title text-center'>Github</h1>
-                    </li>
-                    <li className='col-sm-2'>
+                        <p className='
+                        text-center 
+                        subtitle-contact
+                        text-content'>@gabrielmendesdev</p>
+                    </motion.li>
+                    <motion.li
+                    variants={hoverElement}
+                    initial='normal'
+                    whileHover='hover'                   
+                    className='col contact-icon-container'
+                    onClick={() => window.open('mailto:gabriel.mendes17@outlook.com')}>
                         <SmallIcon
-                            href='mailto:gabriel.mendes17@outlook.com'
-                            className='bi d-flex align-items-center justify-content-center bi-envelope'
+                            className='
+                            bi 
+                            bi-envelope
+                            d-flex 
+                            align-items-center 
+                            justify-content-center'
+                            
                         />
-                        <h1 className='default-text contact-title text-center'>E-mail</h1>
-                    </li>
-                    <li className='col-sm-2'>
+                        <h1 className='
+                        default-text 
+                        contact-title 
+                        text-center'>E-mail</h1>
+                        <p className='
+                        text-center 
+                        subtitle-contact
+                        text-content'>gabriel.mendes17@outlook.com</p>
+                    </motion.li>
+                    <motion.li
+                    variants={hoverElement}
+                    initial='normal'
+                    whileHover='hover'
+                    className='col contact-icon-container'
+                    onClick={() => window.open('https://wa.me/5511977829550/?text=Olá, Gabriel! Vim através do seu portifólio.')}>
                         <SmallIcon
-                            href='mailto:gabriel.mendes17@outlook.com'
-                            className='bi d-flex align-items-center justify-content-center bi-telephone'
+                            className='
+                            bi 
+                            bi-telephone
+                            d-flex 
+                            align-items-center 
+                            justify-content-center'
                         />
-                        <h1 className='default-text contact-title text-center'>Telefone</h1>
-                    </li>
+                        <h1 className='
+                        contact-title 
+                        default-text 
+                        text-center'
+                        >Telefone</h1>
+                        <p className='
+                        text-center 
+                        subtitle-contact
+                        text-content'>(11)97782-9550</p>
+                    </motion.li>
                 </ul>
 
             </motion.div>

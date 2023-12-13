@@ -54,7 +54,14 @@ const SectionHome: React.FC = () => {
 
         <>
             <OnlyHeader />
-            <div className="container bg-transparent initial-content d-flex align-items-center section-home mb-5" id="home">
+            <div className="
+            container 
+            bg-transparent 
+            initial-content 
+            d-flex align-items-center 
+            section-home 
+            mb-5" 
+            id="home">
                 <div className="d-flex flex-column initial-text-apresentation">
                     <motion.div
                         initial={{ opacity: 0 }}

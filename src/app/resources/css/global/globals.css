@@ -37,7 +37,7 @@ ul {
 }
 
 a {
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .bg-content-style {
@@ -113,6 +113,6 @@ a {
 }
 
 .section-title {
-    font-size: 1.5em!important;
-    margin-bottom: 130px!important;
+    font-size: 1.5em !important;
+    margin-bottom: 130px !important;
 }

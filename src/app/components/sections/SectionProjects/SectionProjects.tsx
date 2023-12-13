@@ -41,7 +41,13 @@ const SectionProjects: React.FC = () => {
         <motion.div
             initial='hidden'
             variants={FadeVariant}
-            className="container bg-transparent d-flex flex-column justify-content-center section-projects pb-5"
+            className="
+            container 
+            bg-transparent 
+            d-flex flex-column 
+            justify-content-center 
+            section-projects 
+            pb-5"
             animate={isInView ? 'visible' : 'hidden'}
             id='projects'>
             <div>
@@ -49,22 +55,32 @@ const SectionProjects: React.FC = () => {
                     ref={ref}
                     initial='hidden'
                 >
-                    <Title text="Projetos" className="text-center mb-5 section-title" />
+                    <Title text="Projetos" className="
+                    text-center 
+                    mb-5 
+                    section-title" />
                 </motion.div>
             </div>
-            <div className='row responsive-align-row mt-5'>
+            <div className='
+            row 
+            responsive-align-row 
+            mt-5'>
                 <ProjectCard
                     modalTitle='Solar System'
                     description='Projeto criado do 0, tanto seu design, estilização e transições foram criados por mim. Seu conteúdo foi montado através de uma API e também com pesquisas de blogs diversos, principalmente do site da NASA, onde contém as melhores informações sobre nosso sistema solar. Nunca foi tão divertido criar um projeto quanto foi criar o Solar System, além da paixão por desenvolvimento sou fissurado por astronomia, o que me fez ter um carinho especial por esse projeto.'
                     data='24 de Outubro de 2021'
                     image={SolarSystem}
-                    projectLink='#'
-                    repositoryLink='#'
+                    projectLink='https://solar-system-livid-five.vercel.app/'
+                    repositoryLink='https://github.com/gabrielmendesdev/solar-system'
                     src={SolarSystem}
                     alt='SolarSystem'
                     title='Solar System'
                     tecnologys={
-                        <div className='w-100 d-flex justify-content-center mx-2'>
+                        <div className='
+                        w-100 
+                        d-flex 
+                        justify-content-center 
+                        mx-2'>
                             <Image
                                 src={HTML5}
                                 alt='HTML5'
@@ -104,12 +120,18 @@ const SectionProjects: React.FC = () => {
                     data='24 de Outubro de 2021'
                     image={Login}
                     projectLink='#'
-                    repositoryLink='#'
+                    repositoryLink='https://github.com/gabrielmendesdev/login'
                     src={Login}
                     alt='Login'
                     title='Login(Manutenção)'
+                    //habilita o modo desabilitado(apenas para o botão de projeto)
+                    className='desabilited'
                     tecnologys={
-                        <div className='w-100 d-flex justify-content-center mx-2'>
+                        <div className='
+                        w-100 
+                        d-flex 
+                        justify-content-center 
+                        mx-2'>
                             <Image
                                 src={HTML5}
                                 alt='HTML5'
@@ -141,13 +163,17 @@ const SectionProjects: React.FC = () => {
                      description='Earth Museum foi um projeto criado majoritariamente em bootstrap, a ideia foi criar um site com um design elegante e intuítivo utilizando a biblioteca css, é um projeto simples de fácil entendimento e agradável.'
                      data='24 de Outubro de 2021'
                      image={EarthMuseum}
-                     projectLink='#'
-                     repositoryLink='#'
+                     projectLink='https://bootstrap-project-nine.vercel.app/'
+                     repositoryLink='https://github.com/gabrielmendesdev/bootstrap-project'
                      src={EarthMuseum}
                      alt='EarthMuseum'
                      title='EarthMuseum'
                     tecnologys={
-                        <div className='w-100 d-flex justify-content-center mx-2'>
+                        <div className='
+                        w-100 
+                        d-flex 
+                        justify-content-center 
+                        mx-2'>
                             <Image
                                 src={HTML5}
                                 alt='HTML5'
@@ -185,13 +211,17 @@ const SectionProjects: React.FC = () => {
                      description='Esse projeto foi meu primeiro portifólio desenvolvido, decidi deixa-lo em exibição pois é uma ótima maneira de fazer uma comparação com meu portifólio atual, demonstrando o crescimento tanto em conhecimento como em profissionalismo da melhor maneira possível para um front-end, a maneira visual. '
                      data='24 de Outubro de 2021'
                      image={Portifolio}
-                     projectLink='#'
-                     repositoryLink='#'
+                     projectLink='https://vercel.com/gabrielmendes06/portifolio'
+                     repositoryLink='https://github.com/gabrielmendesdev/portifolio'
                      src={Portifolio}
                      alt='Portifólio(Legado)'
                      title='Portifólio(Legado)'
                     tecnologys={
-                        <div className='w-100 d-flex justify-content-center mx-2'>
+                        <div className='
+                        w-100 
+                        d-flex 
+                        justify-content-center 
+                        mx-2'>
                             <Image
                                 src={HTML5}
                                 alt='HTML5'

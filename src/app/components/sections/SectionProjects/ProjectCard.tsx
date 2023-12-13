@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from "framer-motion"
 import Image, { StaticImageData } from "next/image"
 import Title from "../../global/Title"
 import { ReactNode, useEffect, useState } from "react"
-import ProjectModal from "./Backdrop";
 import DinamicModal from "./DinamicModal";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
@@ -15,17 +14,23 @@ interface ProjectCardProps {
     modalTitle: string;
     description?: string;
     data?: string;
-    projectLink?: string;
-    repositoryLink?: string;
+    projectLink: string;
+    repositoryLink: string;
+    className?: string
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys,
+const ProjectCard: React.FC<ProjectCardProps> = ({ 
+    src, 
+    alt,
+    title, 
+    tecnologys,
     modalTitle,
     description,
     image,
     data,
     projectLink,
-    repositoryLink }) => {
+    repositoryLink,
+    className }) => {
 
     const [modalOpen, setModalOpen] = useState<boolean>(false);
     const close = () => setModalOpen(false)
@@ -97,7 +102,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys,
     return (
         <>
 
-            <motion.div className='col-lg-3 project-container'
+            <motion.div className='
+            col-lg-3 
+            project-container'
                 onClick={() => (modalOpen ? close() : open())}
                 variants={CardVariant}
                 initial='normal'
@@ -107,7 +114,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys,
                     alt={alt}
                     className="card-image" />
                 <motion.div
-                    className="card-description d-flex flex-column"
+                    className="
+                    card-description 
+                    d-flex flex-column"
                     variants={DescriptionVariant}>
                     <Title
                         text={title}
@@ -115,13 +124,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys,
                     {tecnologys}
                 </motion.div>
                 <motion.div
-                    className="w-100 bg-dark position-absolute date-info "
+                    className="
+                    w-100 
+                    bg-dark 
+                    position-absolute 
+                    date-info "
                     variants={DateInfoVariant}
                 >
-                    <div className="d-flex align-items-center justify-content-between info-container">
-                        <p className="text-light m-0 info-text">24 de Outubro de 2021</p>
+                    <div className="
+                    d-flex 
+                    align-items-center 
+                    justify-content-between 
+                    info-container">
+                        <p className="
+                        text-light 
+                        m-0 
+                        info-text">24 de Outubro de 2021</p>
                         <motion.button
-                            className="text-light info-button"
+                            className="
+                            text-light 
+                            info-button"
                             variants={ButtonVariant}
                         >Ver mais</motion.button>
                     </div>
@@ -140,6 +162,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, alt, title, tecnologys,
                     image={image}
                     projectLink={projectLink}
                     repositoryLink={repositoryLink}
+                    className={className}
                 />}
             </AnimatePresence>
 

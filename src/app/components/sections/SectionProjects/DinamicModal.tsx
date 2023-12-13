@@ -11,8 +11,9 @@ interface DinamicModalProps {
     title: string;
     description?: string;
     data?: string;
-    projectLink?: string;
-    repositoryLink?: string;
+    projectLink: string;
+    repositoryLink: string;
+    className?: string
 }
 
 const DinamicModal: React.FC<DinamicModalProps> = ({ 
@@ -22,7 +23,8 @@ const DinamicModal: React.FC<DinamicModalProps> = ({
     handleClose, 
     data,
     projectLink,
-    repositoryLink  }) => {
+    repositoryLink,
+    className  }) => {
 
     const dropIn = {
         hidden: {
@@ -54,22 +56,48 @@ const DinamicModal: React.FC<DinamicModalProps> = ({
                 initial='hidden'
                 animate='visible'
                 exit='exit'> 
-                <div className='row mquery-modal'>
+                <div className='
+                row 
+                mquery-modal'>
                     <div className='col-md-6'> 
                         <Image src={image} alt={title} className="modal-image"/>
                     </div>
-                    <div className='text-light col-md-6 d-flex flex-column'>
-                        <div className='d-flex justify-content-between mb-4'>
+                    <div className='
+                    text-light 
+                    col-md-6 
+                    d-flex 
+                    flex-column'>
+                        <div className='
+                        d-flex 
+                        justify-content-between 
+                        mb-4'>
                             <h1 className='card-modal-title'>{title}</h1>
-                            <i onClick={(handleClose)} className="bi bi-x close-button-modal"></i>
+                            <i onClick={(handleClose)} className="
+                            bi 
+                            bi-x 
+                            close-button-modal"></i>
                         </div>
                         <p className='description-modal'>{description}</p>
-                        <p className='info-text info-modal-color mt-auto mb-0'>{data}</p>
+                        <p className='
+                        info-text 
+                        info-modal-color 
+                        mt-auto 
+                        mb-0'>{data}</p>
                     </div>
                 </div>
                 <div className='mt-4'>
-                    <a href={projectLink} className="text-light info-button modal-redirect-button">Acessar projeto</a>
-                    <a href={repositoryLink} className="text-light info-button modal-redirect-button">Acessar repositório</a>
+                    <a href={projectLink} className={`
+                    ${className}
+                    text-light 
+                    info-button 
+                    modal-redirect-button`}
+                    target="_blank"
+                    >Acessar projeto</a>
+                    <a href={repositoryLink} className="
+                    text-light 
+                    info-button 
+                    modal-redirect-button"
+                    target="_blank">Acessar repositório</a>
                 </div>
             </motion.div>
         </Backdrop>

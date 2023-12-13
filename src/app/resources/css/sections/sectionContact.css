@@ -2,3 +2,23 @@
     font-size: 1em;
     margin: 0!important;
 }
+
+.subtitle-contact {
+    font-size: 0.8em;
+    margin: 0.7em;
+}
+
+.contact-icon-container {
+    cursor: pointer;
+}
+
+.contact-icon-container:hover .icon-content {
+    --_i: 100%;
+    transition: .3s, background-size .3s .3s;
+}
+
+@media(max-width: 768px) {
+    .contact-icon-container {
+        width: 150px!important;
+    }
+}
