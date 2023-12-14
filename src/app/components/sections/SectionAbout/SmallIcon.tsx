@@ -14,14 +14,14 @@ const SmallIcon: React.FC<SmallIconProps> = ({ className, href, variants }) => {
         d-flex 
         align-items-center 
         justify-content-center">
-            <a href={`${href}`} target="_blank" className="
+            <div className="
             d-flex 
             align-items-center 
             justify-content-center 
             icon-content 
             icon-bg">
                 <i className={`${className} icon-size`}></i>
-            </a>
+            </div>
         </motion.div>
     )
 }
