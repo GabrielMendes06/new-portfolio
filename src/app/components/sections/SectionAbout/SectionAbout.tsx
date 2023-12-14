@@ -1,7 +1,6 @@
 import '../../../resources/css/sections/sectionAbout.css'
 import Cartoon from '../../../resources/images/sections/sectionAbout/cartoon.webp'
 import Image from 'next/image'
-import SmallIcon from './SmallIcon'
 import { motion, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import Paragraph from '../../global/Paragraph'
