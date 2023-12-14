@@ -216,7 +216,7 @@ const SectionProjects: React.FC = () => {
                      src={Portifolio}
                      alt='Portifólio(Legado)'
                      title='Portifólio(Legado)'
-                    tecnologys={
+                     tecnologys={
                         <div className='
                         w-100 
                         d-flex 
@@ -247,7 +247,6 @@ const SectionProjects: React.FC = () => {
                                 className='mx-1'
                             />
                         </div>
-
                     } />
             </div>
         </motion.div>

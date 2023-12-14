@@ -57,35 +57,37 @@ const SectionContact: React.FC = () => {
                 justify-content-center'
                 >
                     <motion.li
-                    variants={hoverElement}
-                    initial='normal'
-                    whileHover='hover'                    
-                    className='col contact-icon-container'
-                    onClick={() => window.open('https://www.linkedin.com/in/gabrielmendes7/')}>
-                        <SmallIcon
-                            className='
+                        variants={hoverElement}
+                        initial='normal'
+                        whileHover='hover'
+                        className='col contact-icon-container'>
+                        <a href='https://www.linkedin.com/in/gabrielmendes7/'
+                        target='_blank'>
+                            <SmallIcon
+                                className='
                             bi 
                             d-flex 
                             align-items-center 
                             justify-content-center 
                             bi-linkedin'
-                        />
-                        <h1 className='
+                            />
+                            <h1 className='
                         default-text 
                         contact-title 
                         text-center'
-                        >Linkedin</h1>
-                        <p className='
+                            >Linkedin</h1>
+                            <p className='
                         text-center 
                         subtitle-contact
                         text-content'>@gabrielmendes7</p>
+                        </a>
                     </motion.li>
                     <motion.li
-                    variants={hoverElement}
-                    initial='normal'
-                    whileHover='hover'                    
-                    className='col contact-icon-container'
-                    onClick={() => window.open('https://github.com/gabrielmendesdev')}>
+                        variants={hoverElement}
+                        initial='normal'
+                        whileHover='hover'
+                        className='col contact-icon-container'
+                        onClick={() => window.open('https://github.com/gabrielmendesdev')}>
                         <SmallIcon
                             className='
                             align-items-center 
@@ -101,11 +103,11 @@ const SectionContact: React.FC = () => {
                         text-content'>@gabrielmendesdev</p>
                     </motion.li>
                     <motion.li
-                    variants={hoverElement}
-                    initial='normal'
-                    whileHover='hover'                   
-                    className='col contact-icon-container'
-                    onClick={() => window.open('mailto:gabriel.mendes17@outlook.com')}>
+                        variants={hoverElement}
+                        initial='normal'
+                        whileHover='hover'
+                        className='col contact-icon-container'
+                        onClick={() => window.open('mailto:gabriel.mendes17@outlook.com')}>
                         <SmallIcon
                             className='
                             bi 
@@ -113,7 +115,7 @@ const SectionContact: React.FC = () => {
                             d-flex 
                             align-items-center 
                             justify-content-center'
-                            
+
                         />
                         <h1 className='
                         default-text 
@@ -125,11 +127,11 @@ const SectionContact: React.FC = () => {
                         text-content'>gabriel.mendes17@outlook.com</p>
                     </motion.li>
                     <motion.li
-                    variants={hoverElement}
-                    initial='normal'
-                    whileHover='hover'
-                    className='col contact-icon-container'
-                    onClick={() => window.open('https://wa.me/5511977829550/?text=Olá, Gabriel! Vim através do seu portifólio.')}>
+                        variants={hoverElement}
+                        initial='normal'
+                        whileHover='hover'
+                        className='col contact-icon-container'
+                        onClick={() => window.open('https://wa.me/5511977829550/?text=Olá, Gabriel! Vim através do seu portifólio.')}>
                         <SmallIcon
                             className='
                             bi 
