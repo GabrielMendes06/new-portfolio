@@ -12,16 +12,6 @@ const SectionAbout: React.FC = () => {
     const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" })
     const viewVerification = isInView ? 'visible' : 'hidden'
 
-    const FadeIn = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 1,
-            }
-        }
-    };
-
     const FadeImage = {
         hidden: { opacity: 0, x: -50 },
         visible: {
@@ -47,21 +37,6 @@ const SectionAbout: React.FC = () => {
             }
         })
     }
-
-    const itemIcon = {
-        hidden: {
-            opacity: 0,
-            x: -50,
-        },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.8,
-                delay: 1.8
-            }
-        }
-    };
 
     return (
         <div className="

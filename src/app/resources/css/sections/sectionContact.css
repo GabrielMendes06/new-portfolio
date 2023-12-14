@@ -19,6 +19,6 @@
 
 @media(max-width: 768px) {
     .contact-icon-container {
-        width: 150px!important;
+        width: 50%!important;
     }
 }
