@@ -25,7 +25,7 @@
 
 .animation-heartcode {
   z-index: 0;
-  max-width: 60%;
+  max-width: 45%;
 }
 
 @media (max-width: 968px) {
@@ -48,5 +48,9 @@
     margin: auto;
     opacity: 0;
     max-width: none;
+  }
+
+  .logo-description {
+    display: none;
   }
 }

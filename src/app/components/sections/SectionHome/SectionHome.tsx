@@ -4,7 +4,8 @@ import OnlyHeader from "../../header/OnlyHeader";
 import Paragraph from "../../global/Paragraph";
 import Typewriter from "react-ts-typewriter";
 import Title from "../../global/Title";
-import DevBackground from "../../../resources/images/sections/sectionHome/mendesdev.svg";
+import DevBackground from "../../../resources/images/sections/sectionHome/m.svg";
+import LogoDescription from "../../../resources/images/sections/sectionHome/logo-description.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -59,8 +60,7 @@ const SectionHome: React.FC = () => {
             bg-transparent 
             initial-content 
             d-flex align-items-center 
-            section-home 
-            mb-5" 
+            section-home" 
             id="home">
                 <div className="d-flex flex-column initial-text-apresentation">
                     <motion.div
@@ -86,7 +86,10 @@ const SectionHome: React.FC = () => {
                         text={
                             <Typewriter
                                 text={
-                                    "Olá, me chamo Gabriel Mendes, sou desenvolvedor especializado em Front-End, prazer em conhece-lo."
+                                    "Olá, meu nome é Gabriel Mendes, sou desenvolvedor especializado em Front-End, com cerca de 2 anos de experiência na indústria de desenvolvimento, prazer em conhece-lo."
+                                }
+                                speed={
+                                    1.5
                                 }
                             />
                         }
@@ -106,8 +109,15 @@ const SectionHome: React.FC = () => {
                         animate={variants.animate}
                         transition={variants.transition}
                     >
-                        <Image src={DevBackground} alt="Imagem de fundo"
-                            priority />
+                        <Image src={DevBackground} 
+                        alt="Imagem de fundo"
+                        priority
+                        />
+                        <Image src={LogoDescription} 
+                        alt="Imagem de fundo"
+                        className="logo-description"
+                        priority
+                        />
                     </motion.div>
                 </motion.div>
             </div>

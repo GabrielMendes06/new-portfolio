@@ -68,7 +68,7 @@ export default function OnlyHeader() {
           <Image 
           src={M} 
           alt="logo" 
-          width={110} 
+          width={90}
           onClick={(e) => handleNavClick(e, 'home')}
           />
         </div>
