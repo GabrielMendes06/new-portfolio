@@ -1,12 +1,13 @@
+import "../../resources/css/header/header.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import "../../resources/css/header/header.css";
 import NavbarItemList from "./NavbarItemList";
 import NavbarModal from "./NavbarModal";
-import Paragraph from "../global/Paragraph";
+import Image from "next/image";
+import M from '../../resources/images/header/m.svg'
 import { useEffect, useState } from "react";
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 export default function OnlyHeader() {
 
@@ -64,13 +65,15 @@ export default function OnlyHeader() {
       flex-nowrap 
       navbar-container">
         <div>
-          <Paragraph
-            className={`${verification} m-0`}
-            text='Gabriel Mendes' />
+          <Image 
+          src={M} 
+          alt="logo" 
+          width={110} 
+          onClick={(e) => handleNavClick(e, 'home')}
+          />
         </div>
         <Nav>
           <div className="d-flex me-4 align-items-center">
-            <NavbarItemList text="Início" href="#home" onClick={(e) => handleNavClick(e, 'home')}/>
             <NavbarItemList text="Sobre mim" href="#about" onClick={(e) => handleNavClick(e, 'about')}/>
             <NavbarItemList text="Habilidades" href="#skills" onClick={(e) => handleNavClick(e, 'skills')}/>
             <NavbarItemList text="Projetos" href="#projects" onClick={(e) => handleNavClick(e, 'projects')}/>

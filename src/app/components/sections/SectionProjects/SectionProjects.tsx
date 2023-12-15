@@ -68,7 +68,8 @@ const SectionProjects: React.FC = () => {
                 <ProjectCard
                     modalTitle='Solar System'
                     description='Projeto criado do 0, tanto seu design, estilização e transições foram criados por mim. Seu conteúdo foi montado através de uma API e também com pesquisas de blogs diversos, principalmente do site da NASA, onde contém as melhores informações sobre nosso sistema solar. Nunca foi tão divertido criar um projeto quanto foi criar o Solar System, além da paixão por desenvolvimento sou fissurado por astronomia, o que me fez ter um carinho especial por esse projeto.'
-                    data='24 de Outubro de 2021'
+                    data='22 de Setembro de 2023'
+                    projectData='22 de Setembro de 2023'
                     image={SolarSystem}
                     projectLink='https://solar-system-livid-five.vercel.app/'
                     repositoryLink='https://github.com/gabrielmendesdev/solar-system'
@@ -116,8 +117,9 @@ const SectionProjects: React.FC = () => {
                     } />
                 <ProjectCard
                     modalTitle='Login'
-                    description='A ideia desse projeto foi criar uma aplicação full-stack de um banco digital, contém funcionalidades como criação de conta, saldo bancário, depósito, transferência, extrato bancário entre outras coisas. A aplicação ficou fora do ar pois a nuvem que eu utilizava para hospedar o banco de dados era gratúito apenas por um curto período, em breve o manterei no ar, hoje apenas funciona em localhost. As tecnologias utilizadas foram React, Node.js, MySQL, HTLM5, CSS3, Axios entre outras.'
-                    data='24 de Outubro de 2021'
+                    description='A ideia desse projeto foi criar uma aplicação full-stack de um banco digital, contém funcionalidades como criação de conta, saldo bancário, depósito, transferência, extrato bancário entre outras coisas. A aplicação ficou fora do ar pois a nuvem que eu utilizava para hospedar o banco de dados era gratuito apenas por um curto período, em breve o manterei no ar, hoje apenas funciona em localhost. As tecnologias utilizadas foram React, Node.js, MySQL, HTLM5, CSS3, Axios entre outras.'
+                    data='15 de Julho de 2023'
+                    projectData='15 de Julho de 2023'
                     image={Login}
                     projectLink='#'
                     repositoryLink='https://github.com/gabrielmendesdev/login'
@@ -161,7 +163,8 @@ const SectionProjects: React.FC = () => {
                 <ProjectCard
                      modalTitle='Earth Museum'
                      description='Earth Museum foi um projeto criado majoritariamente em bootstrap, a ideia foi criar um site com um design elegante e intuítivo utilizando a biblioteca css, é um projeto simples de fácil entendimento e agradável.'
-                     data='24 de Outubro de 2021'
+                     data='14 de Setembro de 2023'
+                     projectData='14 de Setembro de 2023'
                      image={EarthMuseum}
                      projectLink='https://bootstrap-project-nine.vercel.app/'
                      repositoryLink='https://github.com/gabrielmendesdev/bootstrap-project'
@@ -209,7 +212,8 @@ const SectionProjects: React.FC = () => {
                 <ProjectCard
                      modalTitle='Portifólio (Legado)'
                      description='Esse projeto foi meu primeiro portifólio desenvolvido, decidi deixa-lo em exibição pois é uma ótima maneira de fazer uma comparação com meu portifólio atual, demonstrando o crescimento tanto em conhecimento como em profissionalismo da melhor maneira possível para um front-end, a maneira visual. '
-                     data='24 de Outubro de 2021'
+                     data='29 de Junho de 2023'
+                     projectData='29 de Junho de 2023'
                      image={Portifolio}
                      projectLink='https://vercel.com/gabrielmendes06/portifolio'
                      repositoryLink='https://github.com/gabrielmendesdev/portifolio'

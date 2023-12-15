@@ -16,7 +16,8 @@ interface ProjectCardProps {
     data?: string;
     projectLink: string;
     repositoryLink: string;
-    className?: string
+    className?: string;
+    projectData: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ 
@@ -30,6 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     data,
     projectLink,
     repositoryLink,
+    projectData,
     className }) => {
 
     const [modalOpen, setModalOpen] = useState<boolean>(false);
@@ -139,7 +141,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         <p className="
                         text-light 
                         m-0 
-                        info-text">24 de Outubro de 2021</p>
+                        info-text">{projectData}</p>
                         <motion.button
                             className="
                             text-light 

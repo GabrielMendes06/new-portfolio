@@ -4,7 +4,7 @@ import OnlyHeader from "../../header/OnlyHeader";
 import Paragraph from "../../global/Paragraph";
 import Typewriter from "react-ts-typewriter";
 import Title from "../../global/Title";
-import DevBackground from "../../../resources/images/sections/sectionHome/programacao.png";
+import DevBackground from "../../../resources/images/sections/sectionHome/mendesdev.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
