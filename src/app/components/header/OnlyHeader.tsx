@@ -70,6 +70,7 @@ export default function OnlyHeader() {
           alt="logo" 
           width={90}
           onClick={(e) => handleNavClick(e, 'home')}
+          className="logo ms-3"
           />
         </div>
         <Nav>

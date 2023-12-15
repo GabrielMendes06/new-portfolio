@@ -82,10 +82,6 @@ function Example() {
         list-none 
         align-items-center">
           <ModalItemList
-            text="Início"
-            onClose={handleCloseModal}
-            rollSectionFunction={(e) => handleNavClick(e, 'home')} />
-          <ModalItemList
             text="Sobre mim"
             onClose={handleCloseModal}
             rollSectionFunction={(e) => handleNavClick(e, 'about')} />

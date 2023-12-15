@@ -35,8 +35,8 @@ const FadeIn = {
         opacity: 1,
         x: 0,
         transition: {
-            delay: 0.18 * index,
-            duration: 0.3
+            delay: 0.22 * index,
+            duration: 0.7
         }
     })
 }

@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.className} dark-theme`}>{children}</body>
+      <body data-theme='dark' className={`${roboto.className} dark-theme`}>{children}</body>
     </html>
   );
 }

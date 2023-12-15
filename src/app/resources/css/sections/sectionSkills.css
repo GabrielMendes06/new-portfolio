@@ -126,6 +126,6 @@
     }
 
     .mquery-align {
-        justify-content: center;
+        justify-content: center!important;
     }
 }

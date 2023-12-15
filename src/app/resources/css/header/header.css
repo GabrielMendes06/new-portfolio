@@ -37,6 +37,10 @@
     transition: 0.5s;
 }
 
+.logo {
+    cursor: pointer;
+}
+
 .nav-item-animation {
     animation-name: fadeIn;
     animation-duration: 1s;

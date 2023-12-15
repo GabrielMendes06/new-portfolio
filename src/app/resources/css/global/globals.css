@@ -19,6 +19,8 @@ ul {
     --text-span-title: rgb(25, 106, 205) !important;
     --text-content: rgb(36, 36, 36) !important;
     --default-text: black !important;
+    --scrollbar-track: white !important;
+    --scrollbar-thumb: rgb(0, 97, 216) !important;
 }
 
 .dark-theme {
@@ -33,7 +35,8 @@ ul {
     --text-span-title: rgb(83, 160, 255) !important;
     --text-content: rgb(138, 138, 138) !important;
     --default-text: white !important;
-
+    --scrollbar-track: rgb(0, 1, 22) !important;
+    --scrollbar-thumb: rgb(83, 160, 255) !important;
 }
 
 a {
@@ -115,4 +118,20 @@ a {
 .section-title {
     font-size: 1.5em !important;
     margin-bottom: 130px !important;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    transition: 1s;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    transition: 1s;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 14px;
+    transition: 1s;
 }
