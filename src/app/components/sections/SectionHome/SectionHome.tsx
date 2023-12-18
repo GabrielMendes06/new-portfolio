@@ -112,6 +112,7 @@ const SectionHome: React.FC = () => {
                         <Image src={DevBackground} 
                         alt="Imagem de fundo"
                         priority
+                        className="logo-background"
                         />
                         <Image src={LogoDescription} 
                         alt="Imagem de fundo"

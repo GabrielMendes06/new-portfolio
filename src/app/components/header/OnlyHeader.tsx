@@ -6,6 +6,8 @@ import NavbarItemList from "./NavbarItemList";
 import NavbarModal from "./NavbarModal";
 import Image from "next/image";
 import M from '../../resources/images/header/m.svg'
+import Mwhite from '../../resources/images/header/m-white.svg'
+import Endes from '../../resources/images/header/endes.svg'
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 
@@ -13,9 +15,26 @@ export default function OnlyHeader() {
 
   const [theme, setTheme] = useState<string>("dark-theme")
   const [scrolled, setScrolled] = useState(false);
-  const verification = scrolled ? 'text-light' : 'default-text'
+  const [hover, setHover] = useState(false);
 
-  //const router = useRouter();
+  //Propriedades de animação
+  const showVariant = {
+    hidden: {
+      opacity: 0,
+      x: -30,
+      transition: {
+        duration: 0.5,       
+      }
+    },
+    show: {
+      opacity: [0, 0, 0, 1],
+      x: 105,
+      transition: {
+        duration: 0.5,
+        times: [0, 0.3, 0.6, 1]
+      }
+    }
+  }
 
   const handleNavClick = (e: any, id: any) => {
     e.preventDefault();
@@ -36,13 +55,13 @@ export default function OnlyHeader() {
       const isScrolled = window.scrollY > 100;
       setScrolled(isScrolled);
     }
-        // Adiciona o ouvinte de evento
-        window.addEventListener('scroll', handleScroll);
+    // Adiciona o ouvinte de evento
+    window.addEventListener('scroll', handleScroll);
 
-        // Limpeza do ouvinte de evento
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
+    // Limpeza do ouvinte de evento
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
 
   }, []);
 
@@ -64,21 +83,32 @@ export default function OnlyHeader() {
       text-light 
       flex-nowrap 
       navbar-container">
-        <div>
-          <Image 
-          src={M} 
-          alt="logo" 
-          width={90}
+        <div
           onClick={(e) => handleNavClick(e, 'home')}
-          className="logo ms-3"
+          className="
+        d-flex
+        position-relative
+        "
+          onMouseEnter={() => {
+            setHover(true)
+            console.log('entrou')
+          }}
+          onMouseLeave={() => setHover(false)
+          }>
+          <Image
+            src={scrolled ? Mwhite : M} 
+            alt="logo"
+            width={90}
+            onClick={(e) => handleNavClick(e, 'home')}
+            className="logo ms-3"
           />
         </div>
         <Nav>
           <div className="d-flex me-4 align-items-center">
-            <NavbarItemList text="Sobre mim" href="#about" onClick={(e) => handleNavClick(e, 'about')}/>
-            <NavbarItemList text="Habilidades" href="#skills" onClick={(e) => handleNavClick(e, 'skills')}/>
-            <NavbarItemList text="Projetos" href="#projects" onClick={(e) => handleNavClick(e, 'projects')}/>
-            <NavbarItemList text="Contato" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}/>
+            <NavbarItemList text="Sobre mim" href="#about" onClick={(e) => handleNavClick(e, 'about')} />
+            <NavbarItemList text="Habilidades" href="#skills" onClick={(e) => handleNavClick(e, 'skills')} />
+            <NavbarItemList text="Projetos" href="#projects" onClick={(e) => handleNavClick(e, 'projects')} />
+            <NavbarItemList text="Contato" href="#contact" onClick={(e) => handleNavClick(e, 'contact')} />
             <NavbarModal />
           </div>
         </Nav>

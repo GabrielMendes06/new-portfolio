@@ -28,7 +28,7 @@
     height: 5px;
     background: #2779e3;
     position: absolute;
-    border-radius: 100vmax;
+    border-radius: 15%;
     animation: none; /* Inicialmente, sem animação */
 }
 

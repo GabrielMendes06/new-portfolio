@@ -13,12 +13,13 @@ const SectionAbout: React.FC = () => {
     const viewVerification = isInView ? 'visible' : 'hidden'
 
     const FadeImage = {
-        hidden: { opacity: 0, x: -50 },
+        hidden: { opacity: 0, y: -50 },
         visible: {
-            opacity: 1,
-            x: 0,
+            opacity: [0, 1, 1],
+            y: [-40, -10, 0],
             transition: {
                 duration: 1,
+                times: [0, 0.7, 1]
             }
         }
     };
@@ -26,14 +27,15 @@ const SectionAbout: React.FC = () => {
     const item = {
         hidden: {
             opacity: 0,
-            x: -100
+            y: -100
         },
         visible: (index: number) => ({
-            opacity: 1,
-            x: 0,
+            opacity: [0, 1, 1],
+            y: [-40, -10, 0],
             transition: {
                 delay: 0.3 * index,
-                duration: 1
+                duration: 1,
+                times: [0, 0.7, 1]
             }
         })
     }

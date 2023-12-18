@@ -25,7 +25,7 @@
 .navbar {
     z-index: 999;
     transition: background-color 0.5s, color 0.3s;
-    padding: 0!important;
+    padding: 0 !important;
 }
 
 .navbar-container {
@@ -39,6 +39,19 @@
 
 .logo {
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.logo-background {
+    margin-top: 2.5em;
+}
+
+.logo {
+    z-index: 4;
+}
+
+.logo-text {
+    z-index: 5;
 }
 
 .nav-item-animation {
@@ -55,7 +68,7 @@
 }
 
 .modal * {
-    overflow: hidden!important;
+    overflow: hidden !important;
 }
 
 .modal {
@@ -177,7 +190,7 @@ input:checked~.moon-icon {
 .menu-text-size {
     font-size: 1.6em;
     width: 100%;
-    padding-bottom: 1em!important;
+    padding-bottom: 1em !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.448);
 }
 
@@ -199,9 +212,9 @@ input:checked~.moon-icon {
 }
 
 @media (max-width: 968px) {
-    
+
     .navbar-nav {
-        margin-left: auto!important;
+        margin-left: auto !important;
     }
 
     .nav-item-animation {
@@ -210,15 +223,15 @@ input:checked~.moon-icon {
 
     .menu-burguer {
         display: block !important;
-        padding: 0!important;
-        margin: 0!important;
-        height: max-content!important;
+        padding: 0 !important;
+        margin: 0 !important;
+        height: max-content !important;
     }
-    
+
     .bi-list {
         font-size: 2.5em;
     }
-    
+
     .logo-text {
         font-size: 1.4em;
     }

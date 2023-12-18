@@ -11,9 +11,10 @@ ul {
     --theme-button: #020a13 !important;
     --main-bg-color: white !important;
     --modal-bg-color: white !important;
-    --card-bg-color: #d7d7d7 !important;
-    --card-border-color: #b6b6b6;
-    --card-border-color-hover: #515151;
+    --card-bg-color: #e7f2ff !important;
+    --card-border-color: #c9d2fd;
+    --card-border-color-hover: #a9dfff;
+    --card-project-background: rgb(171, 171, 171, 0.619);
     --text-nav-color: black !important;
     --text-nav-color-hover: rgb(57, 57, 57) !important;
     --text-span-title: rgb(25, 106, 205) !important;
@@ -29,7 +30,8 @@ ul {
     --modal-bg-color: rgb(36, 36, 36) !important;
     --card-bg-color: #020d18 !important;
     --card-border-color: #082141;
-    --card-border-color-hover: #2779e3;
+    --card-border-color-hover: #0037ff;
+    --card-project-background: rgba(0, 0, 0, 0.619);
     --text-nav-color: rgb(132, 132, 132) !important;
     --text-nav-color-hover: white !important;
     --text-span-title: rgb(83, 160, 255) !important;
@@ -54,6 +56,7 @@ a {
     border-radius: 10px;
     transition: background-color 0.5s, color 0.3s;
     transition: 1s;
+    box-shadow: 3px 3px 7px #00000033;
 }
 
 .bg-border-hover:hover {
@@ -118,6 +121,7 @@ a {
 .section-title {
     font-size: 1.5em !important;
     margin-bottom: 130px !important;
+    font-family: monospace;
 }
 
 *::-webkit-scrollbar {

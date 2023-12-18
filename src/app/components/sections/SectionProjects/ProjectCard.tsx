@@ -18,6 +18,8 @@ interface ProjectCardProps {
     repositoryLink: string;
     className?: string;
     projectData: string;
+    viewVerification: any;
+    custom: number;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ 
@@ -32,7 +34,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     projectLink,
     repositoryLink,
     projectData,
-    className }) => {
+    className,
+    viewVerification,
+    custom }) => {
 
     const [modalOpen, setModalOpen] = useState<boolean>(false);
     const close = () => setModalOpen(false)
@@ -101,54 +105,76 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         }
     }
 
+    const item = {
+        hidden: {
+            opacity: 0,
+            y: -300,
+            x: 0
+        },
+        visible: (index: number) => ({
+            opacity: [0, 1, 1],
+            y: [-40, -10, 0],
+            transition: {
+                delay: 0.4 * index,
+                duration: 1,
+                times: [0, 0.7, 1]
+            }
+        })
+    }
+
     return (
         <>
-
-            <motion.div className='
-            col-lg-3 
-            project-container'
-                onClick={() => (modalOpen ? close() : open())}
-                variants={CardVariant}
-                initial='normal'
-                whileHover='hover'>
-                <Image
-                    src={src}
-                    alt={alt}
-                    className="card-image" />
+            <motion.div 
+            className='col-lg-3 project-container'
+            variants={item}
+            initial='hidden'
+            animate={viewVerification}
+            custom={custom}
+            >
                 <motion.div
-                    className="
-                    card-description 
-                    d-flex flex-column"
-                    variants={DescriptionVariant}>
-                    <Title
-                        text={title}
-                        className="project-title" />
-                    {tecnologys}
-                </motion.div>
-                <motion.div
-                    className="
-                    w-100 
-                    bg-dark 
-                    position-absolute 
-                    date-info "
-                    variants={DateInfoVariant}
-                >
-                    <div className="
-                    d-flex 
-                    align-items-center 
-                    justify-content-between 
-                    info-container">
-                        <p className="
-                        text-light 
-                        m-0 
-                        info-text">{projectData}</p>
-                        <motion.button
-                            className="
-                            text-light 
-                            info-button"
-                            variants={ButtonVariant}
-                        >Ver mais</motion.button>
-                    </div>
+                    onClick={() => (modalOpen ? close() : open())}
+                    variants={CardVariant}
+                    initial='normal'
+                    whileHover='hover'>
+                    <Image
+                        src={src}
+                        alt={alt}
+                        className="card-image" />
+                    <motion.div
+                        className="
+                        card-description
+                        d-flex flex-column"
+                        variants={DescriptionVariant}>
+                        <Title
+                            text={title}
+                            className="project-title" />
+                        {tecnologys}
+                    </motion.div>
+                    <motion.div
+                        className="
+                        w-100
+                        bg-dark
+                        position-absolute
+                        date-info "
+                        variants={DateInfoVariant}
+                    >
+                        <div className="
+                        d-flex
+                        align-items-center
+                        justify-content-between
+                        info-container">
+                            <p className="
+                            text-light
+                            m-0
+                            info-text">{projectData}</p>
+                            <motion.button
+                                className="
+                                text-light
+                                info-button"
+                                variants={ButtonVariant}
+                            >Ver mais</motion.button>
+                        </div>
+                    </motion.div>
                 </motion.div>
             </motion.div>
 

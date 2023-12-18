@@ -1,3 +1,8 @@
+.section-contact {
+    margin-top: 8em;
+    overflow-x: hidden;
+}
+
 .contact-title {
     font-size: 1em;
     margin: 0!important;
@@ -17,8 +22,24 @@
     transition: .3s, background-size .3s .3s;
 }
 
+.footer {
+    background-color: #020d18;
+    padding: 1em;
+}
+
+.text-footer {
+    font-size: 0.9em;
+}
+
 @media(max-width: 768px) {
     .contact-icon-container {
         width: 50%!important;
+    }
+}
+
+@media(max-width: 576px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
     }
 }

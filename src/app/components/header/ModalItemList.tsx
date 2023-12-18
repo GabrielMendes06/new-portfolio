@@ -21,11 +21,11 @@ const ModalItemlist: React.FC<ModalItemlistProps> = ({
     <li
       className="
       text-nav-color 
-      mx-3 px-2 
+      mx-3 
+      px-2 
       font-normal 
       menu-text-size 
       text-center 
-      m-3 
       cursor-pointer"
       onClick={(e) => {
         handleItemClick();

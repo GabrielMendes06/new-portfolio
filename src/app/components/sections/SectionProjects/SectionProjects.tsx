@@ -22,15 +22,14 @@ const SectionProjects: React.FC = () => {
 
     const ref = useRef(null)
     const isInView = useInView(ref, { margin: '0px 0px -250px 0px', once: true })
+    const viewVerification = isInView ? 'visible' : 'hidden'
 
     const FadeVariant = {
         hidden: {
             opacity: 0,
-            x: -100
         },
         visible: {
             opacity: 1,
-            x: 0,
             transition: {
                 duration: 1
             }
@@ -76,6 +75,9 @@ const SectionProjects: React.FC = () => {
                     src={SolarSystem}
                     alt='SolarSystem'
                     title='Solar System'
+                    key={1}
+                    custom={1}                  
+                    viewVerification={viewVerification}
                     tecnologys={
                         <div className='
                         w-100 
@@ -126,6 +128,9 @@ const SectionProjects: React.FC = () => {
                     src={Login}
                     alt='Login'
                     title='Login(Manutenção)'
+                    key={2}
+                    custom={2}
+                    viewVerification={viewVerification}
                     //habilita o modo desabilitado(apenas para o botão de projeto)
                     className='desabilited'
                     tecnologys={
@@ -171,6 +176,9 @@ const SectionProjects: React.FC = () => {
                      src={EarthMuseum}
                      alt='EarthMuseum'
                      title='EarthMuseum'
+                     key={3}
+                     custom={3}
+                     viewVerification={viewVerification}
                     tecnologys={
                         <div className='
                         w-100 
@@ -215,11 +223,14 @@ const SectionProjects: React.FC = () => {
                      data='29 de Junho de 2023'
                      projectData='29 de Junho de 2023'
                      image={Portifolio}
-                     projectLink='https://vercel.com/gabrielmendes06/portifolio'
+                     projectLink='https://www.gabrielmendesdev.com.br/'
                      repositoryLink='https://github.com/gabrielmendesdev/portifolio'
                      src={Portifolio}
                      alt='Portifólio(Legado)'
                      title='Portifólio(Legado)'
+                     key={4}
+                     custom={4}
+                     viewVerification={viewVerification}
                      tecnologys={
                         <div className='
                         w-100 
