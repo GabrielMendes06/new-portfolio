@@ -54,12 +54,13 @@ const SectionHome: React.FC = () => {
 
     const buttonVariant = {
         hidden: {
-            opacity: 0, x: -15
+            opacity: 0, x: -200
         },
         show: {
             opacity: 1,
+            x: 0,
             transition: {
-                delay: 2.5
+                delay: 3
             }
         }
     }
@@ -69,12 +70,7 @@ const SectionHome: React.FC = () => {
 
         <>
             <OnlyHeader />
-            <div className="
-            container 
-            bg-transparent 
-            initial-content 
-            d-flex align-items-center 
-            section-home"
+            <div className="container bg-transparent initial-content d-flex align-items-center section-home"
                 id="home">
                 <div className="d-flex flex-column initial-text-apresentation">
                     <motion.div
@@ -117,7 +113,7 @@ const SectionHome: React.FC = () => {
                         transition: {
                             duration: 0.2
                         }}}>
-                        <DefaultButton text="Download CV" link="#" className="cv-button" />
+                        <DefaultButton text="Download CV" link="https://drive.google.com/file/d/1WGetBZnnsUGENoobDE6CMUw9W2Qrfyw3/view?usp=sharing" className="cv-button" />
                     </motion.div>
                 </div>
                 <motion.div

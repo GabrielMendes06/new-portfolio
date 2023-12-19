@@ -4,6 +4,8 @@ import SectionSkills from "../sections/SectionSkills/SectionSkills"
 import SectionHome from "../sections/SectionHome/SectionHome"
 import SectionProjects from "../sections/SectionProjects/SectionProjects"
 import SectionContact from "../sections/SectionContact/SectionContact"
+import SectionExperience from "../sections/sectionExperience/SectionExperience"
+
 
 export default function HomePage() {
     
@@ -12,6 +14,7 @@ export default function HomePage() {
            <SectionHome />
            <SectionAbout />
            <SectionSkills />
+           <SectionExperience />
            <SectionProjects />
            <SectionContact />
        </div>

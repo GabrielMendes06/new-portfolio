@@ -15,11 +15,11 @@ const SectionAbout: React.FC = () => {
     const FadeImage = {
         hidden: { opacity: 0, y: -50 },
         visible: {
-            opacity: [0, 1, 1],
-            y: [-40, -10, 0],
+            opacity: [0, 1],
+            y: [-40, 0],
             transition: {
                 duration: 1,
-                times: [0, 0.7, 1]
+                times: [0, 1]
             }
         }
     };
@@ -30,31 +30,21 @@ const SectionAbout: React.FC = () => {
             y: -100
         },
         visible: (index: number) => ({
-            opacity: [0, 1, 1],
-            y: [-40, -10, 0],
+            opacity: [0, 1],
+            y: [-40, 0],
             transition: {
                 delay: 0.3 * index,
                 duration: 1,
-                times: [0, 0.7, 1]
+                times: [0, 1]
             }
         })
     }
 
     return (
-        <div className="
-        container 
-        bg-transparent 
-        section-content 
-        d-flex align-items-center 
-        justify-content-center 
-        section-about" 
+        <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about" 
         id='about'>
-            <div className='
-            bg-card 
-            row d-flex'>
-                <motion.div className='
-                col-md-6 
-                middle-card-div'
+            <div className='bg-card row d-flex'>
+                <motion.div className='col-md-6 middle-card-div'
                     variants={FadeImage}
                     initial='hidden'
                     animate={viewVerification}
@@ -65,13 +55,7 @@ const SectionAbout: React.FC = () => {
                         priority
                     />
                 </motion.div>
-                <div className='
-                col-md-6 
-                d-flex 
-                flex-column 
-                justify-content-center 
-                align-items-start 
-                middle-card-div'>
+                <div className='col-md-6 d-flex flex-column justify-content-center align-items-start middle-card-div'>
                     <ul>
                         <motion.li
                             initial='hidden'

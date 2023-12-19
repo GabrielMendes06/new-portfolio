@@ -7,15 +7,7 @@ interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
 
 const Paragraph: React.FC<ParagraphProps> = ({ text, className, ...rest }) => {
   return (
-    <p
-      className={`
-      default-text 
-      mx-3 px-2 
-      font-normal 
-      text-lg 
-      ${className}`}
-      {...rest}
-    >
+    <p className={`default-text font-normal text-lg ${className}`}{...rest}>
       {text}
     </p>
   );

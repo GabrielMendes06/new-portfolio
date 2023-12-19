@@ -6,23 +6,24 @@
   min-height: 600px;
 }
 
-
-
 .initial-text-apresentation {
   z-index: 1;
 }
 
 .initial-title-apresentation {
   max-width: 700px;
+  margin-top: 1em;
 }
 
 .initial-paragraph-apresentation {
-  max-width: 600px;
+  max-width: 550px;
+  font-size: 1.2em;
+  margin-bottom: 0;
 }
 
 .cv-button {
-  width: 120px;
-  height: 40px;
+  width: 130px;
+  height: 50px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -31,6 +32,7 @@
   overflow: hidden;
   border: 0;
   border-radius: 20px;
+  margin-top: 4em;
 }
 
 .cv-button::before {
@@ -54,6 +56,7 @@
   background: rgb(29, 148, 247);
   border-radius: 20px;
   transition: 0.5s;
+  font-size: 1.2em;
 }
 
 @keyframes animate {
