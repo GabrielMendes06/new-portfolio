@@ -16,15 +16,15 @@ interface DinamicModalProps {
     className?: string
 }
 
-const DinamicModal: React.FC<DinamicModalProps> = ({ 
-    title, 
+const DinamicModal: React.FC<DinamicModalProps> = ({
+    title,
     description,
-    image, 
-    handleClose, 
+    image,
+    handleClose,
     data,
     projectLink,
     repositoryLink,
-    className  }) => {
+    className }) => {
 
     const dropIn = {
         hidden: {
@@ -55,49 +55,28 @@ const DinamicModal: React.FC<DinamicModalProps> = ({
                 variants={dropIn}
                 initial='hidden'
                 animate='visible'
-                exit='exit'> 
-                <div className='
-                row 
-                mquery-modal'>
-                    <div className='col-md-6'> 
-                        <Image src={image} alt={title} className="modal-image"/>
+                exit='exit'>
+                <div className='row mquery-modal'>
+                    <div className='col-md-6'>
+                        <Image src={image} alt={title} className="modal-image" />
                     </div>
-                    <div className='
-                    text-light 
-                    col-md-6 
-                    d-flex 
-                    flex-column'>
-                        <div className='
-                        d-flex 
-                        justify-content-between 
-                        mb-4'>
+                    <div className='text-light col-md-6 d-flex flex-column'>
+                        <div className='d-flex justify-content-between mb-4'>
                             <h1 className='card-modal-title'>{title}</h1>
-                            <i onClick={(handleClose)} className="
-                            bi 
-                            bi-x 
-                            close-button-modal"></i>
+                            <i onClick={(handleClose)} className="bi bi-x close-button-modal"></i>
                         </div>
                         <p className='description-modal'>{description}</p>
-                        <p className='
-                        info-text 
-                        info-modal-color 
-                        mt-auto 
-                        mb-0'>{data}</p>
+                        <p className='info-text info-modal-color mt-auto mb-0'>{data}</p>
                     </div>
                 </div>
                 <div className='mt-4'>
-                    <a href={projectLink} className={`
-                    ${className}
-                    text-light 
-                    info-button 
-                    modal-redirect-button`}
-                    target="_blank"
+                    <a href={projectLink}
+                        className={`${className} text-light info-button modal-redirect-button`}
+                        target="_blank"
                     >Acessar projeto</a>
-                    <a href={repositoryLink} className="
-                    text-light 
-                    info-button 
-                    modal-redirect-button"
-                    target="_blank">Acessar repositório</a>
+                    <a href={repositoryLink}
+                        className="text-light info-button modal-redirect-button"
+                        target="_blank">Acessar repositório</a>
                 </div>
             </motion.div>
         </Backdrop>

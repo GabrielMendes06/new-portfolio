@@ -91,7 +91,6 @@ export default function OnlyHeader() {
         "
           onMouseEnter={() => {
             setHover(true)
-            console.log('entrou')
           }}
           onMouseLeave={() => setHover(false)
           }>

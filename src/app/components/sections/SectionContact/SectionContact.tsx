@@ -35,15 +35,7 @@ const SectionContact: React.FC = () => {
     return (
         <>
             <motion.div
-                className="
-                container 
-                bg-transparent 
-                initial-content 
-                d-flex flex-column 
-                justify-content-center 
-                section-contact 
-                pb-5
-                "
+                className="container initial-content d-flex flex-column justify-content-center section-contact mb-5 bg-card"
                 id="contact"
                 initial='hidden'
                 variants={FadeVariant}
@@ -51,16 +43,9 @@ const SectionContact: React.FC = () => {
                 <motion.div
                     ref={ref}
                 >
-                    <Title text="Contato"
-                        className="
-                text-center 
-                pb-5 
-                section-title"
+                    <Title text="Contato" className="text-center pb-2 section-title"
                     />
-                    <ul className='
-                row d-flex 
-                icon-container 
-                justify-content-center'
+                    <ul className='row d-flex icon-container justify-content-center'
                     >
                         <motion.li
                             variants={hoverElement}
@@ -68,23 +53,9 @@ const SectionContact: React.FC = () => {
                             whileHover='hover'
                             className='col-sm-3 contact-icon-container'
                             onClick={() => window.open('mailto:gabriel.mendes17@outlook.com')}>
-                            <SmallIcon
-                                className='
-                                bi 
-                                bi-envelope
-                                d-flex 
-                                align-items-center 
-                                justify-content-center'
-                            />
-                            <h1 className='
-                            default-text 
-                            contact-title 
-                            text-center
-                            '>E-mail</h1>
-                            <p className='
-                        text-center 
-                        subtitle-contact
-                        text-content'>gabriel.mendes17@outlook.com</p>
+                            <SmallIcon className='bi bi-envelope d-flex align-items-center justify-content-center' />
+                            <h1 className='default-text contact-title text-center'>E-mail</h1>
+                            <p className='text-center subtitle-contact text-content'>gabriel.mendes17@outlook.com</p>
                         </motion.li>
                         <motion.li
                             variants={hoverElement}
@@ -92,23 +63,10 @@ const SectionContact: React.FC = () => {
                             whileHover='hover'
                             className='col-sm-3 contact-icon-container'
                             onClick={() => window.open('https://www.linkedin.com/in/gabrielmendes7/')}>
-                            <SmallIcon
-                                className='
-                            bi 
-                            d-flex 
-                            align-items-center 
-                            justify-content-center 
-                            bi-linkedin'
-                            />
-                            <h1 className='
-                        default-text 
-                        contact-title 
-                        text-center'
+                            <SmallIcon className='bi d-flex align-items-center justify-content-center bi-linkedin' />
+                            <h1 className='default-text contact-title text-center'
                             >Linkedin</h1>
-                            <p className='
-                        text-center 
-                        subtitle-contact
-                        text-content'>@gabrielmendes7</p>
+                            <p className='text-center subtitle-contact text-content'>@gabrielmendes7</p>
                         </motion.li>
                         <motion.li
                             variants={hoverElement}
@@ -116,19 +74,9 @@ const SectionContact: React.FC = () => {
                             whileHover='hover'
                             className='col-sm-3 contact-icon-container'
                             onClick={() => window.open('https://github.com/gabrielmendesdev')}>
-                            <SmallIcon
-                                className='
-                            align-items-center 
-                            bi 
-                            bi-github
-                            d-flex                          
-                            justify-content-center'
-                            />
+                            <SmallIcon className='align-items-center bi bi-github d-flex justify-content-center' />
                             <h1 className='default-text contact-title text-center'>Github</h1>
-                            <p className='
-                        text-center 
-                        subtitle-contact
-                        text-content'>@gabrielmendesdev</p>
+                            <p className='text-center subtitle-contact text-content'>@gabrielmendesdev</p>
                         </motion.li>
                         <motion.li
                             variants={hoverElement}
@@ -136,38 +84,24 @@ const SectionContact: React.FC = () => {
                             whileHover='hover'
                             className='col-sm-3 contact-icon-container'
                             onClick={() => window.open('https://wa.me/5511977829550/?text=Olá, Gabriel! Vim através do seu portifólio.')}>
-                            <SmallIcon
-                                className='
-                            bi 
-                            bi-telephone
-                            d-flex 
-                            align-items-center 
-                            justify-content-center'
-                            />
-                            <h1 className='
-                        contact-title 
-                        default-text 
-                        text-center'
-                            >Telefone</h1>
-                            <p className='
-                        text-center 
-                        subtitle-contact
-                        text-content'>(11)97782-9550</p>
+                            <SmallIcon className='bi bi-telephone d-flex align-items-center justify-content-center' />
+                            <h1 className='contact-title default-text text-center'>Telefone</h1>
+                            <p className='text-center subtitle-contact text-content'>(11)97782-9550</p>
                         </motion.li>
                     </ul>
                 </motion.div>
             </motion.div>
             <div className='d-flex justify-content-between footer'>
-                <Paragraph text='Copyright &copy; 2024. Todos os direitos reservados' 
-                className='m-0 text-light text-footer'/>
+                <Paragraph text='Copyright &copy; 2024. Todos os direitos reservados'
+                    className='m-0 text-light text-footer' />
                 <div className='d-flex'>
-                    <Paragraph 
-                    text='Powered by: ' 
-                    className='m-0 text-light text-footer'/>
+                    <Paragraph
+                        text='Powered by: '
+                        className='m-0 text-light text-footer' />
                     <Image src={M}
-                    alt='logo'
-                    width={36}
-                    className='me-3'/>
+                        alt='logo'
+                        width={36}
+                        className='me-3' />
                 </div>
             </div>
         </>
