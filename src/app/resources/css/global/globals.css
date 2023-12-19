@@ -22,6 +22,7 @@ ul {
     --default-text: black !important;
     --scrollbar-track: white !important;
     --scrollbar-thumb: rgb(0, 97, 216) !important;
+    --rotate-border-color: rgba(197, 197, 197, 0.5)!important;
 }
 
 .dark-theme {
@@ -39,6 +40,7 @@ ul {
     --default-text: white !important;
     --scrollbar-track: rgb(0, 1, 22) !important;
     --scrollbar-thumb: rgb(83, 160, 255) !important;
+    --rotate-border-color: rgba(0, 0, 0, 0.5)!important;
 }
 
 a {
@@ -122,6 +124,15 @@ a {
     font-size: 1.5em !important;
     margin-bottom: 130px !important;
     font-family: monospace;
+}
+
+.info-button {
+    padding: 2px;
+    width: 70px;
+    border-radius: 20px;
+    background-color: #2779e300;
+    font-size: 0.8em;
+    border: 1px solid #2779e3;
 }
 
 *::-webkit-scrollbar {

@@ -3,6 +3,7 @@ import Backdrop from "./Backdrop"
 import React, { MouseEventHandler, ReactNode } from "react"
 import Image, { StaticImageData } from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import DefaultButton from "../../global/DefaultButton";
 
 interface DinamicModalProps {
     modalOpen?: boolean;
@@ -70,13 +71,12 @@ const DinamicModal: React.FC<DinamicModalProps> = ({
                     </div>
                 </div>
                 <div className='mt-4'>
-                    <a href={projectLink}
-                        className={`${className} text-light info-button modal-redirect-button`}
-                        target="_blank"
-                    >Acessar projeto</a>
-                    <a href={repositoryLink}
-                        className="text-light info-button modal-redirect-button"
-                        target="_blank">Acessar repositório</a>
+                    <DefaultButton link={projectLink}
+                        className="modal-redirect-button"
+                        text="Acessar projeto" />
+                    <DefaultButton link={repositoryLink}
+                        className="modal-redirect-button"
+                        text="Acessar repositório" />
                 </div>
             </motion.div>
         </Backdrop>

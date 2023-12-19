@@ -8,6 +8,7 @@ import DevBackground from "../../../resources/images/sections/sectionHome/m.svg"
 import LogoDescription from "../../../resources/images/sections/sectionHome/logo-description.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import DefaultButton from "../../global/DefaultButton";
 
 const SectionHome: React.FC = () => {
 
@@ -51,6 +52,19 @@ const SectionHome: React.FC = () => {
         }
     };
 
+    const buttonVariant = {
+        hidden: {
+            opacity: 0, x: -15
+        },
+        show: {
+            opacity: 1,
+            transition: {
+                delay: 2.5
+            }
+        }
+    }
+
+
     return (
 
         <>
@@ -60,8 +74,8 @@ const SectionHome: React.FC = () => {
             bg-transparent 
             initial-content 
             d-flex align-items-center 
-            section-home" 
-            id="home">
+            section-home"
+                id="home">
                 <div className="d-flex flex-column initial-text-apresentation">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -83,6 +97,7 @@ const SectionHome: React.FC = () => {
                         />
                     </motion.div>
                     <Paragraph
+                        className="initial-paragraph-apresentation"
                         text={
                             <Typewriter
                                 text={
@@ -93,8 +108,17 @@ const SectionHome: React.FC = () => {
                                 }
                             />
                         }
-                        className="initial-paragraph-apresentation"
                     />
+                    <motion.div className="mx-auto"
+                        initial='hidden'
+                        variants={buttonVariant}
+                        animate='show'
+                        whileHover={{ scale: 1.2,
+                        transition: {
+                            duration: 0.2
+                        }}}>
+                        <DefaultButton text="Download CV" link="#" className="cv-button" />
+                    </motion.div>
                 </div>
                 <motion.div
                     initial={{ x: 100, opacity: 0 }}
@@ -109,15 +133,15 @@ const SectionHome: React.FC = () => {
                         animate={variants.animate}
                         transition={variants.transition}
                     >
-                        <Image src={DevBackground} 
-                        alt="Imagem de fundo"
-                        priority
-                        className="logo-background"
+                        <Image src={DevBackground}
+                            alt="Imagem de fundo"
+                            priority
+                            className="logo-background"
                         />
-                        <Image src={LogoDescription} 
-                        alt="Imagem de fundo"
-                        className="logo-description"
-                        priority
+                        <Image src={LogoDescription}
+                            alt="Imagem de fundo"
+                            className="logo-description"
+                            priority
                         />
                     </motion.div>
                 </motion.div>

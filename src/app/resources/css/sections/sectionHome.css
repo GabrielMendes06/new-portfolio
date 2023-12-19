@@ -18,7 +18,51 @@
 
 .initial-paragraph-apresentation {
   max-width: 600px;
-  height: 75px;
+}
+
+.cv-button {
+  width: 120px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--rotate-border-color);
+  overflow: hidden;
+  border: 0;
+  border-radius: 20px;
+}
+
+.cv-button::before {
+  content: '';
+  position: absolute;
+  width: 130%;
+  height: 50%;
+  background: linear-gradient(#0051ff, #4c00fd);
+  animation: animate 4s linear infinite;
+}
+
+.cv-button::after {
+  content: 'Download CV';
+  color: white;
+  display: flex;
+  font-family: monospace;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 3px; 
+  background: rgb(29, 148, 247);
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .title {
