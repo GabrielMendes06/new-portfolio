@@ -1,4 +1,4 @@
-import { motion, useInView } from 'framer-motion'
+import { delay, motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Title from '../../global/Title'
 import SmallIcon from './SmallIcon'
@@ -10,7 +10,8 @@ import Image from 'next/image'
 const SectionContact: React.FC = () => {
 
     const ref = useRef(null)
-    const isInView = useInView(ref, { margin: '0px 0px 0px 0px', once: true })
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" })
+    const viewVerification = isInView ? 'visible' : 'hidden'
 
     //Propriedades de animação
     const FadeVariant = {
@@ -18,28 +19,29 @@ const SectionContact: React.FC = () => {
             opacity: 0,
             x: -100
         },
-        visible: {
+        visible: (custom: number) =>  ({
             opacity: 1,
             x: 0,
             transition: {
-                duration: 1
+                duration: 1,
+                delay: custom * 0.5
             }
-        }
+        }),       
+            hover: { 
+                scale: 1.2
+            }      
     }
 
     const hoverElement = {
         normal: { scale: 0.9 },
-        hover: { scale: 1.1 }
+        
     }
 
     return (
         <>
-            <motion.div
+            <div
                 className="container initial-content d-flex flex-column justify-content-center section-contact mb-5 bg-card"
-                id="contact"
-                initial='hidden'
-                variants={FadeVariant}
-                animate={isInView ? 'visible' : 'hidden'}>
+                id="contact">
                 <motion.div
                     ref={ref}
                 >
@@ -48,9 +50,11 @@ const SectionContact: React.FC = () => {
                     <ul className='row d-flex icon-container justify-content-center'
                     >
                         <motion.li
-                            variants={hoverElement}
-                            initial='normal'
+                            variants={FadeVariant}
+                            custom={1}
+                            initial='hidden'
                             whileHover='hover'
+                            animate={viewVerification}
                             className='col-sm-3 contact-icon-container'
                             onClick={() => window.open('mailto:gabriel.mendes17@outlook.com')}>
                             <SmallIcon className='bi bi-envelope d-flex align-items-center justify-content-center' />
@@ -58,9 +62,11 @@ const SectionContact: React.FC = () => {
                             <p className='text-center subtitle-contact text-content'>gabriel.mendes17@outlook.com</p>
                         </motion.li>
                         <motion.li
-                            variants={hoverElement}
-                            initial='normal'
+                            variants={FadeVariant}
+                            custom={2}
+                            initial='hidden'
                             whileHover='hover'
+                            animate={viewVerification}
                             className='col-sm-3 contact-icon-container'
                             onClick={() => window.open('https://www.linkedin.com/in/gabrielmendes7/')}>
                             <SmallIcon className='bi d-flex align-items-center justify-content-center bi-linkedin' />
@@ -69,9 +75,11 @@ const SectionContact: React.FC = () => {
                             <p className='text-center subtitle-contact text-content'>@gabrielmendes7</p>
                         </motion.li>
                         <motion.li
-                            variants={hoverElement}
-                            initial='normal'
+                            variants={FadeVariant}
+                            custom={3}
+                            initial='hidden'
                             whileHover='hover'
+                            animate={viewVerification}
                             className='col-sm-3 contact-icon-container'
                             onClick={() => window.open('https://github.com/gabrielmendesdev')}>
                             <SmallIcon className='align-items-center bi bi-github d-flex justify-content-center' />
@@ -79,9 +87,11 @@ const SectionContact: React.FC = () => {
                             <p className='text-center subtitle-contact text-content'>@gabrielmendesdev</p>
                         </motion.li>
                         <motion.li
-                            variants={hoverElement}
-                            initial='normal'
+                            variants={FadeVariant}
+                            custom={4}
+                            initial='hidden'
                             whileHover='hover'
+                            animate={viewVerification}
                             className='col-sm-3 contact-icon-container'
                             onClick={() => window.open('https://wa.me/5511977829550/?text=Olá, Gabriel! Vim através do seu portifólio.')}>
                             <SmallIcon className='bi bi-telephone d-flex align-items-center justify-content-center' />
@@ -90,7 +100,7 @@ const SectionContact: React.FC = () => {
                         </motion.li>
                     </ul>
                 </motion.div>
-            </motion.div>
+            </div>
             <div className='d-flex justify-content-between footer'>
                 <Paragraph text='Copyright &copy; 2024. Todos os direitos reservados'
                     className='m-0 text-light text-footer' />

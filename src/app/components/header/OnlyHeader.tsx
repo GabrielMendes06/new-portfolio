@@ -108,8 +108,10 @@ export default function OnlyHeader() {
           <div className="d-flex me-4 align-items-center">
             <NavbarItemList text="Sobre mim" href="#about" onClick={(e) => handleNavClick(e, 'about')} />
             <NavbarItemList text="Habilidades" href="#skills" onClick={(e) => handleNavClick(e, 'skills')} />
+            <NavbarItemList text="Experiências" href="#experience" onClick={(e) => handleNavClick(e, 'experience')} />
             <NavbarItemList text="Projetos" href="#projects" onClick={(e) => handleNavClick(e, 'projects')} />
             <NavbarItemList text="Contato" href="#contact" onClick={(e) => handleNavClick(e, 'contact')} />
+            
             <NavbarModal />
           </div>
         </Nav>

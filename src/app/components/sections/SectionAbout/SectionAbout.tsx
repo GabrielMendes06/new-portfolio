@@ -2,7 +2,7 @@ import '../../../resources/css/sections/sectionAbout.css'
 import Cartoon from '../../../resources/images/sections/sectionAbout/cartoon.webp'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import Paragraph from '../../global/Paragraph'
 import Title from '../../global/Title'
 
@@ -29,12 +29,12 @@ const SectionAbout: React.FC = () => {
             opacity: 0,
             y: -100
         },
-        visible: (index: number) => ({
-            opacity: [0, 1],
+        visible: (custom: number) => ( {
+            opacity: 1,
             y: [-40, 0],
             transition: {
-                delay: 0.3 * index,
                 duration: 1,
+                delay: custom * 0.5,
                 times: [0, 1]
             }
         })
