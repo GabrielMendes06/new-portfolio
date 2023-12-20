@@ -152,7 +152,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         className="w-100 bg-dark position-absolute date-info "
                         variants={DateInfoVariant}
                     >
-                        <div className="d-flex align-items-centerjustify-content-between info-container">
+                        <div className="d-flex align-items-center justify-content-between info-container">
                             <p className="text-light m-0 info-text">{projectData}</p>
                             <motion.button
                                 className="text-light info-button"

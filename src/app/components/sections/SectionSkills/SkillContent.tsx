@@ -11,19 +11,29 @@ import Redux from "../../../resources/images/sections/SectionSkills/redux.svg"
 import Bootstrap from "../../../resources/images/sections/SectionSkills/bootstrap.svg"
 import MySQL from "../../../resources/images/sections/SectionSkills/mysql.svg"
 import Tailwind from "../../../resources/images/sections/SectionSkills/tailwind.svg"
+import Cypress from "../../../resources/images/sections/SectionSkills/cypress.svg"
+import Typescript from "../../../resources/images/sections/SectionSkills/typescript.svg"
+import MaterialUI from "../../../resources/images/sections/SectionSkills/materialui.svg"
+import SASS from "../../../resources/images/sections/SectionSkills/sass.svg"
+import Figma from "../../../resources/images/sections/SectionSkills/figma.svg"
 
-const skills = ["HTML5", "CSS3", "JavaScript", "ReactJs", "NextJs", "NodeJs", "Redux", "Bootstrap", "MySQL", "Tailwind"]
+const skills = ["HTML5", "CSS3", "JavaScript", "ReactJs", "Typescript", "NextJs", "NodeJs", "Redux", "Bootstrap", "MaterialUI", "SASS", "Figma", "MySQL", "Tailwind", "Cypress"]
 const skillImages: any = {
     HTML5: HTML5,
     CSS3: CSS3,
     JavaScript: JavaScript,
     ReactJs: ReactJs,
+    Typescript: Typescript,
     NextJs: NextJs,
     NodeJs: NodeJs,
     Redux: Redux,
     Bootstrap: Bootstrap,
+    MaterialUI: MaterialUI,
+    SASS: SASS,
+    Figma: Figma,
     MySQL: MySQL,
     Tailwind: Tailwind,
+    Cypress: Cypress
 };
 
 const FadeIn = {
