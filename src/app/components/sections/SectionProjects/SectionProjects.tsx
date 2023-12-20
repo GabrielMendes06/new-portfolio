@@ -1,4 +1,4 @@
-import { motion, useInView } from 'framer-motion'
+import '../../../resources/css/sections/sectionProject.css'
 import Title from '../../global/Title'
 import SolarSystem from '../../../resources/images/sections/sectionProjects/solar-system.png'
 import EarthMuseum from '../../../resources/images/sections/sectionProjects/earth-museum.png'
@@ -13,9 +13,8 @@ import HTML5 from "../../../resources/images/sections/SectionSkills/html-5.svg"
 import CSS3 from "../../../resources/images/sections/SectionSkills/css3.svg"
 import NodeJs from "../../../resources/images/sections/SectionSkills/nodejs.svg"
 import MySQL from "../../../resources/images/sections/SectionSkills/mysql.svg"
-
-import '../../../resources/css/sections/sectionProject.css'
 import Image from 'next/image'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const SectionProjects: React.FC = () => {
@@ -40,13 +39,7 @@ const SectionProjects: React.FC = () => {
         <motion.div
             initial='hidden'
             variants={FadeVariant}
-            className="
-            container 
-            bg-transparent 
-            d-flex flex-column 
-            justify-content-center 
-            section-projects 
-            pb-5"
+            className="container bg-transparent d-flex flex-column justify-content-center section-projects pb-5"
             animate={isInView ? 'visible' : 'hidden'}
             id='projects'>
             <div>
@@ -54,16 +47,10 @@ const SectionProjects: React.FC = () => {
                     ref={ref}
                     initial='hidden'
                 >
-                    <Title text="Projetos" className="
-                    text-center 
-                    mb-5 
-                    section-title" />
+                    <Title text="Projetos" className="text-center mb-5 section-title" />
                 </motion.div>
             </div>
-            <div className='
-            row 
-            responsive-align-row 
-            mt-5'>
+            <div className='row responsive-align-row mt-5'>
                 <ProjectCard
                     modalTitle='Solar System'
                     description='Projeto criado do 0, tanto seu design, estilização e transições foram criados por mim. Seu conteúdo foi montado através de uma API e também com pesquisas de blogs diversos, principalmente do site da NASA, onde contém as melhores informações sobre nosso sistema solar. Nunca foi tão divertido criar um projeto quanto foi criar o Solar System, além da paixão por desenvolvimento sou fissurado por astronomia, o que me fez ter um carinho especial por esse projeto.'
@@ -79,11 +66,7 @@ const SectionProjects: React.FC = () => {
                     custom={1}                  
                     viewVerification={viewVerification}
                     tecnologys={
-                        <div className='
-                        w-100 
-                        d-flex 
-                        justify-content-center 
-                        mx-2'>
+                        <div className='w-100 d-flex justify-content-center mx-2'>
                             <Image
                                 src={HTML5}
                                 alt='HTML5'
@@ -114,7 +97,6 @@ const SectionProjects: React.FC = () => {
                                 width={30}
                                 className='mx-1'
                             />
-
                         </div>
                     } />
                 <ProjectCard
@@ -134,11 +116,7 @@ const SectionProjects: React.FC = () => {
                     //habilita o modo desabilitado(apenas para o botão de projeto)
                     className='desabilited'
                     tecnologys={
-                        <div className='
-                        w-100 
-                        d-flex 
-                        justify-content-center 
-                        mx-2'>
+                        <div className='w-100 d-flex justify-content-center mx-2'>
                             <Image
                                 src={HTML5}
                                 alt='HTML5'
@@ -180,11 +158,7 @@ const SectionProjects: React.FC = () => {
                      custom={3}
                      viewVerification={viewVerification}
                     tecnologys={
-                        <div className='
-                        w-100 
-                        d-flex 
-                        justify-content-center 
-                        mx-2'>
+                        <div className='w-100 d-flex justify-content-center mx-2'>
                             <Image
                                 src={HTML5}
                                 alt='HTML5'
@@ -232,11 +206,7 @@ const SectionProjects: React.FC = () => {
                      custom={4}
                      viewVerification={viewVerification}
                      tecnologys={
-                        <div className='
-                        w-100 
-                        d-flex 
-                        justify-content-center 
-                        mx-2'>
+                        <div className='w-100 d-flex justify-content-center mx-2'>
                             <Image
                                 src={HTML5}
                                 alt='HTML5'

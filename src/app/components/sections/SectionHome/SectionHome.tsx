@@ -65,9 +65,7 @@ const SectionHome: React.FC = () => {
         }
     }
 
-
     return (
-
         <>
             <OnlyHeader />
             <div className="container bg-transparent initial-content d-flex align-items-center section-home"
@@ -79,16 +77,15 @@ const SectionHome: React.FC = () => {
                             y: [-100, 0],
                             opacity: [0, 1],
                         }}
-                        transition={{ duration: 1.5 }}
-                    >
+                        transition={{ duration: 1.5 }}>
                         <Title
-                            text={
-                                <>
-                                    <span className="span-title">Construindo</span> sistemas e designs{" "}
-                                    <span className="span-title">codificando</span> sempre da maneira mais{" "}
-                                    <span className="span-title">limpa</span> possível :]
-                                </>
-                            }
+                            text=
+                            {<>
+                                <span className="span-title">Construindo</span> sistemas e designs{" "}
+                                <span className="span-title">codificando</span> sempre da maneira mais{" "}
+                                <span className="span-title">limpa</span> possível :]
+                            </>}
+
                             className="initial-title-apresentation"
                         />
                     </motion.div>
@@ -109,10 +106,12 @@ const SectionHome: React.FC = () => {
                         initial='hidden'
                         variants={buttonVariant}
                         animate='show'
-                        whileHover={{ scale: 1.2,
-                        transition: {
-                            duration: 0.2
-                        }}}>
+                        whileHover={{
+                            scale: 1.2,
+                            transition: {
+                                duration: 0.2
+                            }
+                        }}>
                         <DefaultButton text="Download CV" link="https://drive.google.com/file/d/1WGetBZnnsUGENoobDE6CMUw9W2Qrfyw3/view?usp=sharing" className="cv-button" />
                     </motion.div>
                 </div>

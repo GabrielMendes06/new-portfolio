@@ -1,10 +1,10 @@
 import '../../../resources/css/sections/sectionAbout.css'
 import Cartoon from '../../../resources/images/sections/sectionAbout/cartoon.webp'
 import Image from 'next/image'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
 import Paragraph from '../../global/Paragraph'
 import Title from '../../global/Title'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 const SectionAbout: React.FC = () => {
 
@@ -29,7 +29,7 @@ const SectionAbout: React.FC = () => {
             opacity: 0,
             y: -100
         },
-        visible: (custom: number) => ( {
+        visible: (custom: number) => ({
             opacity: 1,
             y: [-40, 0],
             transition: {
@@ -41,8 +41,8 @@ const SectionAbout: React.FC = () => {
     }
 
     return (
-        <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about" 
-        id='about'>
+        <div className="container bg-transparent section-content d-flex align-items-center justify-content-center section-about"
+            id='about'>
             <div className='bg-card row d-flex'>
                 <motion.div className='col-md-6 middle-card-div'
                     variants={FadeImage}
@@ -53,6 +53,7 @@ const SectionAbout: React.FC = () => {
                         src={Cartoon}
                         alt='Dev Cartoon'
                         priority
+                        width={450}
                     />
                 </motion.div>
                 <div className='col-md-6 d-flex flex-column justify-content-center align-items-start middle-card-div'>

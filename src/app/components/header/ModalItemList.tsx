@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 interface ModalItemlistProps extends React.LiHTMLAttributes<HTMLLIElement> {
   text: string;
   onClose: Function;
@@ -19,14 +17,7 @@ const ModalItemlist: React.FC<ModalItemlistProps> = ({
 
   return (
     <li
-      className="
-      text-nav-color 
-      mx-3 
-      px-2 
-      font-normal 
-      menu-text-size 
-      text-center 
-      cursor-pointer"
+      className="text-nav-color mx-3 px-2 font-normal menu-text-size text-center cursor-pointer"
       onClick={(e) => {
         handleItemClick();
         rollSectionFunction(e);

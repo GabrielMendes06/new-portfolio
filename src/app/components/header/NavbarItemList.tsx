@@ -1,7 +1,4 @@
 import { useState, useEffect } from "react";
-
-
-
 interface NavbarItemListProps extends React.LiHTMLAttributes<HTMLLIElement> {
   text: string;
   href: string;

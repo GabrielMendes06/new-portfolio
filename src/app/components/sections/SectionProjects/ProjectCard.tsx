@@ -141,9 +141,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         alt={alt}
                         className="card-image" />
                     <motion.div
-                        className="
-                        card-description
-                        d-flex flex-column"
+                        className="card-description d-flex flex-column"
                         variants={DescriptionVariant}>
                         <Title
                             text={title}
@@ -151,26 +149,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         {tecnologys}
                     </motion.div>
                     <motion.div
-                        className="
-                        w-100
-                        bg-dark
-                        position-absolute
-                        date-info "
+                        className="w-100 bg-dark position-absolute date-info "
                         variants={DateInfoVariant}
                     >
-                        <div className="
-                        d-flex
-                        align-items-center
-                        justify-content-between
-                        info-container">
-                            <p className="
-                            text-light
-                            m-0
-                            info-text">{projectData}</p>
+                        <div className="d-flex align-items-centerjustify-content-between info-container">
+                            <p className="text-light m-0 info-text">{projectData}</p>
                             <motion.button
-                                className="
-                                text-light
-                                info-button"
+                                className="text-light info-button"
                                 variants={ButtonVariant}
                             >Ver mais</motion.button>
                         </div>

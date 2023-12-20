@@ -59,10 +59,7 @@ export default function OnlyHeader() {
 
   return (
     <Navbar expand="lg" className={`position-fixed w-100 ${scrolled ? 'navbar-scroll' : ""}`}>
-      <Container className="
-      text-light 
-      flex-nowrap 
-      navbar-container">
+      <Container className="text-light flex-nowrap navbar-container">
         <div
           onClick={(e) => handleNavClick(e, 'home')}
           className="d-flex position-relative"
@@ -103,7 +100,6 @@ export default function OnlyHeader() {
             <span className="toggle"></span>
           </label>
         </motion.div>
-
       </Container>
     </Navbar>
   );
