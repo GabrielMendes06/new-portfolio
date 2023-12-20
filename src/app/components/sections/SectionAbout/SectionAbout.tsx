@@ -66,7 +66,7 @@ const SectionAbout: React.FC = () => {
                             custom={1}
                             ref={ref}>
                             <Title
-                                text='Quem sou'
+                                text='Sobre mim'
                                 className='about-subtitle span-title mt-5'
                             />
                         </motion.li>
@@ -98,7 +98,7 @@ const SectionAbout: React.FC = () => {
                             variants={item}
                             animate={viewVerification}
                             custom={4}>
-                            <Paragraph text='Meu nome é Gabriel Mendes da Silva, sou Desenvolvedor Front-End desde 2021 e fascinado pela área em que trabalho. Tenho experiência com Startups, prototipagem rápida de idéias e designs de interfaces de alta qualidade, com animações e responsividade.'
+                            <Paragraph text='Desenvolvedor especializado em Front-End. Atuo no mercado de tecnologia desde 2019, iniciando préviamente como suporte técnico (trabalho extremamente divertido hehe) e entrando para o mercado de desenvolvimento em 2021, área que sigo me aprimorando até os dias de hoje.'
                                 className='text-content' />
                         </motion.li>
                     </ul>

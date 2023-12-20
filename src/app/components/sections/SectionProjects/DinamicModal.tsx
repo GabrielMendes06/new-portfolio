@@ -72,7 +72,7 @@ const DinamicModal: React.FC<DinamicModalProps> = ({
                 </div>
                 <div className='mt-4'>
                     <DefaultButton link={projectLink}
-                        className="modal-redirect-button"
+                        className={`modal-redirect-button ${className}`}
                         text="Acessar projeto" />
                     <DefaultButton link={repositoryLink}
                         className="modal-redirect-button"

@@ -14,6 +14,7 @@ ul {
     --card-bg-color: #dadeff !important;
     --card-border-color: #c5d1ff;
     --card-border-color-hover: #a9dfff;
+    --card-box-shadow: #00000063;
     --card-project-background: rgb(171, 171, 171, 0.619);
     --text-nav-color: black !important;
     --text-nav-color-hover: rgb(57, 57, 57) !important;
@@ -34,6 +35,7 @@ ul {
     --card-border-color: #082141;
     --card-border-color-hover: #0037ff;
     --card-project-background: rgba(0, 0, 0, 0.619);
+    --card-box-shadow: #121212;
     --text-nav-color: rgb(132, 132, 132) !important;
     --text-nav-color-hover: white !important;
     --text-span-title: rgb(83, 160, 255) !important;
@@ -60,7 +62,7 @@ a {
     border-radius: 10px;
     transition: background-color 0.5s, color 0.3s;
     transition: 1s;
-    box-shadow: 3px 3px 7px #00000033;
+    box-shadow: 0px 0px 7px var(--card-box-shadow);
 }
 
 .bg-border-hover:hover {

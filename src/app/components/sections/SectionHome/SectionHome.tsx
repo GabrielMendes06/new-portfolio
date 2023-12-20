@@ -81,9 +81,9 @@ const SectionHome: React.FC = () => {
                         <Title
                             text=
                             {<>
-                                <span className="span-title">Construindo</span> sistemas e designs{" "}
-                                <span className="span-title">codificando</span> sempre da maneira mais{" "}
-                                <span className="span-title">limpa</span> possível :]
+                                <span className="span-title">Construindo</span> sistemas e designs e{" "}
+                                <span className="span-title">ajudando</span> na formação de{" "}
+                                <span className="span-title">produtos digitais</span> de alta qualidade :)
                             </>}
 
                             className="initial-title-apresentation"
@@ -94,10 +94,10 @@ const SectionHome: React.FC = () => {
                         text={
                             <Typewriter
                                 text={
-                                    "Olá, meu nome é Gabriel Mendes, sou desenvolvedor especializado em Front-End, com cerca de 2 anos de experiência na indústria de desenvolvimento, prazer em conhecê-lo."
+                                    "Olá, meu nome é Gabriel Mendes, prazer em conhecê-lo."
                                 }
                                 speed={
-                                    1.2
+                                    40
                                 }
                             />
                         }
