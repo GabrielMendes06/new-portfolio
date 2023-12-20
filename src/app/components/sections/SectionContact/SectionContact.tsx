@@ -19,36 +19,45 @@ const SectionContact: React.FC = () => {
             opacity: 0,
             x: -100
         },
-        visible: (custom: number) =>  ({
+        visible: (custom: number) => ({
             opacity: 1,
             x: 0,
             transition: {
                 duration: 1,
                 delay: custom * 0.5
             }
-        }),       
-            hover: { 
-                scale: 1.2
-            }      
+        }),
+        hover: {
+            scale: 1.2
+        }
     }
 
-    const hoverElement = {
-        normal: { scale: 0.9 },
-        
+    const TitleVariant = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 1,
+                staggerChildren: 0.2
+            }
+        }
     }
 
     return (
         <>
-            <div
-                className="container initial-content d-flex flex-column justify-content-center section-contact mb-5 bg-card"
+            <div className="container initial-content d-flex flex-column justify-content-center section-contact mb-5 bg-card"
+                ref={ref}
                 id="contact">
-                <motion.div
-                    ref={ref}
-                >
-                    <Title text="Contato" className="text-center pb-2 section-title"
-                    />
-                    <ul className='row d-flex icon-container justify-content-center'
-                    >
+                <motion.div 
+                initial='hidden'
+                variants={TitleVariant}
+                animate={viewVerification}>
+                    <motion.div>
+                        <Title text="Contato" className="text-center pb-2 section-title" />
+                    </motion.div>
+                    <ul className='row d-flex icon-container justify-content-center'>
                         <motion.li
                             variants={FadeVariant}
                             custom={1}
@@ -102,7 +111,7 @@ const SectionContact: React.FC = () => {
                 </motion.div>
             </div>
             <div className='d-flex justify-content-between footer'>
-                <Paragraph text='Copyright &copy; 2024. Todos os direitos reservados'
+                <Paragraph text='Copyright &copy; 2023. Todos os direitos reservados'
                     className='m-0 text-light text-footer' />
                 <div className='d-flex'>
                     <Paragraph

@@ -223,7 +223,7 @@ const SectionProjects: React.FC = () => {
                      data='29 de Junho de 2023'
                      projectData='29 de Junho de 2023'
                      image={Portifolio}
-                     projectLink='https://www.gabrielmendesdev.com.br/'
+                     projectLink='https://portifolio-drab-kappa.vercel.app/'
                      repositoryLink='https://github.com/gabrielmendesdev/portifolio'
                      src={Portifolio}
                      alt='Portifólio(Legado)'

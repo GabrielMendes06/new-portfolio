@@ -93,15 +93,15 @@ const Tabs: React.FC = () => {
                             <Tab.Pane eventKey="second">
                                 <div className='d-flex justify-content-between'>
                                     <Title className='tab-title' text='Desenvolvedor Front-end' />
-                                    <Paragraph className='text-content ' text='Out 2023 - Atualmente' />
+                                    <Paragraph className='text-content ' text='Nov 2022 - Jun 2023' />
                                 </div>
                                 <Title text='Greb Studios' className='span-title industry-subtitle' />
                                 <Paragraph className='text-content ' text='Criação de interfaces e páginas, consumindo APIs utilizando React.js, testes automatizados utilizando Cypress. Criação de APIs utilizando node.js. Banco de dados MySQL.' />
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
                                 <div className='d-flex justify-content-between'>
-                                    <Title className='tab-title' text='Desenvolvedor Full Stack Jr.' />
-                                    <Paragraph className='text-content ' text='Out 2023 - Atualmente' />
+                                    <Title className='tab-title' text='Desenvolvedor Front-End.' />
+                                    <Paragraph className='text-content ' text='Jan 2022 - Set 2022' />
                                 </div>
                                 <Title text='HexaIT' className='span-title industry-subtitle' />
                                 <Paragraph className='text-content ' text='Responsável pela criação de interfaces e layouts utilizando React.js, Bootstrap, MaterialUI, Tailwind. Design elaborado de acordo com as especificações do cliente' />

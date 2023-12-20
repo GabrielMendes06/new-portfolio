@@ -86,9 +86,13 @@ function Example() {
             onClose={handleCloseModal}
             rollSectionFunction={(e) => handleNavClick(e, 'about')} />
           <ModalItemList
-            text="Conhecimentos"
+            text="Habilidades"
             onClose={handleCloseModal}
             rollSectionFunction={(e) => handleNavClick(e, 'skills')} />
+          <ModalItemList
+            text="Experiências"
+            onClose={handleCloseModal}
+            rollSectionFunction={(e) => handleNavClick(e, 'experience')} />
           <ModalItemList
             text="Projetos"
             onClose={handleCloseModal}

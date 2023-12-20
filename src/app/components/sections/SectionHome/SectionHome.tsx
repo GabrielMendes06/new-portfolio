@@ -60,7 +60,7 @@ const SectionHome: React.FC = () => {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 3
+                delay: 3.5
             }
         }
     }

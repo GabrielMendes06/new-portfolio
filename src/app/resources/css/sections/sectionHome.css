@@ -8,6 +8,7 @@
 
 .initial-text-apresentation {
   z-index: 1;
+  margin-right: 2em;
 }
 
 .initial-title-apresentation {
@@ -16,7 +17,6 @@
 }
 
 .initial-paragraph-apresentation {
-  max-width: 550px;
   font-size: 1.2em;
   margin-bottom: 0;
 }
@@ -79,6 +79,10 @@
 
 @media (max-width: 968px) {
 
+  .initial-text-apresentation {
+    margin: 0;
+  }
+
   .title {
     font-size: 2.5em;
   }
@@ -89,7 +93,7 @@
 
   .initial-paragraph-apresentation {
     font-size: 1.4em;
-    margin-top: 2em;
+    margin-top: 1em;
   }
 
   .animation-heartcode {
