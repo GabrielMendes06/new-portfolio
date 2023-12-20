@@ -81,9 +81,9 @@ const SectionHome: React.FC = () => {
                         <Title
                             text=
                             {<>
-                                <span className="span-title">Construindo</span> sistemas e designs e{" "}
-                                <span className="span-title">ajudando</span> na formação de{" "}
-                                <span className="span-title">produtos digitais</span> de alta qualidade :)
+                                <span className="span-title">Construindo</span> sistemas e designs, ajudando na formação de{" "}        
+                                <span className="span-title">produtos digitais</span> de alta{" "}
+                                <span className="span-title">qualidade</span> :)
                             </>}
 
                             className="initial-title-apresentation"

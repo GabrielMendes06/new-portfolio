@@ -11,6 +11,8 @@ ul {
     --theme-button: #020a13 !important;
     --main-bg-color: white !important;
     --modal-bg-color: white !important;
+    --nav-color-animation1: black;
+    --nav-color-animation2: white;
     --card-bg-color: #dadeff !important;
     --card-border-color: #c5d1ff;
     --card-border-color-hover: #a9dfff;
@@ -31,6 +33,8 @@ ul {
     --theme-button: #ffffff !important;
     --main-bg-color: #020a13 !important;
     --modal-bg-color: rgb(36, 36, 36) !important;
+    --nav-color-animation1: #6dacff;
+    --nav-color-animation2: #17161d;
     --card-bg-color: #020d18 !important;
     --card-border-color: #082141;
     --card-border-color-hover: #0037ff;

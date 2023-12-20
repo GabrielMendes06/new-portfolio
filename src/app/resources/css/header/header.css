@@ -153,7 +153,7 @@ input:checked~.moon-icon {
     height: 1px;
     bottom: -7px;
     left: 0;
-    background: linear-gradient(270deg, #6dacff 0%, #17161d 100%);
+    background: linear-gradient(270deg, var(--nav-color-animation1) 0%, var(--nav-color-animation2) 100%);
     transform-origin: bottom right;
     transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
 }
