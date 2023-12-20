@@ -25,11 +25,7 @@ const NavbarItemList: React.FC<NavbarItemListProps> = ({ text, href, ...rest }) 
 
   return (
     <li
-      className={`
-      mx-3 px-2 
-      nav-item-animation 
-      font-normal 
-      text-lg`}
+      className={`mx-3 px-2 nav-item-animation font-normal text-lg  ${scrolled ? 'scrolled' : ''}`}
       {...rest}
     >
       <a href={href} className={`${scrolled ? 'text-light' : 'text-nav-color'}`}>{text}</a>  

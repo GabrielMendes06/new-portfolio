@@ -158,6 +158,10 @@ input:checked~.moon-icon {
     transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
+.nav-item-animation.scrolled::after {
+    background: linear-gradient(270deg, #ffffff 0%, #0035a7 100%);
+}
+
 .nav-item-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -190,7 +194,7 @@ input:checked~.moon-icon {
 .menu-text-size {
     font-size: 1.6em;
     width: 100%;
-    padding-bottom: 1em !important;
+    padding: 0.5em !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.448);
 }
 
@@ -212,7 +216,7 @@ input:checked~.moon-icon {
 }
 
 @media (max-width: 968px) {
-
+    
     .navbar-nav {
         margin-left: auto !important;
     }

@@ -7,35 +7,14 @@ import NavbarModal from "./NavbarModal";
 import Image from "next/image";
 import M from '../../resources/images/header/m.svg'
 import Mwhite from '../../resources/images/header/m-white.svg'
-import Endes from '../../resources/images/header/endes.svg'
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
-import DefaultButton from "../global/DefaultButton";
 
 export default function OnlyHeader() {
 
   const [theme, setTheme] = useState<string>("dark-theme")
   const [scrolled, setScrolled] = useState(false);
   const [hover, setHover] = useState(false);
-
-  //Propriedades de animação
-  const showVariant = {
-    hidden: {
-      opacity: 0,
-      x: -30,
-      transition: {
-        duration: 0.5,       
-      }
-    },
-    show: {
-      opacity: [0, 0, 0, 1],
-      x: 105,
-      transition: {
-        duration: 0.5,
-        times: [0, 0.3, 0.6, 1]
-      }
-    }
-  }
 
   const handleNavClick = (e: any, id: any) => {
     e.preventDefault();
@@ -86,10 +65,7 @@ export default function OnlyHeader() {
       navbar-container">
         <div
           onClick={(e) => handleNavClick(e, 'home')}
-          className="
-        d-flex
-        position-relative
-        "
+          className="d-flex position-relative"
           onMouseEnter={() => {
             setHover(true)
           }}
@@ -110,8 +86,7 @@ export default function OnlyHeader() {
             <NavbarItemList text="Habilidades" href="#skills" onClick={(e) => handleNavClick(e, 'skills')} />
             <NavbarItemList text="Experiências" href="#experience" onClick={(e) => handleNavClick(e, 'experience')} />
             <NavbarItemList text="Projetos" href="#projects" onClick={(e) => handleNavClick(e, 'projects')} />
-            <NavbarItemList text="Contato" href="#contact" onClick={(e) => handleNavClick(e, 'contact')} />
-            
+            <NavbarItemList text="Contato" href="#contact" onClick={(e) => handleNavClick(e, 'contact')} />        
             <NavbarModal />
           </div>
         </Nav>
@@ -123,14 +98,8 @@ export default function OnlyHeader() {
           transition={{ duration: 1.5 }}>
           <label className="theme-button">
             <input type="checkbox" className="theme-checkbox" onClick={() => toggleTheme()} />
-            <i className="
-            bi 
-            bi-brightness-high-fill 
-            sun-icon"></i>
-            <i className="
-            bi 
-            bi-moon-fill 
-            moon-icon"></i>
+            <i className="bi bi-brightness-high-fill sun-icon"></i>
+            <i className="bi bi-moon-fill moon-icon"></i>
             <span className="toggle"></span>
           </label>
         </motion.div>
