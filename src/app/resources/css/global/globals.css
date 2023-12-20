@@ -11,8 +11,8 @@ ul {
     --theme-button: #020a13 !important;
     --main-bg-color: white !important;
     --modal-bg-color: white !important;
-    --card-bg-color: #e7f2ff !important;
-    --card-border-color: #c9d2fd;
+    --card-bg-color: #dadeff !important;
+    --card-border-color: #c5d1ff;
     --card-border-color-hover: #a9dfff;
     --card-project-background: rgb(171, 171, 171, 0.619);
     --text-nav-color: black !important;
@@ -23,6 +23,7 @@ ul {
     --scrollbar-track: white !important;
     --scrollbar-thumb: rgb(0, 97, 216) !important;
     --rotate-border-color: rgba(197, 197, 197, 0.5)!important;
+    --border-nav-pills: #bfbfbf;
 }
 
 .dark-theme {
@@ -41,6 +42,7 @@ ul {
     --scrollbar-track: rgb(0, 1, 22) !important;
     --scrollbar-thumb: rgb(83, 160, 255) !important;
     --rotate-border-color: rgba(0, 0, 0, 0.5)!important;
+    --border-nav-pills: #141414;
 }
 
 a {

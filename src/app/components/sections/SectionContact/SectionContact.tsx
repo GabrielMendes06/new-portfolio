@@ -116,7 +116,7 @@ const SectionContact: React.FC = () => {
                 <div className='d-flex'>
                     <Paragraph
                         text='Powered by: '
-                        className='m-0 text-light text-footer' />
+                        className='m-0 me-2 text-light text-footer' />
                     <Image src={M}
                         alt='logo'
                         width={36}

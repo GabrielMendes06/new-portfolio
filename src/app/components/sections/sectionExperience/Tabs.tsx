@@ -54,15 +54,15 @@ const Tabs: React.FC = () => {
                         variants={titleVariant}
                         animate={viewVerification}
                         initial='hidden' >Experiências</motion.h1>
-                    <Col lg={3} className='bg-content-style tab-content p-0'>
+                    <Col lg={3} className='bg-content-style tab-content p-0 border-tab-div'>
                         <motion.div
                             variants={item}
                             initial='hidden'
                             animate={viewVerification}
                             custom={1}>
                             <Nav variant="pills" className="flex-column tab-options">
-                                <Nav.Item className='p-4 ps-0'>
-                                    <Nav.Link eventKey="first" className='bg-transparent default-text options' >Tracevia</Nav.Link>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="first" className='bg-transparent p-4 default-text options' >Tracevia</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="second" className='bg-transparent p-4 default-text options'>Greb Studios</Nav.Link>

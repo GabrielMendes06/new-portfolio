@@ -25,6 +25,11 @@
     margin-bottom: 1em;
 }
 
+.border-tab-div {
+    border: 1px solid var(--border-nav-pills);
+    transition: 0.5s;
+}
+
 .nav-item a {
     color: var(--default-text);  
 }

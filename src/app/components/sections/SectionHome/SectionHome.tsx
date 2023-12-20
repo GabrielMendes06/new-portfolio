@@ -97,7 +97,7 @@ const SectionHome: React.FC = () => {
                         text={
                             <Typewriter
                                 text={
-                                    "Olá, meu nome é Gabriel Mendes, sou desenvolvedor especializado em Front-End, com cerca de 2 anos de experiência na indústria de desenvolvimento, prazer em conhece-lo."
+                                    "Olá, meu nome é Gabriel Mendes, sou desenvolvedor especializado em Front-End, com cerca de 2 anos de experiência na indústria de desenvolvimento, prazer em conhecê-lo."
                                 }
                                 speed={
                                     1.2
