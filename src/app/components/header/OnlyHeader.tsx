@@ -76,7 +76,6 @@ export default function OnlyHeader() {
             className="logo ms-3"
           />
         </div>
-        <path></path>
         <Nav>
           <div className="d-flex me-4 align-items-center">
             <NavbarItemList text="Sobre mim" href="#about" onClick={(e) => handleNavClick(e, 'about')} />
