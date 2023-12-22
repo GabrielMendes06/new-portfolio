@@ -1,4 +1,4 @@
-import { delay, motion, useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Title from '../../global/Title'
 import SmallIcon from './SmallIcon'

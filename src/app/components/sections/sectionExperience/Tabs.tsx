@@ -17,11 +17,11 @@ const Tabs: React.FC = () => {
     const item = {
         hidden: {
             opacity: 0,
-            x: 200 
+            x: -100 
         },
         visible: (custom: number) => ( {
             opacity: 1,
-            x: [100, 0],
+            x: [-100, 0],
             transition: {
                 duration: 1.5,
                 delay: custom * 0.5,
@@ -33,7 +33,7 @@ const Tabs: React.FC = () => {
     const textVariant = {
         hidden: {
             opacity: 0,
-            y: 200 
+            y: -100 
         },
         visible: (custom: number) => ( {
             opacity: 1,
