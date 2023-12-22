@@ -1,6 +1,7 @@
 .tab-container {
     padding: 5em;
     border-radius: 0px;
+    overflow-x: hidden;
 }
 
 .tab-options {

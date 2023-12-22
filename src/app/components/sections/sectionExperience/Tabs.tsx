@@ -17,11 +17,11 @@ const Tabs: React.FC = () => {
     const item = {
         hidden: {
             opacity: 0,
-            x: -100 
+            x: 200 
         },
         visible: (custom: number) => ( {
             opacity: 1,
-            x: [-100, 0],
+            x: [100, 0],
             transition: {
                 duration: 1.5,
                 delay: custom * 0.5,
