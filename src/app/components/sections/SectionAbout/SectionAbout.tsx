@@ -33,8 +33,8 @@ const SectionAbout: React.FC = () => {
             opacity: 1,
             y: [-40, 0],
             transition: {
-                duration: 1,
-                delay: custom * 0.5,
+                duration: 0.8,
+                delay: custom * 0.3,
                 times: [0, 1]
             }
         })

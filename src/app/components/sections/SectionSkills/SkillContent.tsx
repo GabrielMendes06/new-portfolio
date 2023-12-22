@@ -71,10 +71,6 @@ const SkillContent: React.FC = () => {
                         className="skill-image"
                         src={skillImages[skill]}
                         alt={skill} />
-                        <span className="top"></span>
-                        <span className="right"></span>
-                        <span className="bottom"></span>
-                        <span className="left"></span>
                 </motion.li>
             ))}
             

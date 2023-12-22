@@ -17,11 +17,27 @@ const Tabs: React.FC = () => {
     const item = {
         hidden: {
             opacity: 0,
-            y: -200
+            x: 200 
         },
         visible: (custom: number) => ( {
             opacity: 1,
-            y: [-40, 0],
+            x: [100, 0],
+            transition: {
+                duration: 1.5,
+                delay: custom * 0.5,
+                times: [0, 1]
+            }
+        })
+    }
+
+    const textVariant = {
+        hidden: {
+            opacity: 0,
+            y: 200 
+        },
+        visible: (custom: number) => ( {
+            opacity: 1,
+            y: [-100, 0],
             transition: {
                 duration: 1.5,
                 delay: custom * 0.5,
@@ -62,13 +78,31 @@ const Tabs: React.FC = () => {
                             custom={1}>
                             <Nav variant="pills" className="flex-column tab-options">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first" className='bg-transparent p-4 default-text options' >Tracevia</Nav.Link>
+                                    <motion.div
+                                    variants={item}
+                                    initial='hidden'
+                                    animate={viewVerification}
+                                    custom={1}>
+                                        <Nav.Link eventKey="first" className='bg-transparent p-4 default-text options' >Tracevia</Nav.Link>
+                                    </motion.div>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second" className='bg-transparent p-4 default-text options'>Greb Studios</Nav.Link>
+                                    <motion.div
+                                    variants={item}
+                                    initial='hidden'
+                                    animate={viewVerification}
+                                    custom={2}>
+                                        <Nav.Link eventKey="second" className='bg-transparent p-4 default-text options'>Greb Studios</Nav.Link>
+                                    </motion.div>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="third" className='bg-transparent p-4 default-text options'>HexaIT</Nav.Link>
+                                    <motion.div
+                                    variants={item}
+                                    initial='hidden'
+                                    animate={viewVerification}
+                                    custom={3}>
+                                        <Nav.Link eventKey="third" className='bg-transparent p-4 default-text options'>HexaIT</Nav.Link>
+                                    </motion.div>
                                 </Nav.Item>
                             </Nav>
                         </motion.div>
@@ -77,7 +111,7 @@ const Tabs: React.FC = () => {
                         <Tab.Content className='ms-2'>
                             <Tab.Pane eventKey="first">
                                 <motion.div
-                                    variants={item}
+                                    variants={textVariant}
                                     initial='hidden'
                                     animate={viewVerification}
                                     custom={2}
@@ -92,7 +126,7 @@ const Tabs: React.FC = () => {
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
                                 <div className='d-flex justify-content-between'>
-                                    <Title className='tab-title' text='Desenvolvedor Front-end' />
+                                    <Title className='tab-title' text='Desenvolvedor Front-End' />
                                     <Paragraph className='text-content ' text='Nov 2022 - Jun 2023' />
                                 </div>
                                 <Title text='Greb Studios' className='span-title industry-subtitle' />
@@ -100,7 +134,7 @@ const Tabs: React.FC = () => {
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
                                 <div className='d-flex justify-content-between'>
-                                    <Title className='tab-title' text='Desenvolvedor Front-End.' />
+                                    <Title className='tab-title' text='Desenvolvedor Front-End' />
                                     <Paragraph className='text-content ' text='Jan 2022 - Set 2022' />
                                 </div>
                                 <Title text='HexaIT' className='span-title industry-subtitle' />

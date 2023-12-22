@@ -16,12 +16,10 @@ const SectionContact: React.FC = () => {
     //Propriedades de animação
     const FadeVariant = {
         hidden: {
-            opacity: 0,
-            x: -100
+            opacity: 0
         },
         visible: (custom: number) => ({
             opacity: 1,
-            x: 0,
             transition: {
                 duration: 1,
                 delay: custom * 0.5
