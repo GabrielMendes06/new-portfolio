@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 ol,
 ul {
     padding-left: 0 !important;
@@ -63,7 +64,7 @@ a {
 .bg-card {
     background-color: var(--card-bg-color);
     border: 1px solid var(--card-border-color);
-    border-radius: 10px;
+    border-radius: 5px;
     transition: background-color 0.5s, color 0.3s;
     transition: 1s;
     box-shadow: 0px 0px 7px var(--card-box-shadow);

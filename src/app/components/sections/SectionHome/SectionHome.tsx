@@ -107,9 +107,9 @@ const SectionHome: React.FC = () => {
                         variants={buttonVariant}
                         animate='show'
                         whileHover={{
-                            scale: 1.2,
+                            scale: 1.1,
                             transition: {
-                                duration: 0.2
+                                duration: 0.1
                             }
                         }}>
                         <DefaultButton text="Download CV" link="https://drive.google.com/file/d/1WGetBZnnsUGENoobDE6CMUw9W2Qrfyw3/view?usp=sharing" className="cv-button" />

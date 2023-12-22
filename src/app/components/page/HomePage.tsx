@@ -8,7 +8,6 @@ import SectionExperience from "../sections/sectionExperience/SectionExperience"
 
 
 export default function HomePage() {
-    
     return (
        <div className="bg-content-style">
            <SectionHome />
