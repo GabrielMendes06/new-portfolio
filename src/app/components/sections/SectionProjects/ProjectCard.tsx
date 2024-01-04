@@ -10,7 +10,7 @@ interface ProjectCardProps {
     alt: string;
     title: string;
     tecnologys: ReactNode;
-    image: any;
+    image?: any;
     modalTitle: string;
     description?: string;
     data?: string;
