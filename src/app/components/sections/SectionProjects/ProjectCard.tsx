@@ -3,14 +3,14 @@ import Image, { StaticImageData } from "next/image"
 import Title from "../../global/Title"
 import { ReactNode, useEffect, useState } from "react"
 import DinamicModal from "./DinamicModal";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 
 interface ProjectCardProps {
     src: StaticImageData;
     alt: string;
     title: string;
     tecnologys: ReactNode;
-    image: string | StaticImport;
+    image: any;
     modalTitle: string;
     description?: string;
     data?: string;

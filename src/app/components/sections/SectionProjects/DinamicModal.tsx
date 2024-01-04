@@ -1,14 +1,16 @@
 import { motion } from "framer-motion"
 import Backdrop from "./Backdrop"
-import React, { MouseEventHandler, ReactNode } from "react"
-import Image, { StaticImageData } from "next/image";
+import React, { MouseEventHandler } from "react"
+import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import DefaultButton from "../../global/DefaultButton";
+import Video from 'next-video';
+import { Asset } from "next-video/dist/assets.js";
 
 interface DinamicModalProps {
     modalOpen?: boolean;
     handleClose: MouseEventHandler;
-    image: string | StaticImport;
+    image: any;
     title: string;
     description?: string;
     data?: string;
@@ -58,8 +60,8 @@ const DinamicModal: React.FC<DinamicModalProps> = ({
                 animate='visible'
                 exit='exit'>
                 <div className='row mquery-modal'>
-                    <div className='col-md-6'>
-                        <Image src={image} alt={title} className="modal-image" />
+                    <div className='col-md-6'> 
+                        <Video autoPlay loop src={image} controls={false} />
                     </div>
                     <div className='text-light col-md-6 d-flex flex-column'>
                         <div className='d-flex justify-content-between mb-4'>
