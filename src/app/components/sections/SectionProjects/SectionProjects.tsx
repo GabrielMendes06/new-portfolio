@@ -16,7 +16,10 @@ import MySQL from "../../../resources/images/sections/SectionSkills/mysql.svg"
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import SolarSystemVideo from '../../../resources/images/sections/sectionProjects/Untitled1.mp4'
+import SolarSystemVideo from '../../../resources/images/sections/sectionProjects/SolarSystemVideo.mp4'
+import EarthMuseumVideo from '../../../resources/images/sections/sectionProjects/EarthMuseumVideo.mp4'
+import PortifolioLegadoVideo from '../../../resources/images/sections/sectionProjects/PortifolioLegadoVideo.mp4'
+import LoginVideo from '../../../resources/images/sections/sectionProjects/LoginVideo.mp4'
 
 const SectionProjects: React.FC = () => {
 
@@ -107,6 +110,7 @@ const SectionProjects: React.FC = () => {
                     projectData='15 de Julho de 2023'
                     projectLink='#'
                     repositoryLink='https://github.com/gabrielmendesdev/login'
+                    image={LoginVideo}
                     src={Login}
                     alt='Login'
                     title='Login(Manutenção)'
@@ -148,7 +152,7 @@ const SectionProjects: React.FC = () => {
                      description='Earth Museum foi um projeto criado majoritariamente em bootstrap, a ideia foi criar um site com um design elegante e intuítivo utilizando a biblioteca css, é um projeto simples de fácil entendimento e agradável.'
                      data='14 de Setembro de 2023'
                      projectData='14 de Setembro de 2023'
-                     image={EarthMuseum}
+                     image={EarthMuseumVideo}
                      projectLink='https://bootstrap-project-nine.vercel.app/'
                      repositoryLink='https://github.com/gabrielmendesdev/bootstrap-project'
                      src={EarthMuseum}
@@ -196,7 +200,7 @@ const SectionProjects: React.FC = () => {
                      description='Esse projeto foi meu primeiro portifólio desenvolvido, decidi deixa-lo em exibição pois é uma ótima maneira de fazer uma comparação com meu portifólio atual, demonstrando o crescimento tanto em conhecimento como em profissionalismo da melhor maneira possível para um front-end, a maneira visual. '
                      data='29 de Junho de 2023'
                      projectData='29 de Junho de 2023'
-                     image={Portifolio}
+                     image={PortifolioLegadoVideo}
                      projectLink='https://portifolio-drab-kappa.vercel.app/'
                      repositoryLink='https://github.com/gabrielmendesdev/portifolio'
                      src={Portifolio}
