@@ -98,7 +98,7 @@ const SectionAbout: React.FC = () => {
                             variants={item}
                             animate={viewVerification}
                             custom={4}>
-                            <Paragraph text='Desenvolvedor especializado em Front-End. Atuo no mercado de tecnologia desde 2019, iniciando préviamente como suporte técnico (trabalho extremamente divertido hehe) e entrando para o mercado de desenvolvimento em 2021, área que sigo me aprimorando até os dias de hoje.'
+                            <Paragraph text='Desenvolvedor especializado em Front-End. Atuo no mercado de tecnologia desde 2019, iniciando previamente como suporte técnico e iniciando no mercado de desenvolvimento em 2021, área que sigo me aprimorando até os dias de hoje. Trabalho com a construção de interfaces modernas e de alta qualidade, concentrado em animações, performance e responsividade.'
                                 className='text-content' />
                         </motion.li>
                     </ul>

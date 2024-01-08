@@ -121,7 +121,7 @@ const Tabs: React.FC = () => {
                                         <Paragraph className='text-content ' text='Out 2023 - Atualmente' />
                                     </div>
                                     <Title text='Tracevia' className='span-title industry-subtitle' />
-                                    <Paragraph className='text-content ' text='Manutenção e criação de novas funcionalidades do software da empresa utilizando Java, Javascript, Jquery, Rust, Bootstrap. Utilização de frameworks para construção de interfaces de usuário utilizando JSV (JavaServer Faces). Gerenciamento de banco de dados MySQL.' />
+                                    <Paragraph className='text-content ' text='Manutenção e criação de novas funcionalidades do software da empresa utilizando Java, Javascript, Jquery, Rust, Bootstrap. Utilização do framework JSF para construção de interfaces de usuário. Gerenciamento de banco de dados MySQL.' />
                                 </motion.div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
@@ -130,7 +130,7 @@ const Tabs: React.FC = () => {
                                     <Paragraph className='text-content ' text='Nov 2022 - Jun 2023' />
                                 </div>
                                 <Title text='Greb Studios' className='span-title industry-subtitle' />
-                                <Paragraph className='text-content ' text='Criação de interfaces e páginas, consumindo APIs utilizando React.js, testes automatizados utilizando Cypress. Criação de APIs utilizando node.js. Banco de dados MySQL.' />
+                                <Paragraph className='text-content ' text='Criação de interfaces e páginas, consumindo APIs utilizando React.js, testes automatizados utilizando Cypress. Criação de APIs utilizando Node.js. Banco de dados MySQL.' />
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
                                 <div className='d-flex justify-content-between'>
