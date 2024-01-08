@@ -112,7 +112,7 @@ const SectionHome: React.FC = () => {
                                 duration: 0.1
                             }
                         }}>
-                        <DefaultButton text="Download CV" link="https://drive.google.com/file/d/1WGetBZnnsUGENoobDE6CMUw9W2Qrfyw3/view?usp=sharing" className="cv-button" />
+                        <DefaultButton text="Download CV" link="https://drive.google.com/file/d/1LTXDj8UbxdmwvbnpMpeXjb50dtHy_Ei_/view?usp=sharing" className="cv-button" />
                     </motion.div>
                 </div>
                 <motion.div
