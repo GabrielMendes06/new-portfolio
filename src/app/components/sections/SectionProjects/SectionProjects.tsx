@@ -134,14 +134,20 @@ const SectionProjects: React.FC = () => {
                                 className='mx-1'
                             />
                             <Image
-                                src={Bootstrap}
-                                alt='Bootstrap'
+                                src={JavaScript}
+                                alt='JavaScript'
                                 width={30}
                                 className='mx-1'
                             />
                             <Image
-                                src={JavaScript}
-                                alt='JavaScript'
+                                src={NodeJs}
+                                alt='NodeJs'
+                                width={30}
+                                className='mx-1'
+                            />
+                            <Image
+                                src={MySQL}
+                                alt='MySQL'
                                 width={30}
                                 className='mx-1'
                             />
@@ -176,23 +182,17 @@ const SectionProjects: React.FC = () => {
                                 className='mx-1'
                             />
                             <Image
+                                src={Bootstrap}
+                                alt='Bootstrap'
+                                width={30}
+                                className='mx-1'
+                            />
+                            <Image
                                 src={JavaScript}
                                 alt='JavaScript'
                                 width={30}
                                 className='mx-1'
-                            />
-                            <Image
-                                src={NodeJs}
-                                alt='NodeJs'
-                                width={30}
-                                className='mx-1'
-                            />
-                            <Image
-                                src={MySQL}
-                                alt='MySQL'
-                                width={30}
-                                className='mx-1'
-                            />
+                            />   
                         </div>
                     } />
                 <ProjectCard
