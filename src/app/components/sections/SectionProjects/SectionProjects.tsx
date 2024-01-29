@@ -57,7 +57,7 @@ const SectionProjects: React.FC = () => {
             <div className='row responsive-align-row mt-5'>
                 <ProjectCard
                     modalTitle='Solar System'
-                    description='Projeto criado do 0, tanto seu design, estilização e transições foram criados por mim. Seu conteúdo foi montado através de uma API e também com pesquisas de blogs diversos, principalmente do site da NASA, onde contém as melhores informações sobre nosso sistema solar. Nunca foi tão divertido criar um projeto quanto foi criar o Solar System, além da paixão por desenvolvimento sou fissurado por astronomia, o que me fez ter um carinho especial por esse projeto.'
+                    description='O projeto do Solar System foi um dos mais divertidos que criei até hoje, pois, além de apaixonado por programação sou fascinado pelo mundo de astronomia. Seu conteúdo foi criado através de uma API e também através de pesquisas em sites e blogs diversos sobre astronomia, principalmente do site da NASA, onde contém as melhores informações sobre nosso sistema solar. O projeto é rico sobre informações detalhadas sobre os planetas, asteroides, luas e muito mais do nosso sistema, também contêm modelos 3D dos corpos celestes, trazendo uma interação divertida ao usuário.'
                     data='22 de Setembro de 2023'
                     projectData='22 de Setembro de 2023'
                     image={SolarSystemVideo}
@@ -197,7 +197,7 @@ const SectionProjects: React.FC = () => {
                     } />
                 <ProjectCard
                      modalTitle='Portifólio (Legado)'
-                     description='Esse projeto foi meu primeiro portifólio desenvolvido, decidi deixa-lo em exibição pois é uma ótima maneira de fazer uma comparação com meu portifólio atual, demonstrando o crescimento tanto em conhecimento como em profissionalismo da melhor maneira possível para um front-end, a maneira visual. '
+                     description='Esse projeto foi meu primeiro portifólio desenvolvido, decidi deixa-lo em exibição pois é uma ótima maneira de fazer uma comparação com meu portifólio atual, demonstrando o crescimento tanto em conhecimento como em profissionalismo da melhor maneira possível para um front-end, a maneira visual.'
                      data='29 de Junho de 2023'
                      projectData='29 de Junho de 2023'
                      image={PortifolioLegadoVideo}
