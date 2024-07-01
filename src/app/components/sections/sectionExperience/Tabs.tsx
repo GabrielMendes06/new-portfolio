@@ -92,7 +92,7 @@ const Tabs: React.FC = () => {
                                     initial='hidden'
                                     animate={viewVerification}
                                     custom={2}>
-                                        <Nav.Link eventKey="second" className='bg-transparent p-4 default-text options'>Greb Studios</Nav.Link>
+                                        <Nav.Link eventKey="second" className='bg-transparent p-4 default-text options'>HexaIT</Nav.Link>
                                     </motion.div>
                                 </Nav.Item>
                                 <Nav.Item>
@@ -101,7 +101,7 @@ const Tabs: React.FC = () => {
                                     initial='hidden'
                                     animate={viewVerification}
                                     custom={3}>
-                                        <Nav.Link eventKey="third" className='bg-transparent p-4 default-text options'>HexaIT</Nav.Link>
+                                        <Nav.Link eventKey="third" className='bg-transparent p-4 default-text options'>Autônomo</Nav.Link>
                                     </motion.div>
                                 </Nav.Item>
                             </Nav>
@@ -118,7 +118,7 @@ const Tabs: React.FC = () => {
                                 >
                                     <div className='d-flex justify-content-between'>
                                         <Title className='tab-title' text='Desenvolvedor de Software' />
-                                        <Paragraph className='text-content ' text='Out 2023 - Atualmente' />
+                                        <Paragraph className='text-content ' text='Ago 2023 - Jan 2024' />
                                     </div>
                                     <Title text='Tracevia' className='span-title industry-subtitle' />
                                     <Paragraph className='text-content ' text='Manutenção e criação de novas funcionalidades do software da empresa utilizando Java, Javascript, Jquery, Rust, Bootstrap. Utilização do framework JSF para construção de interfaces de usuário. Gerenciamento de banco de dados MySQL.' />
@@ -126,19 +126,19 @@ const Tabs: React.FC = () => {
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
                                 <div className='d-flex justify-content-between'>
-                                    <Title className='tab-title' text='Desenvolvedor Front-End' />
-                                    <Paragraph className='text-content ' text='Nov 2022 - Jun 2023' />
+                                    <Title className='tab-title' text='Suporte Técnico' />
+                                    <Paragraph className='text-content ' text='Jan 2023 - Ago 2023' />
                                 </div>
-                                <Title text='Greb Studios' className='span-title industry-subtitle' />
-                                <Paragraph className='text-content ' text='Criação de interfaces e páginas, consumindo APIs utilizando React.js, testes automatizados utilizando Cypress. Criação de APIs utilizando Node.js. Banco de dados MySQL.' />
+                                <Title text='HexaIT Service Solutions' className='span-title industry-subtitle' />
+                                <Paragraph className='text-content ' text="Atuei como técnico no projeto de migração de rede dos computadores do hospital Aviccena, pela Rede'Dor." />
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
                                 <div className='d-flex justify-content-between'>
-                                    <Title className='tab-title' text='Desenvolvedor Front-End' />
-                                    <Paragraph className='text-content ' text='Jan 2022 - Set 2022' />
+                                    <Title className='tab-title' text='Suporte Técnico' />
+                                    <Paragraph className='text-content ' text='Jan 2022 - Jan 2023' />
                                 </div>
-                                <Title text='HexaIT' className='span-title industry-subtitle' />
-                                <Paragraph className='text-content ' text='Responsável pela criação de interfaces e layouts utilizando React.js, Bootstrap, MaterialUI, Tailwind. Design elaborado de acordo com as especificações do cliente' />
+                                <Title text='Autônomo' className='span-title industry-subtitle' />
+                                <Paragraph className='text-content ' text='Criação de interfaces e páginas, consumindo APIs utilizando React.js, testes automatizados utilizando Cypress. Criação de APIs utilizando Node.js. Banco de dados MySQL.' />
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>
