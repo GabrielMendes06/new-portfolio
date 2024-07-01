@@ -138,7 +138,7 @@ const Tabs: React.FC = () => {
                                     <Paragraph className='text-content ' text='Jan 2022 - Jan 2023' />
                                 </div>
                                 <Title text='Autônomo' className='span-title industry-subtitle' />
-                                <Paragraph className='text-content ' text='Criação de interfaces e páginas, consumindo APIs utilizando React.js, testes automatizados utilizando Cypress. Criação de APIs utilizando Node.js. Banco de dados MySQL.' />
+                                <Paragraph className='text-content ' text='Formatação e montagem de computadores, instalação de impressoras, instalação e atualização de softwares' />
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>
